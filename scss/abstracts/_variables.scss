@@ -1,0 +1,69 @@
+/*=============================================
+          _variables.scss
+================================================*/
+// fonts
+$ff-primary-font: 'Fira Code', monospace;
+$ff-secondary-font: 'Alegreya', serif;
+$ff-small-capitals: 'Alegreya SC', serif;
+
+$fonts: (
+        "ff-body-font": $ff-primary-font,
+        "ff-heading-font": $ff-secondary-font,
+        "ff-small-caps-font": $ff-small-capitals
+);
+
+//colors
+$clr-primary-color: blue;
+$clr-secondary-color: goldenrod;
+$clr-accent-color: violet;
+
+$clr-alert-color: #a8071a;
+$clr-success-color: #5b8c00;
+$clr-info-color: #40a9ff;
+$clr-warning-color: #ffc53d;
+
+$clr-white-color: #ffffff;
+$clr-black-color: #000000;
+
+$clr-off-white-color: #eeeeee;
+$clr-off-black-color: #010101;
+
+$clr-gray-01: #f5f5f5;
+$clr-gray-02: #d9d9d9;
+$clr-gray-03: #bfbfbf;
+$clr-gray-04: #8c8c8c;
+$clr-gray-05: #595959;
+$clr-gray-06: #434343;
+$clr-gray-07: #414141;
+$clr-gray-08: #262626;
+$clr-gray-09: #1f1f1f;
+$clr-gray-10: #141414;
+
+$colors: (
+        "clr-primary": $clr-primary-color,
+        "clr-secondary": $clr-secondary-color,
+        "clr-accent": $clr-accent-color,
+        "clr-alert": $clr-alert-color,
+        "clr-info": $clr-info-color,
+        "clr-success": $clr-success-color,
+        "clr-warning": $clr-warning-color,
+        "clr-black": $clr-black-color,
+        "clr-white": $clr-white-color,
+        "clr-off-black": $clr-off-black-color,
+        "clr-off-white": $clr-off-white-color,
+        "clr-gray-01": $clr-gray-01,
+        "clr-gray-02": $clr-gray-02,
+        "clr-gray-03": $clr-gray-03,
+        "clr-gray-04": $clr-gray-04,
+        "clr-gray-05": $clr-gray-05,
+        "clr-gray-06": $clr-gray-06,
+        "clr-gray-07": $clr-gray-07,
+        "clr-gray-08": $clr-gray-08,
+        "clr-gray-09": $clr-gray-09,
+        "clr-gray-10": $clr-gray-10
+);
+
+
+
+// timing functions
+$tf-timing-basic: cubic-bezier(0.26, 0.1, 0.27, 1.55);

@@ -1,0 +1,21 @@
+/*=============================================
+          main.scss
+================================================*/
+//base styles
+@use './base/reset';
+@use './base/typography';
+@use './base/animations';
+@use './base/utils';
+
+
+//abstract styles
+@use './abstracts/functions';
+@use './abstracts/mixins';
+@use './abstracts/placeholders';
+
+//components styles
+@use './components/preloader';
+@use './components/header';
+@use './components/buttons';
+@use './components/anchors';
+@use './components/cards';

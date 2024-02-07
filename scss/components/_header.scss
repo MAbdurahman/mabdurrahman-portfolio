@@ -1,0 +1,40 @@
+/*=============================================
+          components/_header.scss
+================================================*/
+
+header {
+  .header {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    &__heading {
+      margin: 3em auto;
+      text-align: center;
+      &--title {
+        position: relative;
+        margin-bottom: -1em;
+        letter-spacing: 2px;
+        color: #CD6799;
+        text-shadow: 5px 3px 2px rgba(255,255,255,0.87);
+        transition: transform 1s;
+        opacity: 0;
+
+      }
+      &--sub-title {
+        letter-spacing: 1px;
+        color: #CD6799;
+        text-shadow: 5px 3px 2px rgba(255,255,255,0.87);
+        transition: transform 1s;
+        opacity: 0;
+      }
+      &__arrow i {
+        font-size: 2rem;
+        color: #CD6799;
+        text-shadow: 5px 3px 2px rgba(255,255,255,0.87);
+        transition: transform 1s;
+        opacity: 0;
+
+      }
+    }
+  }
+}
