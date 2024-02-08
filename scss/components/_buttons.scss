@@ -8,7 +8,7 @@
   justify-content: space-evenly;
 
   .button--one {
-    @include ab.button-one-styles(ab.set-color(clr-gray-02), ab.set-color(clr-gray-08));
+    @include ab.button-one-styles(ab.set-neutral-color(clr-neutral-200), ab.set-neutral-color(clr-neutral-800));
   }
 
   .button--two {

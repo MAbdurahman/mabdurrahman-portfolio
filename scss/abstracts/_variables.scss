@@ -7,7 +7,7 @@
 $ff-primary-font: 'Lora', serif;
 $ff-secondary-font: 'Montserrat', sans-serif;
 
-$fonts-families: (
+$font-families: (
      "ff-body-font": $ff-secondary-font,
      "ff-head-font": $ff-primary-font
 );
@@ -26,34 +26,97 @@ $font-weights: (
 
 //**************** colors ****************//
 //primary colors
-
-
+$clr-blue-01-000: hsl(204, 51%, 94%);
+$clr-blue-01-100: hsl(204, 51%, 89%);
+$clr-blue-01-200: hsl(204, 51%, 78%);
+$clr-blue-01-300: hsl(204, 51%, 67%);
+$clr-blue-01-400: hsl(204, 51%, 55%);
+$clr-blue-01-500: hsl(204, 64%, 44%);
+$clr-blue-01-600: hsl(204, 64%, 39%);
+$clr-blue-01-700: hsl(204, 64%, 34%);
+$clr-blue-01-800: hsl(204, 64%, 28%);
+$clr-blue-01-900: hsl(204, 64%, 23%);
 
 $primary-colors: (
+    'clr-blue-01-000':$clr-blue-01-000,
+    'clr-blue-01-100':$clr-blue-01-100,
+    'clr-blue-01-200':$clr-blue-01-200,
+    'clr-blue-01-300':$clr-blue-01-300,
+    'clr-blue-01-400':$clr-blue-01-400,
+    'clr-blue-01-500':$clr-blue-01-500,
+    'clr-blue-01-600':$clr-blue-01-600,
+    'clr-blue-01-700':$clr-blue-01-700,
+    'clr-blue-01-800':$clr-blue-01-800,
+    'clr-blue-01-900':$clr-blue-01-900
 
 );
 
 //neutral colors
-
-
-
+$clr-neutral-000: hsl(204, 0%, 98%);
+$clr-neutral-100: hsl(204, 0%, 88%);
+$clr-neutral-200: hsl(204, 0%, 78%);
+$clr-neutral-300: hsl(204, 0%, 68%);
+$clr-neutral-400: hsl(204, 0%, 58%);
+$clr-neutral-500: hsl(204, 0%, 48%);
+$clr-neutral-600: hsl(204, 0%, 38%);
+$clr-neutral-700: hsl(204, 0%, 28%);
+$clr-neutral-800: hsl(204, 0%, 18%);
+$clr-neutral-900: hsl(204, 0%, 10%);
 
 $neutral-colors: (
+  'clr-neutral-000': $clr-neutral-000,
+  'clr-neutral-100': $clr-neutral-100,
+  'clr-neutral-200': $clr-neutral-200,
+  'clr-neutral-300': $clr-neutral-300,
+  'clr-neutral-400': $clr-neutral-400,
+  'clr-neutral-500': $clr-neutral-500,
+  'clr-neutral-600': $clr-neutral-600,
+  'clr-neutral-700': $clr-neutral-700,
+  'clr-neutral-800': $clr-neutral-800,
+  'clr-neutral-900': $clr-neutral-900
 
 );
-
-
 
 
 //augmented colors
-
-
-
+$clr-augmented-000: hsl(204, 12%, 98%);
+$clr-augmented-100: hsl(204, 12%, 88%);
+$clr-augmented-200: hsl(204, 12%, 78%);
+$clr-augmented-300: hsl(204, 15%, 68%);
+$clr-augmented-400: hsl(204, 15%, 58%);
+$clr-augmented-500: hsl(204, 15%, 48%);
+$clr-augmented-600: hsl(204, 15%, 38%);
+$clr-augmented-700: hsl(204, 20%, 28%);
+$clr-augmented-800: hsl(204, 25%, 18%);
+$clr-augmented-900: hsl(204, 30%, 10%);
 
 $augmented-colors: (
+    'clr-augmented-000': $clr-augmented-000,
+    'clr-augmented-100': $clr-augmented-100,
+    'clr-augmented-200': $clr-augmented-200,
+    'clr-augmented-300': $clr-augmented-300,
+    'clr-augmented-400': $clr-augmented-400,
+    'clr-augmented-500': $clr-augmented-500,
+    'clr-augmented-600': $clr-augmented-600,
+    'clr-augmented-700': $clr-augmented-700,
+    'clr-augmented-800': $clr-augmented-800,
+    'clr-augmented-900': $clr-augmented-900,
 
 );
 
+//assigned colors
+$assigned-colors: (
+    'clr-primary-color': $clr-blue-01-900,
+     'clr-background-color': $clr-blue-01-000,
+     'clr-textfield-inactive': $clr-neutral-300,
+     'clr-textfield-active': $clr-augmented-200,
+     'clr-input-inactive': $clr-neutral-300,
+     'clr-input-active': $clr-augmented-200,
+     'clr-text-dark': $clr-augmented-800,
+     'clr-text-medium': $clr-augmented-700,
+     'clr-text-light': $clr-augmented-600
+
+);
 
 //**************** timing functions ****************//
 $tf-timing-function-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
@@ -66,7 +129,6 @@ $tf-timing-function-linear: cubic-bezier(0.19, 0.08, 0.84, 0.75);
 $tf-timing-function-smooth: cubic-bezier(0.1, 0.7, 0.6, 0.9);
 $tf-timing-function-snappy: cubic-bezier(0.5, 0, 0.4, 0.98);
 $tf-timing-function-snappy2: cubic-bezier(.17, .67, .83, .67);
-
 
 $timing-functions: (
      'tf-timing-function-basic-01': $tf-timing-function-basic-01,

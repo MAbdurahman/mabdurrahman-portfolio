@@ -66,8 +66,8 @@
   max-width: 100%;
   height: auto;
   line-height: 1.42857143;
-  background-color: ab.set-color(clr-gray-01);
-  border: 1px solid ab.set-color(clr-gray-03);
+  background-color: ab.set-neutral-color(clr-neutral-100);
+  border: 1px solid ab.set-neutral-color(clr-neutral-300);
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -105,17 +105,15 @@
 
 .title-heading {
   position: relative;
-  margin-bottom: 5rem;
   padding: 2rem 0;
   font-size: 3rem;
   font-weight: 100;
-  letter-spacing: 2px;
   text-transform: capitalize;
   text-align: center;
   margin-bottom: .5em;
-  font-family: ab.$ff-secondary-font;
-  color: ab.set-color(clr-off-black);
-  letter-spacing: 0.5rem;
+  font-family: ab.set-font-family(ff-head-font);
+  color: ab.set-augmented-color(clr-augmented-900);
+  letter-spacing: 0.5px;
 }
 
 .u-text-center {
@@ -150,9 +148,9 @@
 [class*='imghvr-']:before figure {
   font-size: 1rem;
   line-height: 1.6;
-  background-color: ab.set-color(clr-gray-07) !important;
+  background-color: ab.set-neutral-color(clr-neutral-800) !important;
   cursor: pointer;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.5 ab.set-timing-function(tf-timing-function-ease-in-out);
 
 }
 
@@ -174,7 +172,7 @@
   margin: 0px;
   max-width: 100%;
 
-  background-color: ab.set-color(clr-gray-07);
+  background-color: ab.set-neutral-color(clr-neutral-700);
   color: #fff;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -185,7 +183,7 @@
 }
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
-  background-color: ab.set-color(clr-gray-07);
+  background-color: ab.set-neutral-color(clr-neutral-700);
   position: absolute;
   padding: 30px;
   position: absolute;
@@ -199,7 +197,7 @@
 
 [class^='imghvr-shutter-out-']:before, [class*=' imghvr-shutter-out-']:before {
   background: #135796;
-  background: ab.set-color(clr-gray-07);
+  background: ab.set-neutral-color(clr-neutral-700);
   position: absolute;
   content: '';
   -webkit-transition-delay: 0.105s;

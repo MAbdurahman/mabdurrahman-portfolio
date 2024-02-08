@@ -14,16 +14,16 @@
 
     .card-one {
       background: var(--white);
-      background-color: ab.set-color(clr-gray-02);
+      background-color: ab.$clr-neutral-200;
       padding: .33em;
       border-radius: 3px;
-      border: 1px solid ab.set-color(clr-gray-03);
+      border: 1px solid ab.$clr-neutral-300;
 
       box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
 
       &__caption--title {
         margin-top: .75em !important;
-        font-family: ab.set-font(ff-small-caps-font);
+        font-family: ab.$ff-secondary-font;
       }
       &__button-container {
         margin-bottom: .75em;
@@ -51,7 +51,7 @@
           h3 {
             margin-top: 4px;
             margin-bottom: 8px;
-            font-family: ab.set-font(ff-small-caps-font);
+            font-family: ab.$ff-secondary-font;
 
           }
         }
@@ -60,4 +60,3 @@
 
 
 }
-

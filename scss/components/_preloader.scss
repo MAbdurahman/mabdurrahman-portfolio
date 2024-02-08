@@ -13,8 +13,7 @@
   height: 100vh;
   z-index: 10000;
   overflow: hidden;
-  background: ab.set-color(clr-gray-02);
-  background: ab.set-color(clr-gray-10);
+  background: ab.set-neutral-color(clr-neutral-800);
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;

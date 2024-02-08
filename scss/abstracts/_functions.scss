@@ -1,8 +1,36 @@
+
 /* =========================================
             _functions.scss
 ============================================ */
 @use 'sass:math';
 @use './variables' as var;
+
+$default-min-bp: 320px;
+$default-max-bp: 960px;
+
+@function round($number, $decimals: 0) {
+  $n: 1;
+  @if $decimals > 0 {
+    @for $i from 1 through $decimals {
+      $n: $n * 10;
+    }
+  }
+  @return math.div(math.round($number * $n), $n);
+}
+
+@function px-to-rem($px) {
+  $rems: math.div($px, 16px) * 1rem;
+  @return $rems;
+}
+
+@function set-fluid-typography($min-size, $max-size, $min-breakpoint: $default-min-bp, $max-breakpoint: $default-max-bp, $unit: vw) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: math.round($slope * 100);
+  $intercept-rem: math.round(px-to-rem($min-size - $slope * $min-breakpoint));
+  $min-size-rem: math.round(px-to-rem($min-size));
+  $max-size-rem: math.round(px-to-rem($max-size));
+  @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
+}
 
 @function convert-to-rem($pixel) {
   @if (math.is-unitless($pixel)) {
@@ -24,18 +52,67 @@
   }
 }
 
-@function set-color($color-name) {
-  @if not map-has-key(var.$colors, $color-name) {
-    @error 'No color named `#{$color-name}` in $colors!  '
-      + 'Color should be one of the following: `#{map-keys(var.$colors)}`.';
+@function set-primary-color($color-name) {
+  @if not map-has-key(var.$primary-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $primary-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$primary-colors)}`.';
   }
-  @return map-get(var.$colors, $color-name);
+  @return map-get(var.$primary-colors, $color-name);
 }
 
-@function set-font($font-name) {
-  @if not map-has-key(var.$fonts, $font-name) {
-    @error 'No font named `#{$font-name}` in $fonts! '
-    + 'Font should be one of the following: `#{map-keys(var.$fonts)}`.';
+@function set-neutral-color($color-name) {
+  @if not map-has-key(var.$neutral-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $neutral-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$neutral-colors)}`.';
   }
-  @return map-get(var.$fonts, $font-name);
+  @return map-get(var.$neutral-colors, $color-name);
+}
+
+@function set-augmented-color($color-name) {
+  @if not map-has-key(var.$augmented-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $augmented-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$augmented-colors)}`.';
+  }
+  @return map-get(var.$augmented-colors, $color-name);
+
+}
+
+@function set-assigned-color($color-name) {
+  @if not map-has-key(var.$assigned-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $assigned-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$assigned-colors)}`.';
+  }
+  @return map-get(var.$assigned-colors, $color-name);
+}
+
+@function set-font-family($font-name) {
+  @if not map-has-key(var.$font-families, $font-name) {
+    @error 'No font named `#{$font-name}` in $font-families!  '
+      + 'Font name should be one of the following: `#{map-keys(var.$font-families)}`.';
+  }
+  @return map-get(var.$font-families, $font-name);
+}
+
+@function set-font-weight($font-weight) {
+  @if not map-has-key(var.$font-weights, $font-weight) {
+    @error 'No font weight `#{$font-weight}` defined in $font-weights!  '
+      + 'Font weight should be one of the following: `#{map-keys(var.$font-weights)}`.';
+  }
+  @return map-get(var.$font-weights, $font-weight);
+}
+
+@function set-timing-function($timing-function-name) {
+  @if not map-has-key(var.$timing-functions, $timing-function-name) {
+    @error 'No timing-function named `#{$timing-function-name}` in $timing-functions!  '
+      + 'Timing-function should be one of the following: `#{map-keys(var.$timing-functions)}`.';
+  }
+  @return map-get(var.$timing-functions, $timing-function-name);
+}
+
+@function set-box-shadow($box-shadow-name) {
+  @if not map-has-key(var.$box-shadows, $box-shadow-name) {
+    @error 'No box-shadow named `#{$box-shadow-name}` defined in $box-shadows! '
+     + 'Box shadow name should be one of the following:  `#{map-keys(var.$box-shadows)}`.'
+  }
+  @return map-get(var.$box-shadows, $box-shadow-name);
 }
