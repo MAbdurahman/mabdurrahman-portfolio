@@ -1,7 +1,7 @@
 {
   "name": "mabdurrahman-portfolio",
   "version": "1.0.0",
-  "description": "HTML, CSS3, and JavaScript applcation utilizing SASS",
+  "description": "HTML, CSS3, and JavaScript application utilizing SASS",
   "main": "index.js",
   "repository": "https://github.com/MAbdurahman/mabdurrahman-portfolio.git",
   "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",

@@ -1,69 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
 /*=============================================
           _variables.scss
 ================================================*/
-// fonts
-$ff-primary-font: 'Fira Code', monospace;
-$ff-secondary-font: 'Alegreya', serif;
-$ff-small-capitals: 'Alegreya SC', serif;
+//**************** fonts ****************//
+$ff-primary-font: 'Lora', serif;
+$ff-secondary-font: 'Montserrat', sans-serif;
 
-$fonts: (
-        "ff-body-font": $ff-primary-font,
-        "ff-heading-font": $ff-secondary-font,
-        "ff-small-caps-font": $ff-small-capitals
+$fonts-families: (
+     "ff-body-font": $ff-secondary-font,
+     "ff-head-font": $ff-primary-font
 );
 
-//colors
-$clr-primary-color: blue;
-$clr-secondary-color: goldenrod;
-$clr-accent-color: violet;
+$fw-font-weight-light: 300;
+$fw-font-weight-normal: 400;
+$fw-font-weight-medium: 500;
+$fw-font-weight-bold: 600;
 
-$clr-alert-color: #a8071a;
-$clr-success-color: #5b8c00;
-$clr-info-color: #40a9ff;
-$clr-warning-color: #ffc53d;
+$font-weights: (
+     'fw-font-weight-light': $fw-font-weight-light,
+     'fw-font-weight-normal': $fw-font-weight-normal,
+     'fw-font-weight-medium': $fw-font-weight-medium,
+     'fw-font-weight-bold': $fw-font-weight-bold
+);
 
-$clr-white-color: #ffffff;
-$clr-black-color: #000000;
+//**************** colors ****************//
+//primary colors
 
-$clr-off-white-color: #eeeeee;
-$clr-off-black-color: #010101;
 
-$clr-gray-01: #f5f5f5;
-$clr-gray-02: #d9d9d9;
-$clr-gray-03: #bfbfbf;
-$clr-gray-04: #8c8c8c;
-$clr-gray-05: #595959;
-$clr-gray-06: #434343;
-$clr-gray-07: #414141;
-$clr-gray-08: #262626;
-$clr-gray-09: #1f1f1f;
-$clr-gray-10: #141414;
 
-$colors: (
-        "clr-primary": $clr-primary-color,
-        "clr-secondary": $clr-secondary-color,
-        "clr-accent": $clr-accent-color,
-        "clr-alert": $clr-alert-color,
-        "clr-info": $clr-info-color,
-        "clr-success": $clr-success-color,
-        "clr-warning": $clr-warning-color,
-        "clr-black": $clr-black-color,
-        "clr-white": $clr-white-color,
-        "clr-off-black": $clr-off-black-color,
-        "clr-off-white": $clr-off-white-color,
-        "clr-gray-01": $clr-gray-01,
-        "clr-gray-02": $clr-gray-02,
-        "clr-gray-03": $clr-gray-03,
-        "clr-gray-04": $clr-gray-04,
-        "clr-gray-05": $clr-gray-05,
-        "clr-gray-06": $clr-gray-06,
-        "clr-gray-07": $clr-gray-07,
-        "clr-gray-08": $clr-gray-08,
-        "clr-gray-09": $clr-gray-09,
-        "clr-gray-10": $clr-gray-10
+$primary-colors: (
+
+);
+
+//neutral colors
+
+
+
+
+$neutral-colors: (
+
 );
 
 
 
-// timing functions
-$tf-timing-basic: cubic-bezier(0.26, 0.1, 0.27, 1.55);
+
+//augmented colors
+
+
+
+
+$augmented-colors: (
+
+);
+
+
+//**************** timing functions ****************//
+$tf-timing-function-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
+$tf-timing-function-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+$tf-timing-function-ease: cubic-bezier(0.19, 0.08, 0.46, 0.99);
+$tf-timing-function-ease-in: cubic-bezier(0.33, 0.02, 0.84, 0.75);
+$tf-timing-function-ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
+$tf-timing-function-ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
+$tf-timing-function-linear: cubic-bezier(0.19, 0.08, 0.84, 0.75);
+$tf-timing-function-smooth: cubic-bezier(0.1, 0.7, 0.6, 0.9);
+$tf-timing-function-snappy: cubic-bezier(0.5, 0, 0.4, 0.98);
+$tf-timing-function-snappy2: cubic-bezier(.17, .67, .83, .67);
+
+
+$timing-functions: (
+     'tf-timing-function-basic-01': $tf-timing-function-basic-01,
+     'tf-timing-function-basic-02': $tf-timing-function-basic-02,
+     'tf-timing-function-ease': $tf-timing-function-ease,
+     'tf-timing-function-ease-in': $tf-timing-function-ease-in,
+     'tf-timing-function-ease-out': $tf-timing-function-ease-out,
+     'tf-timing-function-ease-in-out': $tf-timing-function-ease-in-out,
+     'tf-timing-function-linear': $tf-timing-function-linear,
+     'tf-timing-function-smooth': $tf-timing-function-smooth,
+     'tf-timing-function-snappy': $tf-timing-function-snappy,
+     'tf-timing-function-snappy2': $tf-timing-function-snappy2
+);
+
+//**************** box shadows ****************//
+$bs-box-shadow-100: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+$bs-box-shadow-200: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+$bs-box-shadow-300: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+$bs-box-shadow-400: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$bs-box-shadow-500: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+$bs-box-shadow-600: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$bs-box-shadow-700: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+$bs-box-shadow-800: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+$box-shadows: (
+     'bs-box-shadow-100': $bs-box-shadow-100,
+     'bs-box-shadow-200': $bs-box-shadow-200,
+     'bs-box-shadow-300': $bs-box-shadow-300,
+     'bs-box-shadow-400': $bs-box-shadow-400,
+     'bs-box-shadow-500': $bs-box-shadow-500,
+     'bs-box-shadow-600': $bs-box-shadow-600,
+     'bs-box-shadow-700': $bs-box-shadow-700,
+     'bs-box-shadow-800': $bs-box-shadow-800
+
+);
