@@ -1,5 +1,10 @@
-/********* maabdurrahman-portfolio-scripts **********/
 
+/**
+ * maabdurrahman-portfolio-scripts
+ * @author: Mahdi Abdurrhaman
+ * @version 1.0.0
+ * @date: 9 February 2024
+ */
 /*===================================================
           preloader
 =====================================================*/
