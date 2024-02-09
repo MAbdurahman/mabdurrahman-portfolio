@@ -24,7 +24,30 @@ $font-weights: (
      'fw-font-weight-bold': $fw-font-weight-bold
 );
 
-//**************** colors ****************//
+/**************** type scale ****************/
+$ts-text-size-xs: 0.5rem;
+$ts-text-size-sm: 0.71rem;
+$ts-text-size-md: 1rem;
+$ts-text-size-lg: 1.41rem;
+$ts-text-size-xl: 2rem;
+$ts-text-size-2xl: 2.83rem;
+$ts-text-size-3xl: 4rem;
+$ts-text-size-4xl: 5.65rem;
+$ts-text-size-5xl: 7.99rem;
+
+$text-sizes: (
+     'ts-text-size-xs': $ts-text-size-xs,
+     'ts-text-size-sm': $ts-text-size-sm,
+     'ts-text-size-md': $ts-text-size-md,
+     'ts-text-size-lg': $ts-text-size-lg,
+     'ts-text-size-xl': $ts-text-size-xl,
+     'ts-text-size-2xl': $ts-text-size-2xl,
+     'ts-text-size-3xl': $ts-text-size-3xl,
+     'ts-text-size-4xl': $ts-text-size-4xl,
+     'ts-text-size-5xl': $ts-text-size-5xl
+);
+
+/**************** colors ****************/
 //primary colors
 $clr-blue-01-000: hsl(204, 51%, 94%);
 $clr-blue-01-100: hsl(204, 51%, 89%);
@@ -38,17 +61,16 @@ $clr-blue-01-800: hsl(204, 64%, 28%);
 $clr-blue-01-900: hsl(204, 64%, 23%);
 
 $primary-colors: (
-    'clr-blue-01-000':$clr-blue-01-000,
-    'clr-blue-01-100':$clr-blue-01-100,
-    'clr-blue-01-200':$clr-blue-01-200,
-    'clr-blue-01-300':$clr-blue-01-300,
-    'clr-blue-01-400':$clr-blue-01-400,
-    'clr-blue-01-500':$clr-blue-01-500,
-    'clr-blue-01-600':$clr-blue-01-600,
-    'clr-blue-01-700':$clr-blue-01-700,
-    'clr-blue-01-800':$clr-blue-01-800,
-    'clr-blue-01-900':$clr-blue-01-900
-
+     'clr-blue-01-000':$clr-blue-01-000,
+     'clr-blue-01-100':$clr-blue-01-100,
+     'clr-blue-01-200':$clr-blue-01-200,
+     'clr-blue-01-300':$clr-blue-01-300,
+     'clr-blue-01-400':$clr-blue-01-400,
+     'clr-blue-01-500':$clr-blue-01-500,
+     'clr-blue-01-600':$clr-blue-01-600,
+     'clr-blue-01-700':$clr-blue-01-700,
+     'clr-blue-01-800':$clr-blue-01-800,
+     'clr-blue-01-900':$clr-blue-01-900
 );
 
 //neutral colors
@@ -64,17 +86,16 @@ $clr-neutral-800: hsl(204, 0%, 18%);
 $clr-neutral-900: hsl(204, 0%, 10%);
 
 $neutral-colors: (
-  'clr-neutral-000': $clr-neutral-000,
-  'clr-neutral-100': $clr-neutral-100,
-  'clr-neutral-200': $clr-neutral-200,
-  'clr-neutral-300': $clr-neutral-300,
-  'clr-neutral-400': $clr-neutral-400,
-  'clr-neutral-500': $clr-neutral-500,
-  'clr-neutral-600': $clr-neutral-600,
-  'clr-neutral-700': $clr-neutral-700,
-  'clr-neutral-800': $clr-neutral-800,
-  'clr-neutral-900': $clr-neutral-900
-
+     'clr-neutral-000': $clr-neutral-000,
+     'clr-neutral-100': $clr-neutral-100,
+     'clr-neutral-200': $clr-neutral-200,
+     'clr-neutral-300': $clr-neutral-300,
+     'clr-neutral-400': $clr-neutral-400,
+     'clr-neutral-500': $clr-neutral-500,
+     'clr-neutral-600': $clr-neutral-600,
+     'clr-neutral-700': $clr-neutral-700,
+     'clr-neutral-800': $clr-neutral-800,
+     'clr-neutral-900': $clr-neutral-900
 );
 
 
@@ -91,22 +112,21 @@ $clr-augmented-800: hsl(204, 25%, 18%);
 $clr-augmented-900: hsl(204, 30%, 10%);
 
 $augmented-colors: (
-    'clr-augmented-000': $clr-augmented-000,
-    'clr-augmented-100': $clr-augmented-100,
-    'clr-augmented-200': $clr-augmented-200,
-    'clr-augmented-300': $clr-augmented-300,
-    'clr-augmented-400': $clr-augmented-400,
-    'clr-augmented-500': $clr-augmented-500,
-    'clr-augmented-600': $clr-augmented-600,
-    'clr-augmented-700': $clr-augmented-700,
-    'clr-augmented-800': $clr-augmented-800,
-    'clr-augmented-900': $clr-augmented-900,
-
+     'clr-augmented-000': $clr-augmented-000,
+     'clr-augmented-100': $clr-augmented-100,
+     'clr-augmented-200': $clr-augmented-200,
+     'clr-augmented-300': $clr-augmented-300,
+     'clr-augmented-400': $clr-augmented-400,
+     'clr-augmented-500': $clr-augmented-500,
+     'clr-augmented-600': $clr-augmented-600,
+     'clr-augmented-700': $clr-augmented-700,
+     'clr-augmented-800': $clr-augmented-800,
+     'clr-augmented-900': $clr-augmented-900,
 );
 
 //assigned colors
 $assigned-colors: (
-    'clr-primary-color': $clr-blue-01-900,
+     'clr-primary-color': $clr-blue-01-900,
      'clr-background-color': $clr-blue-01-000,
      'clr-textfield-inactive': $clr-neutral-300,
      'clr-textfield-active': $clr-augmented-200,
@@ -115,7 +135,6 @@ $assigned-colors: (
      'clr-text-dark': $clr-augmented-800,
      'clr-text-medium': $clr-augmented-700,
      'clr-text-light': $clr-augmented-600
-
 );
 
 //**************** timing functions ****************//
@@ -162,5 +181,4 @@ $box-shadows: (
      'bs-box-shadow-600': $bs-box-shadow-600,
      'bs-box-shadow-700': $bs-box-shadow-700,
      'bs-box-shadow-800': $bs-box-shadow-800
-
 );

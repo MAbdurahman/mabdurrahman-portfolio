@@ -101,6 +101,14 @@ $default-max-bp: 960px;
   @return map-get(var.$font-weights, $font-weight);
 }
 
+@function set-text-size($text-size) {
+  @if not map-has-key(var.$text-sizes, $text-size) {
+    @error 'No text size `#{$text-size}` defined in $text-sizes!  '
+    + 'Text size should be one of the following:  `#{map-keys(var.$text-sizes)}`.';
+  }
+  @return map-get(var.$text-sizes, $text-size);
+}
+
 @function set-timing-function($timing-function-name) {
   @if not map-has-key(var.$timing-functions, $timing-function-name) {
     @error 'No timing-function named `#{$timing-function-name}` in $timing-functions!  '
