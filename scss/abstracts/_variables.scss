@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 
 /*=============================================
           _variables.scss
@@ -6,10 +7,12 @@
 //**************** fonts ****************//
 $ff-primary-font: 'Lora', serif;
 $ff-secondary-font: 'Montserrat', sans-serif;
+$ff-monospace-font: 'Noto Sans Mono', monospace;
 
 $font-families: (
      "ff-body-font": $ff-secondary-font,
-     "ff-head-font": $ff-primary-font
+     "ff-head-font": $ff-primary-font,
+     'ff-mono-font': $ff-monospace-font
 );
 
 $fw-font-weight-light: 300;
@@ -49,16 +52,16 @@ $text-sizes: (
 
 /**************** colors ****************/
 //primary colors
-$clr-blue-01-000: hsl(204, 51%, 94%);
-$clr-blue-01-100: hsl(204, 51%, 89%);
-$clr-blue-01-200: hsl(204, 51%, 78%);
-$clr-blue-01-300: hsl(204, 51%, 67%);
-$clr-blue-01-400: hsl(204, 51%, 55%);
-$clr-blue-01-500: hsl(204, 64%, 44%);
-$clr-blue-01-600: hsl(204, 64%, 39%);
-$clr-blue-01-700: hsl(204, 64%, 34%);
-$clr-blue-01-800: hsl(204, 64%, 28%);
-$clr-blue-01-900: hsl(204, 64%, 23%);
+$clr-blue-01-000: hsl(210, 51%, 94%);
+$clr-blue-01-100: hsl(210, 51%, 89%);
+$clr-blue-01-200: hsl(210, 51%, 78%);
+$clr-blue-01-300: hsl(210, 51%, 67%);
+$clr-blue-01-400: hsl(210, 51%, 55%);
+$clr-blue-01-500: hsl(210, 64%, 44%);
+$clr-blue-01-600: hsl(210, 64%, 39%);
+$clr-blue-01-700: hsl(210, 64%, 34%);
+$clr-blue-01-800: hsl(210, 64%, 28%);
+$clr-blue-01-900: hsl(210, 64%, 23%);
 
 $primary-colors: (
      'clr-blue-01-000':$clr-blue-01-000,
@@ -74,16 +77,16 @@ $primary-colors: (
 );
 
 //neutral colors
-$clr-neutral-000: hsl(204, 0%, 98%);
-$clr-neutral-100: hsl(204, 0%, 88%);
-$clr-neutral-200: hsl(204, 0%, 78%);
-$clr-neutral-300: hsl(204, 0%, 68%);
-$clr-neutral-400: hsl(204, 0%, 58%);
-$clr-neutral-500: hsl(204, 0%, 48%);
-$clr-neutral-600: hsl(204, 0%, 38%);
-$clr-neutral-700: hsl(204, 0%, 28%);
-$clr-neutral-800: hsl(204, 0%, 18%);
-$clr-neutral-900: hsl(204, 0%, 10%);
+$clr-neutral-000: hsl(210, 0%, 98%);
+$clr-neutral-100: hsl(210, 0%, 88%);
+$clr-neutral-200: hsl(210, 0%, 78%);
+$clr-neutral-300: hsl(210, 0%, 68%);
+$clr-neutral-400: hsl(210, 0%, 58%);
+$clr-neutral-500: hsl(210, 0%, 48%);
+$clr-neutral-600: hsl(210, 0%, 38%);
+$clr-neutral-700: hsl(210, 0%, 28%);
+$clr-neutral-800: hsl(210, 0%, 18%);
+$clr-neutral-900: hsl(210, 0%, 10%);
 
 $neutral-colors: (
      'clr-neutral-000': $clr-neutral-000,
@@ -100,16 +103,16 @@ $neutral-colors: (
 
 
 //augmented colors
-$clr-augmented-000: hsl(204, 12%, 98%);
-$clr-augmented-100: hsl(204, 12%, 88%);
-$clr-augmented-200: hsl(204, 12%, 78%);
-$clr-augmented-300: hsl(204, 15%, 68%);
-$clr-augmented-400: hsl(204, 15%, 58%);
-$clr-augmented-500: hsl(204, 15%, 48%);
-$clr-augmented-600: hsl(204, 15%, 38%);
-$clr-augmented-700: hsl(204, 20%, 28%);
-$clr-augmented-800: hsl(204, 25%, 18%);
-$clr-augmented-900: hsl(204, 30%, 10%);
+$clr-augmented-000: hsl(210, 12%, 98%);
+$clr-augmented-100: hsl(210, 12%, 88%);
+$clr-augmented-200: hsl(210, 12%, 78%);
+$clr-augmented-300: hsl(210, 15%, 68%);
+$clr-augmented-400: hsl(210, 15%, 58%);
+$clr-augmented-500: hsl(210, 15%, 48%);
+$clr-augmented-600: hsl(210, 15%, 38%);
+$clr-augmented-700: hsl(210, 20%, 28%);
+$clr-augmented-800: hsl(210, 25%, 18%);
+$clr-augmented-900: hsl(210, 30%, 10%);
 
 $augmented-colors: (
      'clr-augmented-000': $clr-augmented-000,

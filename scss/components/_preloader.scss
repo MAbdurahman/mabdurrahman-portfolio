@@ -13,7 +13,7 @@
   height: 100vh;
   z-index: 10000;
   overflow: hidden;
-  background: ab.set-neutral-color(clr-neutral-800);
+  background: ab.$clr-blue-01-900;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -21,8 +21,8 @@
   -webkit-box-pack: center;
   justify-content: center;
 
-&--gif {
-  width: 50%;
+&__gif {
+  width: 25%;
   align-self: center;
 }
 
