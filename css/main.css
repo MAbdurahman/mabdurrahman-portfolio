@@ -1,12 +1,11 @@
 /*=============================================
           main.scss
 ================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap");
 /*=============================================
        _reset.scss
 ================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC:ital@0;1&family=Alegreya:ital@0;1&family=Fira+Code:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1448,9 +1447,15 @@ input[type=number] {
 }
 .preloader__gif {
   width: 25%;
-  align-self: center;
+  /*align-self: center;*/
 }
 
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+@media (max-width: 767px) {
+  .preloader__gif {
+    width: 50%;
+  }
+}
 /*=============================================
           components/_header.scss
 ================================================*/
