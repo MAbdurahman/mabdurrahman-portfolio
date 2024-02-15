@@ -2,6 +2,7 @@
           components/_navigation
 ================================================*/
 @use './../abstracts/variables' as var;
+
 .navigation__button {
   position: fixed;
   top: 3%;
@@ -23,7 +24,7 @@
     position: absolute;
     top: 0;
     display: block;
-    background-color: var.$clr-neutral-500;
+    background-color: var.$clr-neutral-400;
     width: 100%;
     height: 3px;
     cursor: pointer;
@@ -53,20 +54,30 @@
       margin-right: auto;
     }
   }
+
   &.active .navigation__button-bar:nth-child(1) {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 48%;
   }
+
   &.active .navigation__button-bar:nth-child(2) {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     opacity: 0;
   }
+
   &.active .navigation__button-bar:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 48%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation__button {
+    top: 3%;
+    right: 5%;
   }
 }
 
@@ -76,6 +87,7 @@
   right: 0;
   height: 100%;
   width: 0;
+
   background: var.$clr-blue-01-800;
   z-index: 1000;
   -webkit-transition: all 0.275s linear;
@@ -87,24 +99,33 @@
 }
 
 .navigation__background--inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-20%, -50%);
-  transform: translate(-20%, -50%);
+  /* position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-20%, -30%);
+   transform: translate(-20%, -30%);*/
+  position: relative;
+  display: grid;
+  place-self: center;
+  height: 100%;
   width: 50%;
 
 }
 
 .navigation__list {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  /*top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  place-content: center;
   list-style: none;
-  text-align: left;
-  width: 100%;
+  text-align: center;
+  /*width: 100%;*/
+
 }
 
 .navigation__item {
@@ -118,7 +139,7 @@
 }
 
 .navigation__list.active .navigation__item {
-  margin: 1rem;
+  margin: 0.5rem;
   -webkit-animation-name: animate-move-from-right;
   animation-name: animate-move-from-right;
   -webkit-animation-duration: 0.4s;
