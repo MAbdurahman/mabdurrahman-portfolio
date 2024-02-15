@@ -11,9 +11,8 @@
   background-color: transparent;
   cursor: pointer;
   z-index: 9999;
-
-  -webkit-transition: -webkit-transform 0.35s var.$tf-timing-function-smooth;
-  transition: transform 0.35s var.$tf-timing-function-smooth;
+  -webkit-transition: -webkit-transform 0.35s var.$tf-timing-function-ease-in-out;
+  transition: transform 0.35s var.$tf-timing-function-ease-in-out;
 
   &:hover {
     -webkit-transform: scale(1.1);
@@ -24,16 +23,14 @@
     position: absolute;
     top: 0;
     display: block;
-    background-color: #a9a9a9;
     background-color: var.$clr-neutral-500;
     width: 100%;
     height: 3px;
     cursor: pointer;
     border-radius: 8em;
     margin: 0 auto;
-
-    -webkit-transition: all 0.35s var.$tf-timing-function-smooth;
-    transition: all 0.35s var.$tf-timing-function-smooth;
+    -webkit-transition: all 0.35s var.$tf-timing-function-ease-in-out;
+    transition: all 0.35s var.$tf-timing-function-ease-in-out;
 
     &:nth-child(1) {
       top: 25%;
@@ -63,7 +60,7 @@
   }
   &.active .navigation__button-bar:nth-child(2) {
     -webkit-transform: translateX(-100%);
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   &.active .navigation__button-bar:nth-child(3) {
@@ -79,7 +76,7 @@
   right: 0;
   height: 100%;
   width: 0;
-  background: var.$clr-blue-01-900;
+  background: var.$clr-blue-01-800;
   z-index: 1000;
   -webkit-transition: all 0.275s linear;
   transition: all 0.275s linear;
@@ -111,10 +108,10 @@
 
 .navigation__item {
   opacity: 0;
-  -webkit-transition: all 0.35ms var.$tf-timing-function-smooth;
-  transition: all 0.35ms var.$tf-timing-function-smooth;
-  -webkit-transition: all .35ms var.$tf-timing-function-smooth;
-  transition: all .35s var.$tf-timing-function-smooth;
+  -webkit-transition: all 0.35ms var.$tf-timing-function-basic-01;
+  transition: all 0.35ms var.$tf-timing-function-basic-01;
+  -webkit-transition: all .35ms var.$tf-timing-function-basic-01;
+  transition: all .35s var.$tf-timing-function-basic-01;
 }
 
 .navigation__list.active .navigation__item {
@@ -168,28 +165,26 @@
 .navigation__link:visited {
   display: inline-block;
   font-family: var.$ff-secondary-font;
-  font-size: 4rem;
-  font-weight: 300;
-  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1em 2em;
   color: var.$clr-neutral-200;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(115deg, transparent 0%, transparent 50%, var.$clr-neutral-400 50%);
-  background-size: 220%;
+  background: linear-gradient(90deg, transparent 0%, transparent 50%, var.$clr-neutral-400 50%, var.$clr-neutral-400 100%);
+  background-size: 200%;
   -webkit-transition: all .4s;
   transition: all .4s;
 }
 
 .navigation__link:link span,
 .navigation__link:visited span {
-  margin-right: 1.5rem;
+  margin-right: 0.25em;
   display: inline-block;
 }
 
 .navigation__link:hover,
 .navigation__link.active {
-  background-position: 100%;
-  color: var.$clr-neutral-200;
-  -webkit-transform: translateX(1rem);
-  transform: translateX(1rem);
+  background-position: -100%;
+  color: var.$clr-blue-01-900;
 }
