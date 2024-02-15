@@ -116,6 +116,60 @@
   letter-spacing: 0.5px;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.grid-container {
+  margin: 3em auto;
+  width: 90%;
+  display: grid;
+  row-gap: 3rem;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-container-12 {
+  /*margin: 3em auto 1em;*/
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  row-gap: 3rem;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-column-1 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+.grid-column-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+.grid-column-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+.grid-column-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
 .u-text-center {
   text-align: center;
 }
