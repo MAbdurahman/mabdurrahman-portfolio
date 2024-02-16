@@ -84,6 +84,56 @@
 
 }
 
+/*If you want the image to scale both up and down on responsiveness,
+set CSS width property to 100% and height to auto*/
+.u-img-responsive-up-and-down {
+  width: 100%;
+  height: auto;
+}
+
+/*If you want the image to scale down if it has to, but never scale up
+to be larger than its original size, use CSS max-width property to 100%
+and height to auto*/
+.u-img-responsive-down {
+  max-width: 100%;
+  height: auto;
+}
+
+/*If you want to restrict the image to a maximum size, set CSS width property
+to 100%, max-width property to a pixel value of choice, and height to auto*/
+.u-img-responsive-up-to {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.u-img-responsive {
+  vertical-align: middle;
+}
+
+.u-img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.42857143;
+  background-color: ab.set-neutral-color(clr-neutral-700);
+  border: 1px solid ab.set-neutral-color(clr-neutral-300);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.u-img-responsive,
+.u-thumbnail > img,
+.u-thumbnail a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;

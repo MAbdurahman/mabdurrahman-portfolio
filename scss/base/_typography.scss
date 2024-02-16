@@ -12,13 +12,13 @@ html {
 body {
   z-index: 1;
   overflow-x: hidden;
-  background: #D1D1D1;
+  line-height: 1.5;
   font-family: var.$ff-secondary-font;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.75;
-  color: #000000;
+  color: var.$clr-augmented-900;
+  background-color: var.$clr-augmented-100;
 }
 
 p {
@@ -26,7 +26,7 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 3rem 0 1.38rem;
+  /*margin: 3rem 0 1.38rem;*/
   font-family: var.$ff-primary-font;
   font-weight: 400;
   line-height: 1.3;
