@@ -1620,6 +1620,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: -1em;
 }
 .header__content-heading--one {
   margin-bottom: 0.5em;
@@ -1642,7 +1643,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -4em;
 }
 .header__content-subheading--one {
   font-family: "Montserrat", sans-serif;
