@@ -1572,6 +1572,9 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+  /*&__content-buttons {
+
+  }*/
 }
 .header__logo-container {
   position: absolute;
@@ -1620,10 +1623,10 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: -1em;
+  margin-bottom: -2.5em;
 }
 .header__content-heading--one {
-  margin-bottom: 0.5em;
+  margin-bottom: -0.125em;
   font-size: 3rem;
   font-weight: 100;
   text-transform: uppercase;
@@ -1643,6 +1646,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
 }
 .header__content-subheading--one {
   font-family: "Montserrat", sans-serif;
@@ -1650,7 +1654,61 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-weight: 400;
   /*text-transform: capitalize;*/
   letter-spacing: 1px;
-  color: hsl(43, 59%, 50%);
+  /*color: hsl(43deg, 59%, 50%);*/
+  color: hsl(210, 0%, 58%);
+}
+.header__button {
+  margin: 0 0.375em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: hsl(210, 0%, 10%);
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(210, 0%, 38%);
+  background-color: hsl(210, 0%, 68%);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(210, 12%, 78%);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(90deg, hsl(210, 15%, 68%) 0%, hsl(210, 15%, 68%) 50%, transparent 50%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.25s ease-out;
+  padding: 12px 48px;
+  border: 1px solid hsl(210, 12%, 78%);
+  border-radius: 3px;
+}
+.header__button:hover, .header__button:focus {
+  cursor: pointer;
+  color: hsl(210, 0%, 78%);
+  background-color: #2e2e2e;
+}
+.header__button:hover, .header__button:focus {
+  cursor: pointer;
+  color: hsl(210, 0%, 78%);
+  background-color: transparent;
+}
+.header__button:hover {
+  background-position: left bottom;
+}
+.header__button:hover, .header__button:focus {
+  color: hsl(210, 64%, 23%);
+  border-color: hsl(210, 15%, 68%);
 }
 
 /*=============================================
@@ -1973,7 +2031,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   display: inline-block;
   padding: 8px 16px;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(210, 0%, 38%);
   background-color: hsl(210, 0%, 68%);
   cursor: pointer;
@@ -1989,7 +2047,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   display: inline-block;
   padding: 8px 16px;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(210, 0%, 38%);
   background-color: hsl(210, 0%, 48%);
   cursor: pointer;
@@ -2013,7 +2071,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   display: inline-block;
   padding: 8px 16px;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(210, 0%, 38%);
   background-color: hsl(210, 0%, 48%);
   cursor: pointer;
@@ -2039,7 +2097,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   display: inline-block;
   padding: 8px 16px;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(210, 0%, 38%);
   background-color: hsl(210, 0%, 48%);
   cursor: pointer;
@@ -2065,7 +2123,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   display: inline-block;
   padding: 8px 16px;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   color: hsl(210, 0%, 68%);
   background-color: transparent;
   cursor: pointer;
