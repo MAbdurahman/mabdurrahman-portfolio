@@ -1,3 +1,7 @@
 /*=============================================
           pages/_index.scss
 ================================================*/
+@forward 'about';
+@forward 'skills';
+@forward 'portfolio';
+@forward 'contact';
