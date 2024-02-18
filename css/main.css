@@ -2219,7 +2219,86 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   width: 100%;
   height: 90vh;
   z-index: 3;
-  background-color: hsl(210, 64%, 28%);
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.25em;
+  background-color: hsl(210, 0%, 88%);
+}
+.about__section--image {
+  position: relative;
+  width: 40%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 2em;
+  background-color: hsl(210, 0%, 88%);
+}
+.about__section--image .about__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-height: 600px;
+  background-color: hsl(210, 15%, 68%);
+  border: 3px solid hsl(210, 15%, 58%);
+  border-radius: 3px;
+  box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+}
+.about__section--info {
+  width: 60%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+  padding-top: 13em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: hsl(210, 0%, 88%);
+}
+.about__section--info .about__info--container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.5em;
+  /*font-family: 'Lora', serif;
+  font-weight: ab.$fw-font-weight-medium;
+  color: ab.$clr-augmented-900;*/
+  /*text-transform: capitalize;*/
+  /*letter-spacing: 0.5rem;*/
+}
+.about__section--info .about__info--title {
+  margin-bottom: 0.5em;
+  font-family: "Lora", serif;
+  font-size: 2.441rem;
+  font-weight: 500;
+  color: hsl(210, 25%, 18%);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.about__section--info .about__info--text {
+  font-size: 1.125rem;
+  color: hsl(210, 25%, 18%);
+  line-height: 1.5;
+  hyphens: auto;
+  /*margin: .5em 0;*/
+}
+
+/*=============================================
+          base/_animations.scss
+================================================*/
+/*=============================================
+         layouts/_main.scss
+================================================*/
+.main {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: fit-content;
+  background-color: hsl(210, 0%, 88%);
 }
 
 /*# sourceMappingURL=main.css.map */

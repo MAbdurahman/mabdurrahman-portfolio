@@ -7,6 +7,77 @@
   width: 100%;
   height: 90vh;
   z-index: 3;
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.25em;
 
-  background-color: ab.$clr-blue-01-800;
+  background-color: ab.$clr-neutral-100;
+  &--image {
+    position: relative;
+    width: 40%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    padding-top: 2em;
+    background-color: ab.$clr-neutral-100;
+
+
+    .about__image {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-height: 600px;
+      background-color: ab.$clr-augmented-300;
+      border: 3px solid ab.$clr-augmented-400;
+      border-radius: 3px;
+      box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+
+    }
+  }
+  &--info {
+    width: 60%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+    padding-top: 13em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: ab.$clr-neutral-100;
+
+    .about__info--container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 100%;
+      height: 100%;
+
+      margin-bottom: 0.5em;
+      /*font-family: 'Lora', serif;
+      font-weight: ab.$fw-font-weight-medium;
+      color: ab.$clr-augmented-900;*/
+      /*text-transform: capitalize;*/
+
+      /*letter-spacing: 0.5rem;*/
+    }
+    .about__info--title {
+      margin-bottom: .5em;
+      font-family: ab.$ff-primary-font;
+      font-size: 2.441rem;
+      font-weight: ab.$fw-font-weight-medium;
+      color: ab.$clr-augmented-800;
+      text-transform: uppercase;
+      text-align: left;
+      letter-spacing: 1px;
+    }
+    .about__info--text {
+      font-size: 1.125rem;
+      color: ab.$clr-augmented-800;
+      line-height: 1.5;
+      hyphens: auto;
+      /*margin: .5em 0;*/
+    }
+  }
 }
