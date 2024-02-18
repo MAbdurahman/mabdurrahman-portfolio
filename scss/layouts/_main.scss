@@ -1,0 +1,12 @@
+/*=============================================
+         layouts/_main.scss
+================================================*/
+@use './../abstracts' as ab;
+.main {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: fit-content;
+  background-color: ab.$clr-neutral-700;
+
+}

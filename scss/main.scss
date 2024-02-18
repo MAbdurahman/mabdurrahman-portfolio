@@ -20,3 +20,12 @@
 @use './components/buttons';
 @use './components/anchors';
 @use './components/cards';
+
+//pages styles
+@use './pages/about';
+@use './pages/skills';
+@use './pages/portfolio';
+@use './pages/contact';
+
+//layout styles
+@use './layouts/footer';

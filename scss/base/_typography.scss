@@ -10,15 +10,17 @@ html {
 /*16px*/
 
 body {
+  position: relative;
   z-index: 1;
   overflow-x: hidden;
-  line-height: 1.5;
   font-family: var.$ff-secondary-font;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
   color: var.$clr-augmented-900;
   background-color: var.$clr-augmented-100;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -104,4 +106,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
   font-family: var.$ff-monospace-font;
+}
+
+section {
+
 }

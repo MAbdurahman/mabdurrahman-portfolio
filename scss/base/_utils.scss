@@ -4,7 +4,7 @@
 @use './../abstracts' as ab;
 @use './animations' as anim;
 
-.ma-container-fluid {
+.utils-container-fluid {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -12,7 +12,7 @@
   padding-right: 16px;
 }
 
-.ma-container {
+.utils-container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -21,31 +21,31 @@
 }
 
 @media (min-width: 576px) {
-  .ma-container {
+  .utils-container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .ma-container {
+  .utils-container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .ma-container {
+  .utils-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .ma-container {
+  .utils-container {
     max-width: 1140px;
   }
 }
 
 @media (min-width: 1400px) {
-  .ma-container {
+  .utils-container {
     max-width: 1320px;
   }
 }
@@ -57,11 +57,11 @@
   padding-top: 1.25em;
 }
 
-.img-responsive {
+.utils-img-responsive {
   vertical-align: middle;
 }
 
-.img-thumbnail {
+.utils-img-thumbnail {
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -75,9 +75,9 @@
   -o-border-radius: 4px;
 }
 
-.img-responsive,
-.thumbnail>img,
-.thumbnail a>img {
+.utils-img-responsive,
+.utils-thumbnail > img,
+.utils-thumbnail a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -86,7 +86,7 @@
 
 /*If you want the image to scale both up and down on responsiveness,
 set CSS width property to 100% and height to auto*/
-.u-img-responsive-up-and-down {
+.utils-img-responsive-up-and-down {
   width: 100%;
   height: auto;
 }
@@ -94,24 +94,24 @@ set CSS width property to 100% and height to auto*/
 /*If you want the image to scale down if it has to, but never scale up
 to be larger than its original size, use CSS max-width property to 100%
 and height to auto*/
-.u-img-responsive-down {
+.utils-img-responsive-down {
   max-width: 100%;
   height: auto;
 }
 
 /*If you want to restrict the image to a maximum size, set CSS width property
 to 100%, max-width property to a pixel value of choice, and height to auto*/
-.u-img-responsive-up-to {
+.utils-img-responsive-up-to {
   width: 100%;
   max-width: 400px;
   height: auto;
 }
 
-.u-img-responsive {
+.utils-img-responsive {
   vertical-align: middle;
 }
 
-.u-img-thumbnail {
+.utils-img-thumbnail {
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -125,9 +125,9 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   -o-border-radius: 4px;
 }
 
-.u-img-responsive,
-.u-thumbnail > img,
-.u-thumbnail a > img {
+.utils-img-responsive,
+.utils-thumbnail > img,
+.utils-thumbnail a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -144,7 +144,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   -ms-overflow-style: none;
   scrollbar-width: none; /* Firefox */
 }
-
 
 .section {
   width: 100vw;
@@ -178,7 +177,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 
 .grid-container {
-  margin: 3em auto;
+  margin: 0 auto;
   width: 90%;
   display: grid;
   row-gap: 3rem;
@@ -187,7 +186,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 
 .grid-container-12 {
-  /*margin: 3em auto 1em;*/
   margin: 0 auto;
   width: 90%;
   display: grid;
@@ -220,17 +218,26 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   column-gap: 2rem;
 }
 
-.u-text-center {
+.utils-text-center {
   text-align: center;
 }
-.u-margin-bottom-small {
+
+.utils-margin-bottom-small {
   margin-bottom: 1.5em;
 }
-.u-margin-bottom-medium {
+
+.utils-margin-bottom-medium {
   margin-bottom: 4em;
 }
-.u-margin-bottom-large {
+
+.utils-margin-bottom-large {
   margin-bottom: 8em;
+}
+
+.section {
+  width: 100vw;
+  height: fit-content;
+
 }
 
 .wrapper {
@@ -258,7 +265,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 }
 
-
 [class^='imghvr-'], [class*=' imghvr-'], [class^='imghvr-']:before,
 [class^='imghvr-']:after, [class*=' imghvr-']:before, [class*=' imghvr-']:after,
 [class^='imghvr-'] *, [class*=' imghvr-'] *, [class^='imghvr-'] *:before,
@@ -269,13 +275,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 }
 
-
 [class^='imghvr-'], [class*=' imghvr-'] {
   position: relative;
   display: inline-block;
   margin: 0px;
   max-width: 100%;
-
   background-color: ab.set-neutral-color(clr-neutral-700);
   color: #fff;
   overflow: hidden;
@@ -289,28 +293,26 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
   background-color: ab.set-neutral-color(clr-neutral-700);
   position: absolute;
-  padding: 30px;
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 30px;
   color: #ffffff !important;
 }
 
-
 [class^='imghvr-shutter-out-']:before, [class*=' imghvr-shutter-out-']:before {
+  content: '';
+  position: absolute;
   background: #135796;
   background: ab.set-neutral-color(clr-neutral-700);
-  position: absolute;
-  content: '';
   -webkit-transition-delay: 0.105s;
   transition-delay: 0.105s;
 }
 
-  /*=============================================
-            animations
-  ================================================*/
+/*=============================================
+          animations
+================================================*/
 .animate-move-from-bottom {
   @include anim.animation(animate-move-from-bottom, 1.5s, 4s);
 
