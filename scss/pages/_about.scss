@@ -67,15 +67,17 @@
       font-family: ab.$ff-primary-font;
       font-size: 2.441rem;
       font-weight: ab.$fw-font-weight-medium;
-      color: ab.$clr-augmented-800;
+      color: ab.$clr-augmented-900;
       text-transform: uppercase;
       text-align: left;
       letter-spacing: 1px;
     }
     .about__info--text {
       font-size: 1.125rem;
-      color: ab.$clr-augmented-800;
+      font-weight: ab.$fw-font-weight-normal;
+      color: ab.$clr-augmented-900;
       line-height: 1.5;
+      letter-spacing: 1px;
       hyphens: auto;
       /*margin: .5em 0;*/
     }

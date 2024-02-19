@@ -2274,15 +2274,17 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-family: "Lora", serif;
   font-size: 2.441rem;
   font-weight: 500;
-  color: hsl(210, 25%, 18%);
+  color: hsl(210, 30%, 10%);
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 1px;
 }
 .about__section--info .about__info--text {
   font-size: 1.125rem;
-  color: hsl(210, 25%, 18%);
+  font-weight: 400;
+  color: hsl(210, 30%, 10%);
   line-height: 1.5;
+  letter-spacing: 1px;
   hyphens: auto;
   /*margin: .5em 0;*/
 }
