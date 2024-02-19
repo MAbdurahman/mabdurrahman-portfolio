@@ -2217,7 +2217,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .about__section {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   z-index: 3;
   display: flex;
   flex-direction: row;
@@ -2250,7 +2250,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   flex-direction: column;
   justify-content: center;
   margin-left: 1em;
-  padding-top: 13em;
+  padding-top: 17em;
   padding-left: 1em;
   padding-right: 1em;
   background-color: hsl(210, 0%, 88%);
@@ -2287,6 +2287,49 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   letter-spacing: 1px;
   hyphens: auto;
   /*margin: .5em 0;*/
+}
+.about__section .about__info--links {
+  /*display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  margin-bottom: 1.875em;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.about__section .about__info--single-link {
+  padding: 16px 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  border: 1px solid hsl(210, 0%, 18%);
+  outline: none;
+  color: hsl(210, 0%, 18%);
+  background-color: hsl(210, 0%, 68%);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(90deg, hsl(210, 64%, 39%) 0%, hsl(210, 64%, 39%) 50%, hsl(210, 64%, 23%) 50%, hsl(210, 64%, 23%) 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.25s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(210, 51%, 78%);
+  border-radius: 3px;
+}
+.about__section .about__info--single-link:hover, .about__section .about__info--single-link:focus {
+  cursor: pointer;
+  color: hsl(210, 0%, 78%);
+}
+.about__section .about__info--single-link:hover {
+  background-position: left bottom;
+}
+.about__section .about__info--single-link:hover, .about__section .about__info--single-link:focus {
+  color: hsl(210, 51%, 94%);
+}
+.about__section .about__info--single-link:not(:last-child) {
+  margin-right: 1.5em;
 }
 
 /*=============================================
