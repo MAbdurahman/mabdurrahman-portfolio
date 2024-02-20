@@ -375,6 +375,7 @@ template {
 /**************** colors ****************/
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 /*16px*/
@@ -389,7 +390,6 @@ body {
   line-height: 1.5;
   color: hsl(210, 30%, 10%);
   background-color: hsl(210, 12%, 88%);
-  scroll-behavior: smooth;
 }
 
 p {
