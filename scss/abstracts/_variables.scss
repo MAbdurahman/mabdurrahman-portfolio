@@ -28,6 +28,48 @@ $font-weights: (
 );
 
 /**************** type scale ****************/
+$fs-font-size-001: 0.5rem;
+$fs-font-size-010: 0.75rem;
+$fs-font-size-100: 1rem;
+$fs-font-size-101: 1.125rem;
+$fs-font-size-110: 1.250rem;
+$fs-font-size-200: 1.50rem;
+$fs-font-size-201: 1.75rem;
+$fs-font-size-210: 2rem;
+$fs-font-size-300: 2.5rem;
+$fs-font-size-301: 2.75rem;
+$fs-font-size-310: 3rem;
+$fs-font-size-400: 3.5rem;
+
+$font-sizes: (
+  'fs-font-size-001': $fs-font-size-001,
+  'fs-font-size-010': $fs-font-size-010,
+  'fs-font-size-100': $fs-font-size-100,
+  'fs-font-size-101': $fs-font-size-101,
+  'fs-font-size-110': $fs-font-size-110,
+  'fs-font-size-200': $fs-font-size-200,
+  'fs-font-size-201': $fs-font-size-201,
+  'fs-font-size-210': $fs-font-size-210,
+  'fs-font-size-300': $fs-font-size-300,
+  'fs-font-size-301': $fs-font-size-301,
+  'fs-font-size-310': $fs-font-size-310,
+  'fs-font-size-400': $fs-font-size-400,
+);
+
+$ffs-fluid-font-size-000: clamp(075rem, 1.5vw, 1rem);
+$ffs-fluid-font-size-100: clamp(1rem, 2vw, 1.5rem);
+$ffs-fluid-font-size-200: clamp(1.5rem, 3vw, 2.5rem);
+$ffs-fluid-font-size-300: clamp(2rem, 4vw, 3.5rem);
+$ffs-fluid-font-size-400: clamp(2.5rem, 5vw, 4rem);
+
+$fluid-font-sizes: (
+  'ffs-font-size-000': $ffs-fluid-font-size-000,
+  'ffs-font-size-100': $ffs-fluid-font-size-100,
+  'ffs-font-size-200': $ffs-fluid-font-size-200,
+  'ffs-font-size-300': $ffs-fluid-font-size-300,
+  'ffs-font-size-400': $ffs-fluid-font-size-400
+);
+
 $ts-text-size-xs: 0.5rem;
 $ts-text-size-sm: 0.71rem;
 $ts-text-size-md: 1rem;

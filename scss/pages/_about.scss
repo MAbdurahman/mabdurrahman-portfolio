@@ -30,7 +30,8 @@
       background-color: ab.$clr-augmented-300;
       border: 3px solid ab.$clr-augmented-400;
       border-radius: 3px;
-      box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+      /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
+      box-shadow: ab.set-box-shadow(bs-box-shadow-800);
 
     }
   }
@@ -42,6 +43,7 @@
     justify-content: center;
     margin-left: 1em;
     padding-top: 17em;
+
     padding-left: 1em;
     padding-right: 1em;
     background-color: ab.$clr-neutral-100;
@@ -111,6 +113,11 @@
   }
 
 }
-.btn-general .btn-blue {
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1539px) {
+  .about__section--info {
+    padding-top: calc(72px + 1.5626vw);
+  }
 
 }
