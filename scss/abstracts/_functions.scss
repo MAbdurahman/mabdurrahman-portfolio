@@ -124,3 +124,19 @@ $default-max-bp: 960px;
   }
   @return map-get(var.$box-shadows, $box-shadow-name);
 }
+
+@function set-font-size($font-size-name) {
+  @if not map-has-key(var.$font-sizes, $font-size-name) {
+    @error 'No font-size named `#{$font-size-name}` defined in $font-sizes! '
+     + 'Font-size name should be one of the following:  `#{map-keys(var.$font-sizes)}`.'
+  }
+  @return map-get(var.$font-sizes, $font-size-name);
+}
+
+@function set-font-size($fluid-font-size-name) {
+  @if not map-has-key(var.$fluid-font-sizes, $fluid-font-size-name) {
+    @error 'No font-size named `#{$fluid-font-size-name}` defined in $fluid-font-sizes! '
+     + 'Fluid-font-size name should be one of the following:  `#{map-keys(var.$fluid-font-sizes)}`.'
+  }
+  @return map-get(var.$fluid-font-sizes, $fluid-font-size-name);
+}

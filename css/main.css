@@ -2241,7 +2241,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-color: hsl(210, 15%, 68%);
   border: 3px solid hsl(210, 15%, 58%);
   border-radius: 3px;
-  box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .about__section--info {
   width: 60%;
@@ -2332,6 +2333,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   margin-right: 1.5em;
 }
 
+@media (max-width: 1539px) {
+  .about__section--info {
+    padding-top: calc(72px + 1.5626vw);
+  }
+}
 /*=============================================
           base/_animations.scss
 ================================================*/
