@@ -1722,6 +1722,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .header__button-arrow {
   position: relative;
+  bottom: -20vh;
   font-size: 2rem;
   color: hsl(210, 15%, 68%);
   cursor: pointer;
@@ -2226,6 +2227,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   row-gap: 0.25em;
   background-color: hsl(210, 0%, 88%);
 }
+@media only screen and (max-width: 1370px) {
+  .about__section {
+    column-gap: 1.5em;
+  }
+}
 .about__section--image {
   position: relative;
   width: 32%;
@@ -2243,8 +2249,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-color: hsl(210, 15%, 68%);
   border: 3px solid hsl(210, 15%, 58%);
   border-radius: 5px;
-  /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
-  /*box-shadow: ab.set-box-shadow(bs-box-shadow-800);*/
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.15), 5px 3px 21px -1px rgba(34, 40, 45, 0.15);
 }
 .about__section--info {
@@ -2263,7 +2267,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   height: 100%;
   margin-bottom: 0.5em;
@@ -2337,11 +2341,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   margin-right: 1.5em;
 }
 
-@media (max-width: 1539px) {
-  .about__section--info {
-    padding-top: calc(72px + 1.5626vw);
-  }
-}
 /*=============================================
           base/_animations.scss
 ================================================*/
