@@ -130,6 +130,7 @@
 .navigation__item {
   border: 0;
   border: none;
+  border-radius: 5px;
   opacity: 0;
   -webkit-transition: all 0.35ms var.$tf-timing-function-basic-01;
   transition: all 0.35ms var.$tf-timing-function-basic-01;
@@ -198,6 +199,7 @@
   background-size: 200%;
   border: 0;
   border: none;
+  border-radius: 5px;
   -webkit-transition: all .4s;
   transition: all .4s;
 }

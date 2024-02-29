@@ -117,12 +117,36 @@ $default-max-bp: 960px;
   @return map-get(var.$timing-functions, $timing-function-name);
 }
 
-@function set-box-shadow($box-shadow-name) {
-  @if not map-has-key(var.$box-shadows, $box-shadow-name) {
-    @error 'No box-shadow named `#{$box-shadow-name}` defined in $box-shadows! '
-     + 'Box shadow name should be one of the following:  `#{map-keys(var.$box-shadows)}`.'
+@function set-border-radius($border-radius-name) {
+  @if not map-has-key(var.$border-radius, $border-radius-name) {
+    @error 'No border-radius named `#{$border-radius-name}` defined in $border-radius! '
+     + 'Border-radius-name should be one of the following:  `#{map-keys(var.$border-radius)}`.'
   }
-  @return map-get(var.$box-shadows, $box-shadow-name);
+  @return map-get(var.$border-radius, $border-radius-name);
+}
+
+@function set-box-shadow-bottom($box-shadow-bottom-name) {
+  @if not map-has-key(var.$box-shadow-bottom, $box-shadow-bottom-name) {
+    @error 'No box-shadow-bottom named `#{$box-shadow-bottom-name}` defined in $box-shadow-bottom! '
+     + 'Box shadow bottom name should be one of the following:  `#{map-keys(var.$box-shadow-bottom)}`.'
+  }
+  @return map-get(var.$box-shadow-bottom, $box-shadow-bottom-name);
+}
+
+@function set-box-shadow-bottom-right($box-shadow-bottom-right-name) {
+  @if not map-has-key(var.$box-shadow-bottom-right, $box-shadow-bottom-right-name) {
+    @error 'No box-shadow-bottom-right named `#{$box-shadow-bottom-right-name}` defined in $box-shadow-bottom-right! '
+     + 'Box-shadow-bottom-right name should be one of the following:  `#{map-keys(var.$box-shadow-bottom-right)}`.'
+  }
+  @return map-get(var.$box-shadow-bottom-right, $box-shadow-bottom-right-name);
+}
+
+@function set-box-shadow-right($box-shadow-right-name) {
+  @if not map-has-key(var.$box-shadow-right, $box-shadow-right-name) {
+    @error 'No box-shadow-bottom named `#{$box-shadow-right-name}` defined in $box-shadow-bottom! '
+     + 'Box shadow bottom name should be one of the following:  `#{map-keys(var.$box-shadow-right)}`.'
+  }
+  @return map-get(var.$box-shadow-right, $box-shadow-right-name);
 }
 
 @function set-font-size($font-size-name) {
@@ -139,4 +163,12 @@ $default-max-bp: 960px;
      + 'Fluid-font-size name should be one of the following:  `#{map-keys(var.$fluid-font-sizes)}`.'
   }
   @return map-get(var.$fluid-font-sizes, $fluid-font-size-name);
+}
+
+@function set-fluid-space($fluid-space-name) {
+  @if not map-has-key(var.$fluid-spaces, $fluid-space-name) {
+    @error 'No fluid-space named `#{$fluid-space-name}` defined in $fluid-spaces! '
+     + 'Fluid-space name should be one of the following:  `#{map-keys(var.$fluid-spaces)}`.'
+  }
+  @return map-get(var.$fluid-spaces, $fluid-space-name);
 }
