@@ -50,3 +50,14 @@ $(function () {
    });
 
 });
+
+/* =========================================
+            Simple-Scroll-Spy
+============================================ */
+window.onload = function () {
+   scrollSpy('#navigation__list', {
+      sectionClass: '.scrollspy',
+      menuActiveTarget: '.navigation__link',
+      offset: 100,
+   });
+};

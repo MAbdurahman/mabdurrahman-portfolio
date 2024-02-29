@@ -130,6 +130,7 @@
 
   &__button-arrow {
     position: relative;
+    bottom: calc((100vh - 80vh)* -1);
     font-size: 2rem;
     color: ab.$clr-augmented-300;
     cursor: pointer;
