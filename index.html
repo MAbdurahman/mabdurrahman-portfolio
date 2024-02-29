@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#about" id="about--link" class="navigation__link">
+                    <a href="#about" class="navigation__link">
                         <span class="navigation__span">
                             <i class="fas fa-user-tie"></i>
                         </span>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">
+                    <a href="#skills" class="navigation__link">
                         <span class="navigation__span">
                             <i class="fas fa-tools"></i>
                         </span>
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">
+                    <a href="#portfolio" class="navigation__link">
                         <span class="navigation__span">
                             <i class="fas fa-images"></i>
                         </span>
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">
+                    <a href="#contact" class="navigation__link">
                         <span class="navigation__span">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -104,14 +104,14 @@
             <h2 class="header__content-subheading--one">Software and Web Developer</h2>
         </div>
         <div class="header__content-buttons">
-            <a href="#about" id="header__button" class="header__button" role="button">View More</a>
-            <a href="#about" id="arrow-down" class="header__button-arrow"><i class="fa fa-chevron-down"></i></a>
+            <a href="#about" id="header__button" class="header__button js-scroll-spy" role="button">View More</a>
+            <a href="#about" id="arrow__down" class="header__button-arrow js-scroll-spy"><i class="fa fa-chevron-down"></i></a>
         </div>
     </div>
 </header>
 <!-- main content -->
 <main class="main">
-    <section id="about" class="js-scroll-spy section">
+    <section id="about" class="section js-scroll-spy">
         <div class="utils-container">
             <div class="about__section">
                 <article class="about__section--image">
@@ -145,12 +145,33 @@
                             <a href="tel:901-424-5525" class="about__info--single-link">
                                 contact me
                             </a>
-                            <a href="mailto:mdbdrrhm@gmail.com" class="about__info--single-link">
+                            <a href="#skills" class="about__info--single-link js-scroll-spy">
                                 learn more
                             </a>
                         </div>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="section js-scroll-spy">
+        <div class="utils-container">
+            <div class="skills__section">
+                <h2 class="skills__section--title">My Skills</h2>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="section js-scroll-spy">
+        <div class="utils-container">
+            <div class="portfolio__section">
+                <h2 class="portfolio__section--title">My Portfolio</h2>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class=" section js-scroll-spy">
+        <div class="utils-container">
+            <div class="contact__section">
+                <h2 class="contact__section--title">Contact Me</h2>
             </div>
         </div>
     </section>
