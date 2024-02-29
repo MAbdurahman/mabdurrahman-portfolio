@@ -2345,6 +2345,72 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
           base/_animations.scss
 ================================================*/
 /*=============================================
+          pages/_skills.scss
+================================================*/
+.skills__section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.25em;
+  background-color: hsl(210, 0%, 88%);
+}
+@media only screen and (max-width: 1370px) {
+  .skills__section {
+    column-gap: 1.5em;
+  }
+}
+
+/*=============================================
+          base/_animations.scss
+================================================*/
+/*=============================================
+          pages/_portfolio.scss
+================================================*/
+.portfolio__section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.25em;
+  background-color: hsl(210, 0%, 88%);
+}
+@media only screen and (max-width: 1370px) {
+  .portfolio__section {
+    column-gap: 1.5em;
+  }
+}
+
+/*=============================================
+          base/_animations.scss
+================================================*/
+/*=============================================
+          pages/_contact.scss
+================================================*/
+.contact__section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.25em;
+  background-color: hsl(210, 0%, 88%);
+}
+@media only screen and (max-width: 1370px) {
+  .contact__section {
+    column-gap: 1.5em;
+  }
+}
+
+/*=============================================
+          base/_animations.scss
+================================================*/
+/*=============================================
          layouts/_main.scss
 ================================================*/
 .main {
