@@ -13,13 +13,49 @@ $(window).on('load', function () {
    $('#preloader__gif, #preloader').fadeOut(5000, function () {});
 
 });
-/*=============================================
-          navigation
-================================================*/
+/*===================================================
+          navigation and scroll-spy
+=====================================================*/
 $(function () {
+   const options = {
+      threshold: 0.8
+   }
+   const observer = new IntersectionObserver(addActiveClass, options);
+   const navigation_links = document.querySelectorAll('.navigation__link');
+   const sections = document.querySelectorAll('.js-scroll-spy');
+
+   sections.forEach(section => {
+      observer.observe(section);
+   })
+
+   /**
+    * @description - remove the active class from the navigation links and add active class to the
+    * current navigation link in the viewport
+    * @param entries - the sections to be observed
+    * @param observer - the IntersectionObserver
+    */
+   function addActiveClass (entries, observer) {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
+            removeActiveClass();
+            current_link.classList.add('active');
+         }
+      })
+   }
+
+   /**
+    * @description - removes active class from navigation links
+    */
+   function removeActiveClass () {
+      navigation_links.forEach(navigation_link => {
+         navigation_link.classList.remove('active');
+      })
+   }
+
    /**
     * @description - toogle the active class for the navigation_button, navigation_button-bars,
-    * navigation_background, navigation_list
+    * navigation_background, and navigation_list
     */
    function toggleNavigation () {
       $('.navigation__button').toggleClass('active');
@@ -48,87 +84,8 @@ $(function () {
       closeNavigation();
    });
 
-
-   //smooth scroll from w3schools
-   /*$('.navigation__link, .heading__link, #header__button, #arrow__down').on('click', function (event) {
-         if (this.hash !== '') {
-            event.preventDefault();
-
-            // Store hash
-            let hash = this.hash;
-
-            $('html, body').animate(
-               {
-                  scrollTop: $(hash).offset().top,
-               },
-               1500,
-               function () {
-                  window.location.hash = hash;
-               }
-            );
-         }
-      }
-   );
-*/
-   //Add active class to the current navigation__link, highlight it, and remove from previous active link
-   let list = document.getElementById('navigation__list');
-   console.log(list)
-   let links = list.getElementsByClassName('navigation__link');
-   console.log(links)
-   for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', function () {
-         let current = list.getElementsByClassName('active');
-         current[0].className = current[0].className.replace(' active', ' ');
-         this.className += ' active';
-      });
-   }
-
-   //Add active class to the heading__button, highlight it, and remove from previous active link
-   let button = document.getElementById('header__button');
-   let link = document.querySelector('a.navigation__link');
-   button.addEventListener('click', function () {
-      let current = list.getElementsByClassName('active');
-      current[0].className = current[0].className.replace(' active', ' ');
-      link.className += ' active';
-   });
-
-   //Add active class to the arrow-down, highlight it, and remove from previous active link
-   let arrow = document.getElementById('arrow__down');
-   // let link = document.getElementById('about--link');
-   arrow.addEventListener('click', function () {
-      let current = list.getElementsByClassName('active');
-      current[0].className = current[0].className.replace(' active', ' ');
-      link.className += ' active';
-   });
-
 });
 
-/* =========================================
-            Simple-Scroll-Spy
-============================================ */
-/*
-window.onload = function () {
-   scrollSpy('#navigation__list', {
-      sectionClass: '.scrollspy',
-      menuActiveTarget: '.navigation__link',
-      offset: 100,
-   });
-};*/
-
-const sections = document.querySelectorAll('section');
-const listLinks = document.querySelectorAll('.navbar__list_link');
-window.addEventListener('scroll', () => {
-   sections.forEach(section => {
-      let top = window.scrollY;
-      let offset = section.offsetTop - 200;
-      let height = section.offsetHeight;
-      let id = section.getAttribute('id');
-
-      if ((top >= offset) && (top < (offset + height))) {
-         listLinks.forEach(listLink => {
-            listLink.classList.remove('active');
-            document.querySelector('header nav ul li a[href*=' + id + ']').classList.add('active');
-         });
-      }
-   });
-});
+/*===================================================
+          skill progress bars
+=====================================================*/
