@@ -7,13 +7,26 @@
   width: 100%;
   height: 100vh;
   z-index: 3;
-  display: flex;
+  /*display: flex;
   flex-direction: row;
   row-gap: 0.25em;
   @include ab.responsive-max-width(1370px) {
     column-gap: 1.5em;
-  }
+  }*/
 
-  background-color: ab.$clr-neutral-100;
+
+  &--title {
+    margin-top: 5em;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+    font-family: ab.$ff-primary-font;
+    font-size: 2.441rem;
+    font-weight: ab.$fw-font-weight-bold;
+    color: ab.$clr-augmented-900;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+  }
 
 }

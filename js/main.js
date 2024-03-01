@@ -10,28 +10,29 @@
 =====================================================*/
 $(window).on('load', function () {
    // makes sure that whole site is loaded
-   $('#preloader__gif, #preloader').fadeOut(5000, function () {});
+   $('#preloader__gif, #preloader').fadeOut(3500, function () {});
 
 });
 /*===================================================
           navigation and scroll-spy
 =====================================================*/
 $(function () {
+
    const options = {
       threshold: 0.8
    }
    const observer = new IntersectionObserver(addActiveClass, options);
    const navigation_links = document.querySelectorAll('.navigation__link');
-   const sections = document.querySelectorAll('.js-scroll-spy');
 
+   const sections = document.querySelectorAll('.js-scroll-spy');
    sections.forEach(section => {
       observer.observe(section);
-   })
+   });
 
    /**
     * @description - remove the active class from the navigation links and add active class to the
     * current navigation link in the viewport
-    * @param entries - the sections to be observed
+    * @param entries - the sections in the of an array to be observed
     * @param observer - the IntersectionObserver
     */
    function addActiveClass (entries, observer) {
@@ -41,7 +42,7 @@ $(function () {
             removeActiveClass();
             current_link.classList.add('active');
          }
-      })
+      });
    }
 
    /**
@@ -50,7 +51,7 @@ $(function () {
    function removeActiveClass () {
       navigation_links.forEach(navigation_link => {
          navigation_link.classList.remove('active');
-      })
+      });
    }
 
    /**
