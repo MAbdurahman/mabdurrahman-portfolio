@@ -69,14 +69,21 @@
           overflow: hidden;
           height: 0;
           transition: 0.5s;
-          /*box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);*/
           box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
           border-bottom-left-radius: ab.$br-border-radius-300;
           border-bottom-right-radius: ab.$br-border-radius-300;
         }
 
-        .accordion > input[name="collapse"]:checked ~ .content {
-          height: 50px;
+        .accordion > input[name="collapse"]:checked ~ .content p {
+          height: 120px;
+          padding: 8px 16px;
+          font-size: ab.$fs-font-size-010;
+          font-weight: ab.$fw-font-weight-normal;
+          text-align: left;
+          color: ab.$clr-augmented-900;
+          line-height: 1.5;
+          letter-spacing: 1px;
+          hyphens: auto;
           transition: height 0.5s;
         }
 
@@ -85,19 +92,15 @@
 
         }
 
-
-
         /* For Desktop */
         @media only screen and (min-width: 620px){
 
-
           .accordion > input[name="collapse"]:checked ~ .content {
-            height: 50px;
+            height: 120px;
+
           }
 
         }
-
-
 
         .accordion {
           margin-bottom: 1em;
@@ -117,7 +120,8 @@
         .accordion label {
           text-align: left;
           cursor: pointer;
-          font-weight: normal;
+          font-family: ab.$ff-secondary-font;
+          font-weight: ab.$fw-font-weight-medium;
           padding: 8px;
           color: ab.$clr-neutral-000;
           background-color: ab.$clr-blue-01-900;
@@ -133,7 +137,6 @@
           background-color: ab.$clr-blue-01-500;
           /*border-bottom-right-radius: 0;
           border-bottom-left-radius: 0;*/
-
 
         }
 
@@ -159,8 +162,6 @@
           transform-origin: center;
           transition: 0.4s;
         }
-
-
       }
     }
     &--right {
@@ -170,15 +171,99 @@
       height: 100%;
 
       /*background-color: ab.$clr-blue-01-600;*/
+
+      .progress__bars {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        /*grid-template-columns: repeat(2, 1fr);*/
+        grid-template-rows: repeat(8, 1fr);
+        /*grid-column-gap: 3em;*/
+        grid-row-gap: 1.5em;
+        /*padding-bottom: 3em;*/
+
+
+        .skill {
+          width: 100%;
+          /*margin-bottom: 1.25em;*/
+          /* padding-left: 1.5em; */
+          padding-right: 0;
+
+        }
+
+        .skill h4 {
+          margin: 0;
+          color: ab.$clr-augmented-700;
+          font-family: ab.$ff-secondary-font;
+          font-weight: ab.$fw-font-weight-bold;
+          font-size: 1.0125rem;
+          /*font-size: 0.75rem;*/
+          line-height: 1.5;
+        }
+
+        .progress {
+          height: 1.5625em;
+          border-radius: 0;
+          /*background: #a9a9a9;*/
+          background-color: ab.$clr-neutral-300;
+          overflow: visible;
+          /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
+          box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+          border-radius: ab.$br-border-radius-300;
+        }
+
+        .progress-bar {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: ab.$clr-blue-01-900;
+          /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
+          box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+          white-space: nowrap;
+          transition: width 0.6s ease;
+        }
+
+        .progress-bar span {
+          position: absolute;
+          left: 97%;
+          /*top: -2.8125em;*/
+          top: -2.5em;
+          width: 40px;
+          padding: 4px;
+          font-size: .9rem;
+          font-weight: ab.$fw-font-weight-bold;
+          letter-spacing: 1px;
+          /*font-family: 'Lora', serif;*/
+          font-family: ab.$ff-monospace-font;
+          /*background-color: ab.$clr-blue-01-200;
+          color: ab.$clr-blue-01-900;*/
+          color: ab.$clr-neutral-100;
+          background-color: ab.$clr-blue-01-500;
+          border-radius: ab.$br-border-radius-300;
+        }
+
+        .progress-bar span::before {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 5%;
+          border-top: 8px solid ab.$clr-blue-01-200;
+          border-top: 8px solid ab.$clr-blue-01-500;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+        }
+
+      }
     }
 
   }
   .skills__section--sub-title {
     margin-bottom: .5em;
-    font-weight: ab.$fw-font-weight-bold;
+    font-weight: ab.$fw-font-weight-medium;
     text-transform: capitalize;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
 
 }

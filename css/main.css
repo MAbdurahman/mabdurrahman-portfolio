@@ -2429,13 +2429,20 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   overflow: hidden;
   height: 0;
   transition: 0.5s;
-  /*box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);*/
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.skills__section__content--left .accordions .accordion > input[name=collapse]:checked ~ .content {
-  height: 50px;
+.skills__section__content--left .accordions .accordion > input[name=collapse]:checked ~ .content p {
+  height: 120px;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: left;
+  color: hsl(210, 30%, 10%);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  hyphens: auto;
   transition: height 0.5s;
 }
 .skills__section__content--left .accordions .accordion label {
@@ -2443,7 +2450,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 @media only screen and (min-width: 620px) {
   .skills__section__content--left .accordions .accordion > input[name=collapse]:checked ~ .content {
-    height: 50px;
+    height: 120px;
   }
 }
 .skills__section__content--left .accordions .accordion {
@@ -2460,7 +2467,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .skills__section__content--left .accordions .accordion label {
   text-align: left;
   cursor: pointer;
-  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   padding: 8px;
   color: hsl(210, 0%, 98%);
   background-color: hsl(210, 64%, 23%);
@@ -2501,12 +2509,86 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   height: 100%;
   /*background-color: ab.$clr-blue-01-600;*/
 }
+.skills__section__content--right .progress__bars {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  /*grid-template-columns: repeat(2, 1fr);*/
+  grid-template-rows: repeat(8, 1fr);
+  /*grid-column-gap: 3em;*/
+  grid-row-gap: 1.5em;
+  /*padding-bottom: 3em;*/
+}
+.skills__section__content--right .progress__bars .skill {
+  width: 100%;
+  /*margin-bottom: 1.25em;*/
+  /* padding-left: 1.5em; */
+  padding-right: 0;
+}
+.skills__section__content--right .progress__bars .skill h4 {
+  margin: 0;
+  color: hsl(210, 20%, 28%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.0125rem;
+  /*font-size: 0.75rem;*/
+  line-height: 1.5;
+}
+.skills__section__content--right .progress__bars .progress {
+  height: 1.5625em;
+  border-radius: 0;
+  /*background: #a9a9a9;*/
+  background-color: hsl(210, 0%, 68%);
+  overflow: visible;
+  /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
+  box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
+  border-radius: 5px;
+}
+.skills__section__content--right .progress__bars .progress-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: hsl(210, 64%, 23%);
+  /*box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);*/
+  box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
+  white-space: nowrap;
+  transition: width 0.6s ease;
+}
+.skills__section__content--right .progress__bars .progress-bar span {
+  position: absolute;
+  left: 97%;
+  /*top: -2.8125em;*/
+  top: -2.5em;
+  width: 40px;
+  padding: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  /*font-family: 'Lora', serif;*/
+  font-family: "Noto Sans Mono", monospace;
+  /*background-color: ab.$clr-blue-01-200;
+  color: ab.$clr-blue-01-900;*/
+  color: hsl(210, 0%, 88%);
+  background-color: hsl(210, 64%, 44%);
+  border-radius: 5px;
+}
+.skills__section__content--right .progress__bars .progress-bar span::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 5%;
+  border-top: 8px solid hsl(210, 51%, 78%);
+  border-top: 8px solid hsl(210, 64%, 44%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
 .skills__section .skills__section--sub-title {
   margin-bottom: 0.5em;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /*=============================================
