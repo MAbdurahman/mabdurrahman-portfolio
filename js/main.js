@@ -88,5 +88,9 @@ $(function () {
 });
 
 /*===================================================
-          skill progress bars
+          skills accordions and progress bars
 =====================================================*/
+$(function () {
+
+
+});
