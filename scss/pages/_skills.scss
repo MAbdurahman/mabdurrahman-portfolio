@@ -23,7 +23,7 @@
   &__content {
     position: relative;
     min-width: 100%;
-    min-height: 80%;
+    min-height: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
@@ -38,6 +38,130 @@
       text-align: center;
       letter-spacing: 1px;
       /*background-color: ab.$clr-blue-01-400;*/
+      .accordions {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+
+        /*
+ CSS for the main interaction
+
+*/
+
+        .accordion > input[name="collapse"] {
+          display: none;
+
+          /*position: absolute;
+          left: -100vw;*/
+        }
+
+        .accordion label,
+        .accordion .content{
+          max-width: 620px;
+          margin: 0 auto;
+        }
+
+
+        .accordion .content {
+          background: #fff;
+          overflow: hidden;
+          height: 0;
+          transition: 0.5s;
+          /*box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);*/
+          box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+          border-bottom-left-radius: ab.$br-border-radius-300;
+          border-bottom-right-radius: ab.$br-border-radius-300;
+        }
+
+        .accordion > input[name="collapse"]:checked ~ .content {
+          height: 50px;
+          transition: height 0.5s;
+        }
+
+        .accordion label {
+          display: block;
+
+        }
+
+
+
+        /* For Desktop */
+        @media only screen and (min-width: 620px){
+
+
+          .accordion > input[name="collapse"]:checked ~ .content {
+            height: 50px;
+          }
+
+        }
+
+
+
+        .accordion {
+          margin-bottom: 1em;
+        }
+
+        .accordion > input[name="collapse"]:checked ~ .content {
+          border-top: 0;
+          transition: 0.3s;
+        }
+
+        .accordion .handle {
+          margin: 0;
+          font-size: 16px;
+
+        }
+
+        .accordion label {
+          text-align: left;
+          cursor: pointer;
+          font-weight: normal;
+          padding: 8px;
+          color: ab.$clr-neutral-000;
+          background-color: ab.$clr-blue-01-900;
+          user-select: none;
+          border-radius: ab.$br-border-radius-300;
+          box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+
+        }
+
+        .accordion label:hover,
+        .accordion label:focus {
+          color: ab.$clr-neutral-100;
+          background-color: ab.$clr-blue-01-500;
+          /*border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;*/
+
+
+        }
+
+        .accordion .handle label:before {
+          font-family: FontAwesome;
+          content: "\f107";
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 1em;
+          line-height: 1.556em;
+          vertical-align: middle;
+          transition: 0.4s;
+
+        }
+        .accordion > input[name="collapse"]:checked ~ .handle label {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+
+        }
+
+        .accordion > input[name="collapse"]:checked ~ .handle label:before {
+          transform: rotate(180deg);
+          transform-origin: center;
+          transition: 0.4s;
+        }
+
+
+      }
     }
     &--right {
       position: relative;
@@ -50,6 +174,7 @@
 
   }
   .skills__section--sub-title {
+    margin-bottom: .5em;
     font-weight: ab.$fw-font-weight-bold;
     text-transform: capitalize;
     text-align: center;
