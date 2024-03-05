@@ -88,7 +88,7 @@ $(function () {
 });
 
 /*===================================================
-          skills accordions and progress bars
+          skills progress bars
 =====================================================*/
 $(function () {
    $('#progress-bars').waypoint(
@@ -108,5 +108,4 @@ $(function () {
          offset: '100%',
       }
    );
-
 });
