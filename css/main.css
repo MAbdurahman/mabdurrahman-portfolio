@@ -1688,6 +1688,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   color: hsl(210, 0%, 10%);
   text-align: center;
@@ -2256,7 +2257,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   min-height: 100%;
   display: grid;
   place-items: center;
-  /*padding-top: 2em;*/
   background-color: hsl(210, 12%, 98%);
 }
 .about__section--image .about__image {
@@ -2275,11 +2275,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*margin-left: 1em;
-  padding-top: 17em;*/
-  /*    padding-left: 1em;
-      padding-right: 1em;*/
-  /*    background-color: ab.$clr-neutral-100;*/
 }
 .about__section--info .about__info--container {
   position: relative;
@@ -2289,11 +2284,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   width: 100%;
   height: 100%;
   margin-bottom: 0.5em;
-  /*font-family: 'Lora', serif;
-  font-weight: ab.$fw-font-weight-medium;
-  color: ab.$clr-augmented-900;*/
-  /*text-transform: capitalize;*/
-  /*letter-spacing: 0.5rem;*/
 }
 .about__section--info .about__info--title {
   margin-bottom: 0.5em;
@@ -2312,13 +2302,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   line-height: 1.5;
   letter-spacing: 1px;
   hyphens: auto;
-  /*margin: .5em 0;*/
 }
 .about__section .about__info--links {
-  /*display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1em;
-  margin-bottom: 1.875em;*/
   margin-top: 0.7em;
   display: flex;
   flex-direction: row;
@@ -2342,7 +2327,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: hsl(210, 51%, 78%);
   color: hsl(210, 0%, 98%);
   border-radius: 5px;
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
@@ -2355,7 +2339,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-position: left bottom;
 }
 .about__section .about__info--single-link:hover, .about__section .about__info--single-link:focus {
-  color: hsl(210, 51%, 94%);
   color: hsl(210, 0%, 88%);
 }
 .about__section .about__info--single-link:not(:last-child) {
