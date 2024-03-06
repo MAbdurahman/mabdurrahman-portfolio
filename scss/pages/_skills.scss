@@ -120,10 +120,17 @@
           padding: 8px;
           color: ab.$clr-neutral-000;
           background-color: ab.$clr-blue-01-900;
-          user-select: none;
+          background-position: right bottom;
+          transition: all 0.25s ease-in-out;
           border-radius: ab.$br-border-radius-300;
           box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-600);
 
+        }
+        .accordion label:hover {
+          background-position: left bottom;
+        }
+        .accordion label:focus {
+          background-color: ab.$clr-blue-01-500;
         }
 
         .accordion label:hover,

@@ -2454,9 +2454,16 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   padding: 8px;
   color: hsl(210, 0%, 98%);
   background-color: hsl(210, 64%, 23%);
-  user-select: none;
+  background-position: right bottom;
+  transition: all 0.25s ease-in-out;
   border-radius: 5px;
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.15), 5px 3px 21px -1px rgba(34, 40, 45, 0.15);
+}
+.skills__section__content--left .accordions .accordion label:hover {
+  background-position: left bottom;
+}
+.skills__section__content--left .accordions .accordion label:focus {
+  background-color: hsl(210, 64%, 44%);
 }
 .skills__section__content--left .accordions .accordion label:hover,
 .skills__section__content--left .accordions .accordion label:focus {
