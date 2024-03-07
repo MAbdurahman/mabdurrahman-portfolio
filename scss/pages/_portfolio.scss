@@ -2,31 +2,79 @@
           pages/_portfolio.scss
 ================================================*/
 @use './../abstracts' as ab;
+
 .portfolio__section {
   position: relative;
   width: 100%;
   height: 100vh;
   z-index: 3;
-  /*display: flex;
-  flex-direction: row;
-  row-gap: 0.25em;
-  @include ab.responsive-max-width(1370px) {
-    column-gap: 1.5em;
-  }*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
 
 
-  &--title {
-    margin-top: 5em;
-    /*display: flex;
+  &--upper {
+    position: relative;
+    display: flex;
     flex-direction: column;
-    justify-content: center;*/
-    font-family: ab.$ff-primary-font;
-    font-size: 2.441rem;
-    font-weight: ab.$fw-font-weight-bold;
-    color: ab.$clr-augmented-900;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
+    justify-content: space-between;
+
+
+    .portfolio__section--title {
+      position: relative;
+      /*top: 5%;*/
+      display: flex;
+      flex-direction: column;
+      /*justify-content: start;*/
+      align-items: center;
+      margin-bottom: 1em;
+      font-family: ab.$ff-primary-font;
+      font-size: 2.441rem;
+      font-weight: ab.$fw-font-weight-bold;
+      color: ab.$clr-augmented-900;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1px;
+
+    }
+
+    .portfolio__section--container {
+      position: relative;
+      min-width: 100%;
+      max-height: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+
+      .portfolio__filters {
+        position: relative;
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .portfolio__filter {
+          @include ab.button-default();
+          @include ab.background-transition-basic(ab.$clr-blue-01-500, ab.$clr-blue-01-900);
+          font-size: 0.85rem;
+          font-weight: ab.$fw-font-weight-bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: ab.$clr-neutral-000;
+          border-radius: 5px;
+          border-color: ab.$clr-blue-01-500;
+          box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+        }
+      }
+    }
   }
 
+  &--bottom {
+
+  }
 }

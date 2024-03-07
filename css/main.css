@@ -1142,7 +1142,7 @@ input[type=number] {
 }
 
 .section__five {
-  background-color: hsl(210, 0%, 78%);
+  background-color: hsl(210, 12%, 98%);
 }
 
 .utils-img-responsive {
@@ -1687,7 +1687,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   /*margin: 0 .375em;*/
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
   font-weight: 600;
   letter-spacing: 1px;
   color: hsl(210, 0%, 10%);
@@ -2421,10 +2420,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-size: 0.75rem;
   font-weight: 400;
   text-align: left;
-  color: hsl(210, 30%, 10%);
+  text-transform: none;
   line-height: 1.5;
   letter-spacing: 1px;
   hyphens: auto;
+  color: hsl(210, 30%, 10%);
+  background-color: hsl(210, 12%, 98%);
   transition: height 0.5s;
 }
 .skills__section__content--left .accordions .accordion label {
@@ -2565,6 +2566,10 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   text-align: center;
   letter-spacing: 2px;
 }
+.skills__section .focused {
+  color: hsl(210, 0%, 88%);
+  background-color: hsl(210, 64%, 44%);
+}
 
 @-webkit-keyframes progress-bar-stripes {
   from {
@@ -2638,18 +2643,25 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   width: 100%;
   height: 100vh;
   z-index: 3;
-  /*display: flex;
-  flex-direction: row;
-  row-gap: 0.25em;
-  @include ab.responsive-max-width(1370px) {
-    column-gap: 1.5em;
-  }*/
-}
-.portfolio__section--title {
-  margin-top: 5em;
-  /*display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center;*/
+  justify-content: center;
+  gap: 1.5em;
+}
+.portfolio__section--upper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.portfolio__section--upper .portfolio__section--title {
+  position: relative;
+  /*top: 5%;*/
+  display: flex;
+  flex-direction: column;
+  /*justify-content: start;*/
+  align-items: center;
+  margin-bottom: 1em;
   font-family: "Lora", serif;
   font-size: 2.441rem;
   font-weight: 600;
@@ -2658,7 +2670,55 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   text-align: center;
   letter-spacing: 1px;
 }
-
+.portfolio__section--upper .portfolio__section--container {
+  position: relative;
+  min-width: 100%;
+  max-height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio__section--upper .portfolio__section--container .portfolio__filters {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.portfolio__section--upper .portfolio__section--container .portfolio__filters .portfolio__filter {
+  padding: 16px 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  border: 1px solid hsl(210, 0%, 18%);
+  outline: none;
+  color: hsl(210, 0%, 18%);
+  background-color: hsl(210, 0%, 68%);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(90deg, hsl(210, 64%, 23%) 0%, hsl(210, 64%, 23%) 50%, hsl(210, 64%, 44%) 50%, hsl(210, 64%, 44%) 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.25s ease-out;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(210, 0%, 98%);
+  border-radius: 5px;
+  border-color: hsl(210, 64%, 44%);
+  box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
+}
+.portfolio__section--upper .portfolio__section--container .portfolio__filters .portfolio__filter:hover, .portfolio__section--upper .portfolio__section--container .portfolio__filters .portfolio__filter:focus {
+  cursor: pointer;
+  color: hsl(210, 0%, 78%);
+}
+.portfolio__section--upper .portfolio__section--container .portfolio__filters .portfolio__filter:hover {
+  background-position: left bottom;
+}
 /*=============================================
           base/_animations.scss
 ================================================*/
