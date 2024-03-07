@@ -2,6 +2,7 @@
           pages/_skills.scss
 ================================================*/
 @use './../abstracts' as ab;
+
 .skills__section {
   position: relative;
   width: 100%;
@@ -13,7 +14,7 @@
   gap: 1.5em;
 
 
-  &--title{
+  &--title {
     position: relative;
     top: 5%;
     font-family: ab.$ff-primary-font;
@@ -24,6 +25,7 @@
     text-align: center;
     letter-spacing: 1px;
   }
+
   &__content {
     position: relative;
     min-width: 100%;
@@ -56,7 +58,7 @@
         }
 
         .accordion label,
-        .accordion .content{
+        .accordion .content {
           max-width: 620px;
           margin: 0 auto;
         }
@@ -78,10 +80,12 @@
           font-size: ab.$fs-font-size-010;
           font-weight: ab.$fw-font-weight-normal;
           text-align: left;
-          color: ab.$clr-augmented-900;
+          text-transform: none;
           line-height: 1.5;
           letter-spacing: 1px;
           hyphens: auto;
+          color: ab.$clr-augmented-900;
+          background-color: ab.$clr-augmented-000;
           transition: height 0.5s;
         }
 
@@ -91,7 +95,7 @@
         }
 
         /* For Desktop */
-        @media only screen and (min-width: 620px){
+        @media only screen and (min-width: 620px) {
           .accordion > input[name="collapse"]:checked ~ .content {
             height: 120px;
           }
@@ -126,9 +130,11 @@
           box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-600);
 
         }
+
         .accordion label:hover {
           background-position: left bottom;
         }
+
         .accordion label:focus {
           background-color: ab.$clr-blue-01-500;
         }
@@ -151,6 +157,7 @@
           transition: 0.4s;
 
         }
+
         .accordion > input[name="collapse"]:checked ~ .handle label {
           color: ab.$clr-neutral-100;
           background-color: ab.$clr-blue-01-500;
@@ -166,6 +173,7 @@
         }
       }
     }
+
     &--right {
       position: relative;
       top: 10%;
@@ -244,6 +252,7 @@
     }
 
   }
+
   .skills__section--sub-title {
     margin-bottom: .5em;
     font-weight: ab.$fw-font-weight-medium;
@@ -252,7 +261,12 @@
     letter-spacing: 2px;
   }
 
+  .focused {
+    color: ab.$clr-neutral-100;
+    background-color: ab.$clr-blue-01-500;
+  }
 }
+
 
 
 
@@ -300,14 +314,14 @@
   transition: width .6s ease
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   .progress-bar {
     transition: none
   }
 }
 
 .progress-bar-striped {
-  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem
 }
 
@@ -316,7 +330,7 @@
   animation: progress-bar-stripes 1s linear infinite
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   .progress-bar-animated {
     -webkit-animation: none;
     animation: none

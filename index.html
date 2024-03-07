@@ -17,8 +17,10 @@
     <!-- normalize styles -->
     <link href="./css/normalize.css" rel="stylesheet"/>
     <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link crossorigin="anonymous"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          rel="stylesheet">
     <!-- jquery-ui styles -->
     <link href="./css/jquery-ui.min.css" rel="stylesheet"/>
     <!-- image hover-extended styles -->
@@ -29,21 +31,23 @@
 </head>
 <body>
 <!-- preloader -->
-<div id="preloader" class="preloader scrollbar-hidden">
-    <img src="./img/gifs/preloader.gif" alt="Three spinning gears" id="preloader__gif" class="preloader__gif"/>
+<div class="preloader scrollbar-hidden" id="preloader">
+    <img alt="Three spinning gears" class="preloader__gif"
+         id="preloader__gif" src="./img/gifs/preloader.gif"/>
 </div>
 <!-- navigation -->
-<div id="navigation" class="navigation">
-    <div id="navigation__button" class="navigation__button">
+<div class="navigation" id="navigation">
+    <div class="navigation__button" id="navigation__button">
         <span class="navigation__button-bar"></span>
         <span class="navigation__button-bar"></span>
         <span class="navigation__button-bar"></span>
     </div>
-    <nav id="navigation__background" class="navigation__background">
-        <div id="navigation__background--inner" class="navigation__background--inner">
-            <ul id="navigation__list" class="navigation__list">
+    <nav class="navigation__background" id="navigation__background">
+        <div class="navigation__background--inner"
+             id="navigation__background--inner">
+            <ul class="navigation__list" id="navigation__list">
                 <li class="navigation__item">
-                    <a href="#home" class="navigation__link active">
+                    <a class="navigation__link active" href="#home">
                     <span class="navigation__span">
                         <i class="fas fa-home"></i>
                     </span>
@@ -51,7 +55,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#about" class="navigation__link">
+                    <a class="navigation__link" href="#about">
                         <span class="navigation__span">
                             <i class="fas fa-user-tie"></i>
                         </span>
@@ -59,7 +63,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#skills" class="navigation__link">
+                    <a class="navigation__link" href="#skills">
                         <span class="navigation__span">
                             <i class="fas fa-tools"></i>
                         </span>
@@ -67,7 +71,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#portfolio" class="navigation__link">
+                    <a class="navigation__link" href="#portfolio">
                         <span class="navigation__span">
                             <i class="fas fa-images"></i>
                         </span>
@@ -75,7 +79,7 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#contact" class="navigation__link">
+                    <a class="navigation__link" href="#contact">
                         <span class="navigation__span">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -87,12 +91,13 @@
     </nav>
 </div>
 <!-- header -->
-<header id="home" class="header js-scroll-spy">
+<header class="header js-scroll-spy" id="home">
     <div class="header__logo-container">
-        <img src="./img/header/logo.png" alt="Brand logo" class="header__logo"/>
+        <img alt="Brand logo" class="header__logo" src="./img/header/logo.png"/>
     </div>
     <div class="header__video-container">
-        <video id="header__video-item" class="header__video_item" autoplay loop muted >
+        <video autoplay class="header__video_item" id="header__video-item" loop
+               muted>
             <source src="./videos/mp4/binary-code.mp4" type="video/mp4">
             <source src="./videos/ogv/binary-code.ogv" type="video/ogv">
             <source src="./videos/webm/binary-code.webm" type="video/webm">
@@ -106,51 +111,69 @@
             <h1 class="header__content-heading--two">Abdurrahman</h1>
         </div>
         <div class="header__content-subheading">
-            <h2 class="header__content-subheading--one">Software and Web Developer</h2>
+            <h2 class="header__content-subheading--one">Software and Web
+                Developer</h2>
         </div>
         <div class="header__content-buttons">
-            <a href="#about" id="header__button" class="header__button" role="button">View More</a>
-            <a href="#about" id="arrow__down" class="header__button-arrow"><i class="fa fa-chevron-down"></i></a>
+            <a class="header__button" href="#about" id="header__button"
+               role="button">View More</a>
+            <a class="header__button-arrow" href="#about" id="arrow__down"><i
+                    class="fa fa-chevron-down"></i></a>
         </div>
     </div>
 </header>
 <!-- main content -->
 <main class="main">
-    <section id="about" class="section section__two js-scroll-spy">
+    <section class="section section__two js-scroll-spy" id="about">
         <div class="utils-container">
             <div class="about__section">
                 <article class="about__section--image">
-                    <img src="./img/about/mabdurrahman.png" alt="Mahdi Abdurrahman" class="utils-img-responsive about__image">
+                    <img alt="Mahdi Abdurrahman" class="utils-img-responsive about__image"
+                         src="./img/about/mabdurrahman.png">
                 </article>
                 <article class="about__section--info">
                     <div class="about__info--container">
                         <h2 class="about__info--title"><strong>About Me</strong></h2>
                         <p class="about__info--text">
-                            Hello, I am <strong>Mahdi Abdurrahman</strong>, a Software and Web Developer, living in the
-                            southeast region of the United States, working primarily with
-                            desktop applications, web applications, responsive website
-                            development, and databases.&nbsp;&nbsp;I have a bachelor's in Criminal
-                            Justice, approximately three years towards a bachelor's in Computer
-                            Science, and I am self-taught in other information technologies.
+                            Hello, I am <strong>Mahdi Abdurrahman</strong>, a
+                            Software and Web Developer, living in the
+                            southeast region of the United States, working primarily
+                            with
+                            desktop applications, web applications, responsive
+                            website
+                            development, and databases.&nbsp;&nbsp;I have a
+                            bachelor's in Criminal
+                            Justice, approximately three years towards a bachelor's
+                            in Computer
+                            Science, and I am self-taught in other information
+                            technologies.
                         </p>
                         <p class="about__info--text">
-                            I specialize in creating beautiful, reusable, and professional websites, using the best
-                            practices, standards, and guidelines.&nbsp;&nbsp;This results in semantic and SEO friendly
-                            websites, which improves the quality and quantity of website traffic.&nbsp;&nbsp;<strong><em>I put
+                            I specialize in creating beautiful, reusable, and
+                            professional websites, using the best
+                            practices, standards, and guidelines.&nbsp;&nbsp;This
+                            results in semantic and SEO friendly
+                            websites, which improves the quality and quantity of
+                            website traffic.&nbsp;&nbsp;<strong><em>I put
                             my heart and soul into my work!</em></strong>
                         </p>
                         <p class="about__info--text">
-                            When not writing code, I am continuing to investigate, experiment,
+                            When not writing code, I am continuing to investigate,
+                            experiment,
                             and test to improve existing methods of software and web
-                            development.&nbsp;&nbsp;For, I am not content to rely on past laurels.&nbsp;&nbsp;Also, I
-                            have a strong interest in Mathematics and an appreciation for the Arts.&nbsp;&nbsp;<em>But,
-                            <strong>programming and computer science are my passions!</strong></em>
+                            development.&nbsp;&nbsp;For, I am not content to rely on
+                            past laurels.&nbsp;&nbsp;Also, I
+                            have a strong interest in Mathematics and an appreciation
+                            for the Arts.&nbsp;&nbsp;<em>But,
+                            <strong>programming and computer science are my
+                                passions!</strong></em>
                         </p>
                         <div class="about__info--links">
-                            <a href="tel:901-424-5525" class="about__info--single-link">
+                            <a class="about__info--single-link"
+                               href="tel:901-424-5525">
                                 contact me
                             </a>
-                            <a href="#skills" class="about__info--single-link">
+                            <a class="about__info--single-link" href="#skills">
                                 learn more
                             </a>
                         </div>
@@ -159,7 +182,7 @@
             </div>
         </div>
     </section>
-    <section id="skills" class="section section__three js-scroll-spy">
+    <section class="section section__three js-scroll-spy" id="skills">
         <div class="utils-container">
             <div class="skills__section">
                 <h2 class="skills__section--title">My Skills</h2>
@@ -168,78 +191,113 @@
                         <h3 class="skills__section--sub-title">soft skills</h3>
                         <section class="accordions">
                             <section class="accordion">
-                                <input type="radio" name="collapse" id="handle1" checked="checked">
+                                <input checked="checked" class="js-accordion-input" id="handle1"
+                                       name="collapse" type="radio">
                                 <h4 class="handle">
                                     <label for="handle1">Detail Oriented</label>
                                 </h4>
                                 <div class="content">
-                                    <p><strong>Lorem ipsum dolor:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                        eu fugiat nulla pariatur. </p>
+                                    <p>In the computer science and IT field, <strong>attention
+                                        to detail</strong> is vital. You must be able
+                                        to look at long lines of code and identify
+                                        anything amiss. Having an eye for small
+                                        details can help you have a huge impact on
+                                        projects. Listing on your résumé that you’re
+                                        detail-oriented shows potential employers you
+                                        understand how impactful small elements are
+                                        to the larger project. Being a stickler for
+                                        the details can be an immense strength.</p>
                                 </div>
                             </section>
                             <section class="accordion">
-                                <input type="radio" name="collapse" id="handle2">
+                                <input class="js-accordion-input" id="handle2" name="collapse"
+                                       type="radio">
                                 <h4 class="handle">
-                                    <label for="handle2">Effective Communication</label>
+                                    <label for="handle2">Effective
+                                        Communication</label>
                                 </h4>
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                    <p>In the IT world, communication is key. This
+                                        soft skill is vital to help you talk to
+                                        clients, coworkers, and managers. Show you’re
+                                        skilled when it comes to explaining your
+                                        projects, objectives, and timelines. Listing
+                                        communication on your résumé shows you
+                                        recognize the importance of communicating
+                                        clearly in your job. It’s wise to show
+                                        employers that you have a willingness to
+                                        engage respectfully in workplace
+                                        communication.</p>
                                 </div>
                             </section>
                             <section class="accordion">
-                                <input type="radio" name="collapse" id="handle3">
+                                <input class="js-accordion-input" id="handle3" name="collapse"
+                                       type="radio">
                                 <h4 class="handle">
-                                    <label for="handle3">Creative Problem-Solving</label>
+                                    <label for="handle3">Creative
+                                        Problem-Solving</label>
                                 </h4>
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                    <p>Some people think computer science is all
+                                        logical, dry work. But that’s simply not
+                                        true. Creativity is key to solving problems
+                                        and creating functional, modern web
+                                        applications and websites. When you put
+                                        creativity on your résumé, the hiring manager
+                                        can see you’re someone who’ll think outside
+                                        the box to solve problems and give unique
+                                        solutions.</p>
                                 </div>
                             </section>
                             <section class="accordion">
-                                <input type="radio" name="collapse" id="handle4">
+                                <input class="js-accordion-input" id="handle4" name="collapse"
+                                       type="radio">
                                 <h4 class="handle">
                                     <label for="handle4">Time Management</label>
                                 </h4>
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                    <p>In most jobs in the computer science field,
+                                        there are tight deadlines, competing
+                                        priorities, and quick transitions between
+                                        tasks. Effective time management will help
+                                        you stay on top of the various tasks and
+                                        projects you’ll face. By listing time
+                                        management on your résumé, you show potential
+                                        employers you’re dedicated to hitting
+                                        deadlines, and you’ll be productive and
+                                        efficient in your work.</p>
                                 </div>
                             </section>
                             <section class="accordion">
-                                <input type="radio" name="collapse" id="handle5">
+                                <input class="js-accordion-input" id="handle5" name="collapse"
+                                       type="radio">
                                 <h4 class="handle">
-                                    <label for="handle5">Teamwork and Cooperation</label>
+                                    <label for="handle5">Teamwork and
+                                        Cooperation</label>
                                 </h4>
                                 <div class="content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                    <p>Being a good team player is key in any
+                                        organization, but it’s particularly important
+                                        if you’re working in computer science. Many
+                                        times, software engineers, data scientists,
+                                        and IT professionals are expected to
+                                        collaborate with a number of different groups
+                                        within an organization to ensure timelines
+                                        are met and expectations are fulfilled.</p>
                                 </div>
                             </section>
-                        
                         </section>
                     </div>
                     <div class="skills__section__content--right">
                         <h3 class="skills__section--sub-title">tech skills</h3>
-                        <section id="progress-bars" class="progress__bars">
+                        <section class="progress__bars" id="progress-bars">
                             <!--skill 1-->
                             <div class="skill">
                                 <h4>HTML5</h4>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
+                                    <div aria-valuemax="100" aria-valuemin="0"
+                                         aria-valuenow="90" class="progress-bar"
+                                         role="progressbar" style="width: 0%;">
                                         <span>90%</span>
                                     </div>
                                 </div>
@@ -248,8 +306,9 @@
                             <div class="skill">
                                 <h4>CSS3</h4>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
+                                    <div aria-valuemax="100" aria-valuemin="0"
+                                         aria-valuenow="85" class="progress-bar"
+                                         role="progressbar" style="width: 0%;">
                                         <span>85%</span>
                                     </div>
                                 </div>
@@ -258,18 +317,20 @@
                             <div class="skill">
                                 <h4>JavaScript</h4>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
+                                    <div aria-valuemax="100" aria-valuemin="0"
+                                         aria-valuenow="80" class="progress-bar"
+                                         role="progressbar" style="width: 0%;">
                                         <span>80%</span>
                                     </div>
                                 </div>
                             </div>
                             <!--skill 4-->
                             <div class="skill">
-                            <h4>NodeJS</h4>
+                                <h4>NodeJS</h4>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
+                                    <div aria-valuemax="100" aria-valuemin="0"
+                                         aria-valuenow="70" class="progress-bar"
+                                         role="progressbar" style="width: 0%;">
                                         <span>70%</span>
                                     </div>
                                 </div>
@@ -278,8 +339,9 @@
                             <div class="skill">
                                 <h4>NoSQL</h4>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
+                                    <div aria-valuemax="100" aria-valuemin="0"
+                                         aria-valuenow="65" class="progress-bar"
+                                         role="progressbar" style="width: 0%;">
                                         <span>65%</span>
                                     </div>
                                 </div>
@@ -288,46 +350,48 @@
                             <div class="skill">
                                 <h4>Git</h4>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
+                                    <div aria-valuemax="100" aria-valuemin="0"
+                                         aria-valuenow="85" class="progress-bar"
+                                         role="progressbar" style="width: 0%;">
                                         <span>85%</span>
                                     </div>
                                 </div>
                             </div>
-                            <!--skill 7-->
-                            <!--<div class="skill">
-                                <h4>SQL</h4>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
-                                        <span>87%</span>
-                                    </div>
-                                </div>
-                            </div>-->
-                            <!--skill 8-->
-                            <!--<div class="skill">
-                                <h4>Git/GitHub</h4>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 0%;">
-                                        <span>80%</span>
-                                    </div>
-                                </div>
-                            </div>-->
                         </section>
                     </div>
                 </section>
             </div>
         </div>
     </section>
-    <section id="portfolio" class="section section__four js-scroll-spy">
+    <section class="section section__four js-scroll-spy" id="portfolio">
         <div class="utils-container">
             <div class="portfolio__section">
-                <h2 class="portfolio__section--title">My Portfolio</h2>
+                <div class="portfolio__section--upper">
+                    <h2 class="portfolio__section--title">My Portfolio</h2>
+                    <section class="portfolio__section--container">
+                        <ul id="portfolio__filters" class="portfolio__filters">
+                            <li class="portfolio__filter active" data-filter="all">
+                                projects
+                            </li>
+                            <li class="portfolio__filter" data-filter="software">
+                                software
+                            </li>
+                            <li class="portfolio__filter" data-filter="website">
+                                websites
+                            </li>
+                            <li class="portfolio__filter" data-filter="webapp">
+                                webApps
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="portfolio__section--bottom">
+                
+                </div>
             </div>
         </div>
     </section>
-    <section id="contact" class=" section section__five js-scroll-spy">
+    <section class=" section section__five js-scroll-spy" id="contact">
         <div class="utils-container">
             <div class="contact__section">
                 <h2 class="contact__section--title">Contact Me</h2>

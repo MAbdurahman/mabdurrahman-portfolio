@@ -91,6 +91,17 @@ $(function () {
           skills progress bars
 =====================================================*/
 $(function () {
+   /*const accordion_labels = document.querySelectorAll('.accordion label');
+   const accordion_inputs = document.querySelectorAll('.js-accordion-input');
+   accordion_labels.forEach(accordion => {
+      accordion.addEventListener('click', addFocusedClass)
+   });*/
+
+
+
+
+
+
    $('#progress-bars').waypoint(
       function () {
          $('.progress-bar').each(function () {
@@ -110,10 +121,40 @@ $(function () {
    );
 });
 
+
+/*function addFocusedClass(e) {
+   e.preventDefault();
+   let label = e.target;
+   let accordion_inputs = document.querySelectorAll('.js-accordion-input');
+   accordion_inputs.forEach(accordion_input => {
+      if (accordion_input.checked === true) {
+         if (label.htmlFor === accordion_input.id) {
+            removeFocusedClass();
+            accordion_label.classList.add('focused');
+            accordion_input.setAttribute('checked', true);
+
+         }
+      }
+   });
+}*/
+
+/*function removeFocusedClass() {
+   let accordion_inputs = document.querySelectorAll('.js-accordion-input');
+   accordion_inputs.forEach(accordion_input => {
+      accordion_input.setAttribute('checked', false);
+      console.log(accordion_input)
+   });
+   accordion_labels.forEach(accordion_label => {
+      accordion_label.classList.remove('focused');
+   });
+}*/
+
+
 /*===================================================
           portfolio filterizr cards
 =====================================================*/
 $(function () {
+
 
 
 });
