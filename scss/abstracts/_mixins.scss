@@ -96,7 +96,13 @@
 
 @mixin anchor-two-styles {
   @include anchor-default(var.$clr-neutral-500);
-  @include background-transition-basic(var.$clr-neutral-300, var.$clr-neutral-500);
+  @include background-transition-basic(var.$clr-blue-01-600, var.$clr-blue-01-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .75rem;
+  font-weight: var.$fw-font-weight-bold;
+  color: var.$clr-neutral-000;
+  border-radius: var.$br-border-radius-300;
 }
 
 @mixin anchor-three-styles {
