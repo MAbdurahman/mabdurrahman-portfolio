@@ -98,10 +98,6 @@ $(function () {
    });*/
 
 
-
-
-
-
    $('#progress-bars').waypoint(
       function () {
          $('.progress-bar').each(function () {
@@ -154,7 +150,10 @@ $(function () {
           portfolio filterizr cards
 =====================================================*/
 $(function () {
-
+   /**************** add and remove active class from filter buttons ****************/
+   $('#portfolio__filters > .js-filter').click(function() {
+      $(this).addClass('active').siblings().removeClass('active');
+   });
 
 
 });

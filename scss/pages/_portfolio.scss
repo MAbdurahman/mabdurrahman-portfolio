@@ -6,24 +6,30 @@
 .portfolio__section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: fit-content;
   z-index: 3;
-  display: flex;
+  display: grid;
+  place-items: center;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5em;
+  align-items: center;*/
+  gap: 5em;
+  padding-top: calc(5em + 2vw);
 
 
   &--upper {
     position: relative;
+    width: 66.667%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
 
     .portfolio__section--title {
       position: relative;
-      /*top: 5%;*/
+
       display: flex;
       flex-direction: column;
       /*justify-content: start;*/
@@ -51,7 +57,7 @@
 
       .portfolio__filters {
         position: relative;
-        width: 75%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
@@ -69,12 +75,46 @@
           border-radius: 5px;
           border-color: ab.$clr-blue-01-500;
           box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+
+          &.active {
+            background-position: left bottom;
+            color: ab.$clr-neutral-000;
+          }
         }
       }
     }
   }
 
   &--bottom {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 2.5em;
+    padding-bottom: 5em;
+
+
+    .portfolio__card {
+      padding: 8px;
+      background-color: ab.$clr-blue-01-900;
+
+      figure img {
+        margin-bottom: 0.5em;
+      }
+
+      &--title {
+        color: ab.$clr-augmented-000;
+        margin-bottom: 0.5em;
+      }
+
+      &--paragraph {
+        background-color: ab.$clr-blue-01-900;
+      }
+    }
+
 
   }
 }

@@ -1364,6 +1364,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   margin: 0px;
   max-width: 100%;
   background-color: hsl(210, 0%, 28%);
+  background-color: hsl(210, 64%, 23%);
   color: #fff;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -1375,13 +1376,15 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 [class^=imghvr-] figcaption, [class*=" imghvr-"] figcaption {
   background-color: hsl(210, 0%, 28%);
+  background-color: hsl(210, 64%, 23%);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 30px;
-  color: #ffffff !important;
+  padding: 8px 8px;
+  /*color: #ffffff !important;*/
+  color: hsl(210, 12%, 98%) !important;
 }
 
 [class^=imghvr-shutter-out-]:before, [class*=" imghvr-shutter-out-"]:before {
@@ -2096,11 +2099,17 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-color: hsl(210, 0%, 48%);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  background: linear-gradient(90deg, hsl(210, 0%, 48%) 0%, hsl(210, 0%, 48%) 50%, hsl(210, 0%, 68%) 50%, hsl(210, 0%, 68%) 100%);
+  background: linear-gradient(90deg, hsl(210, 64%, 44%) 0%, hsl(210, 64%, 44%) 50%, hsl(210, 64%, 39%) 50%, hsl(210, 64%, 39%) 100%);
   background-repeat: no-repeat;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: background-position 0.25s ease-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(210, 0%, 98%);
+  border-radius: 5px;
 }
 .anchor--two:hover, .anchor--two:focus {
   cursor: pointer;
@@ -2641,22 +2650,27 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .portfolio__section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: fit-content;
   z-index: 3;
-  display: flex;
+  display: grid;
+  place-items: center;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5em;
+  align-items: center;*/
+  gap: 5em;
+  padding-top: calc(5em + 2vw);
 }
 .portfolio__section--upper {
   position: relative;
+  width: 66.667%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .portfolio__section--upper .portfolio__section--title {
   position: relative;
-  /*top: 5%;*/
   display: flex;
   flex-direction: column;
   /*justify-content: start;*/
@@ -2681,7 +2695,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .portfolio__section--upper .portfolio__section--container .portfolio__filters {
   position: relative;
-  width: 75%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -2719,6 +2733,36 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .portfolio__section--upper .portfolio__section--container .portfolio__filters .portfolio__filter:hover {
   background-position: left bottom;
 }
+.portfolio__section--upper .portfolio__section--container .portfolio__filters .portfolio__filter.active {
+  background-position: left bottom;
+  color: hsl(210, 0%, 98%);
+}
+.portfolio__section--bottom {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1.5em;
+  grid-row-gap: 2.5em;
+  padding-bottom: 5em;
+}
+.portfolio__section--bottom .portfolio__card {
+  padding: 8px;
+  background-color: hsl(210, 64%, 23%);
+}
+.portfolio__section--bottom .portfolio__card figure img {
+  margin-bottom: 0.5em;
+}
+.portfolio__section--bottom .portfolio__card--title {
+  color: hsl(210, 12%, 98%);
+  margin-bottom: 0.5em;
+}
+.portfolio__section--bottom .portfolio__card--paragraph {
+  background-color: hsl(210, 64%, 23%);
+}
+
 /*=============================================
           base/_animations.scss
 ================================================*/
