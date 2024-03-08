@@ -2327,7 +2327,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-color: hsl(210, 0%, 68%);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  background: linear-gradient(90deg, hsl(210, 64%, 44%) 0%, hsl(210, 64%, 44%) 50%, hsl(210, 64%, 23%) 50%, hsl(210, 64%, 23%) 100%);
+  background: linear-gradient(90deg, hsl(210, 64%, 39%) 0%, hsl(210, 64%, 39%) 50%, hsl(210, 64%, 23%) 50%, hsl(210, 64%, 23%) 100%);
   background-repeat: no-repeat;
   background-size: 200% 100%;
   background-position: right bottom;
@@ -2473,12 +2473,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-position: left bottom;
 }
 .skills__section__content--left .accordions .accordion label:focus {
-  background-color: hsl(210, 64%, 44%);
+  background-color: hsl(210, 64%, 39%);
 }
 .skills__section__content--left .accordions .accordion label:hover,
 .skills__section__content--left .accordions .accordion label:focus {
   color: hsl(210, 0%, 88%);
-  background-color: hsl(210, 64%, 44%);
+  background-color: hsl(210, 64%, 39%);
 }
 .skills__section__content--left .accordions .accordion .handle label:before {
   font-family: FontAwesome;
@@ -2492,7 +2492,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .skills__section__content--left .accordions .accordion > input[name=collapse]:checked ~ .handle label {
   color: hsl(210, 0%, 88%);
-  background-color: hsl(210, 64%, 44%);
+  background-color: hsl(210, 64%, 39%);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -2556,7 +2556,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   letter-spacing: 1px;
   font-family: "Noto Sans Mono", monospace;
   color: hsl(210, 0%, 88%);
-  background-color: hsl(210, 64%, 44%);
+  background-color: hsl(210, 64%, 39%);
   border-radius: 5px;
 }
 .skills__section__content--right .progress__bars .progress-bar span::before {
@@ -2564,7 +2564,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: absolute;
   bottom: -8px;
   left: 5%;
-  border-top: 8px solid hsl(210, 64%, 44%);
+  border-top: 8px solid hsl(210, 64%, 39%);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
@@ -2577,7 +2577,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .skills__section .focused {
   color: hsl(210, 0%, 88%);
-  background-color: hsl(210, 64%, 44%);
+  background-color: hsl(210, 64%, 39%);
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -2712,7 +2712,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-color: hsl(210, 0%, 68%);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  background: linear-gradient(90deg, hsl(210, 64%, 23%) 0%, hsl(210, 64%, 23%) 50%, hsl(210, 64%, 44%) 50%, hsl(210, 64%, 44%) 100%);
+  background: linear-gradient(90deg, hsl(210, 64%, 23%) 0%, hsl(210, 64%, 23%) 50%, hsl(210, 64%, 39%) 50%, hsl(210, 64%, 39%) 100%);
   background-repeat: no-repeat;
   background-size: 200% 100%;
   background-position: right bottom;

@@ -136,13 +136,13 @@
         }
 
         .accordion label:focus {
-          background-color: ab.$clr-blue-01-500;
+          background-color: ab.$clr-blue-01-600;
         }
 
         .accordion label:hover,
         .accordion label:focus {
           color: ab.$clr-neutral-100;
-          background-color: ab.$clr-blue-01-500;
+          background-color: ab.$clr-blue-01-600;
 
         }
 
@@ -160,7 +160,7 @@
 
         .accordion > input[name="collapse"]:checked ~ .handle label {
           color: ab.$clr-neutral-100;
-          background-color: ab.$clr-blue-01-500;
+          background-color: ab.$clr-blue-01-600;
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
 
@@ -234,7 +234,7 @@
           letter-spacing: 1px;
           font-family: ab.$ff-monospace-font;
           color: ab.$clr-neutral-100;
-          background-color: ab.$clr-blue-01-500;
+          background-color: ab.$clr-blue-01-600;
           border-radius: ab.$br-border-radius-300;
         }
 
@@ -243,7 +243,7 @@
           position: absolute;
           bottom: -8px;
           left: 5%;
-          border-top: 8px solid ab.$clr-blue-01-500;
+          border-top: 8px solid ab.$clr-blue-01-600;
           border-left: 6px solid transparent;
           border-right: 6px solid transparent;
         }
@@ -263,7 +263,7 @@
 
   .focused {
     color: ab.$clr-neutral-100;
-    background-color: ab.$clr-blue-01-500;
+    background-color: ab.$clr-blue-01-600;
   }
 }
 
