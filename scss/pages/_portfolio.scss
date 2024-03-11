@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;*/
   gap: 5em;
-  padding-top: calc(5em + 2vw);
+  padding-top: calc(7em + 5vw);
 
 
   &--upper {
@@ -88,13 +88,13 @@
   &--bottom {
     position: relative;
     width: 100%;
-    height: fit-content;
+    /*height: fit-content;*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1.5em;
     grid-row-gap: 2.5em;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
 
 
     .portfolio__card {
