@@ -13,21 +13,94 @@
   @include ab.responsive-max-width(1370px) {
     column-gap: 1.5em;
   }*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   /*background-color: ab.$clr-neutral-100;*/
-
-  &--title {
-    margin-top: 5em;
-    /*display: flex;
+  &--upper {
+    display: flex;
     flex-direction: column;
-    justify-content: center;*/
-    font-family: ab.$ff-primary-font;
-    font-size: 2.441rem;
-    font-weight: ab.$fw-font-weight-bold;
-    color: ab.$clr-augmented-900;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
+    align-items: center;
+    justify-content: space-between;
+
+    .contact__section--title-text {
+      .contact__section--title {
+        margin-top: 3em;
+        margin-bottom: 0.2em;
+        /*display: flex;
+        flex-direction: column;
+        justify-content: center;*/
+        font-family: ab.$ff-primary-font;
+        font-size: 2.441rem;
+        font-weight: ab.$fw-font-weight-bold;
+        color: ab.$clr-augmented-900;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+    }
+    .contact__section--title-paragraph {
+      .contact__section--paragraph {
+        margin-bottom: 3.25em;
+        font-family: ab.$ff-secondary-font;
+        font-weight: ab.$fw-font-weight-medium;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
   }
+
+  &--bottom {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contact__form--group {
+      position: relative;
+      width: 66.667%;
+      height: fit-content;
+
+      .contact__form {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .contact__form--content {
+          position: relative;
+          width: 90%;
+          margin: 20px 3%;
+          /*box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);*/
+        }
+
+        .contact__form--button {
+          @include ab.button-default();
+          @include ab.background-transition-basic(ab.$clr-blue-01-900, ab.$clr-blue-01-600);
+          font-weight: ab.$fw-font-weight-bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: ab.$clr-neutral-000;
+          border-radius: 5px;
+          box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);
+
+          &:hover,
+          &:focus {
+            color: ab.$clr-neutral-100;
+          }
+        }
+
+      }
+    }
+  }
+
+
 
 }

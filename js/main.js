@@ -227,3 +227,50 @@ $(function () {
    const filterizd = $('.filtr-container').filterizr({});
 
 });
+
+/*===================================================
+          contact section
+=====================================================*/
+$(function () {
+   $('#contact__section--title-paragraph').waypoint(
+      function () {
+         var typed5 = new Typed('#contact__section--paragraph', {
+            strings: [
+               'If you',
+               'If you have any',
+               'If you have any questions or wish',
+               'If you have any questions or wish to collaborate,',
+               'If you have any questions or wish to collaborate, send me a message! ',
+            ],
+            typeSpeed: 120,
+            backSpeed: 70,
+            backDelay: 1000,
+            // cursorChar: '_',
+            showCursor: false,
+            shuffle: false,
+            smartBackspace: true,
+            loop: false,
+         });
+
+         this.destroy();
+      },
+      {
+         offset: '50%',
+      }
+   );
+
+   //**************** effect 07 scripts ****************//
+   $('.utils-effect-07').val('');
+   console.log($('.utils-effect-07').attr('class'))
+
+
+   $('.js-effect-07 .utils-effect-07').focusout(function () {
+      if ($(this).val() !== '') {
+         $(this).addClass('has-content');
+         console.log($(this).attr('class'))
+      } else {
+         $(this).removeClass('has-content');
+         console.log($(this).attr('class'))
+      }
+   });
+});
