@@ -206,6 +206,61 @@ $assigned-colors: (
      'clr-text-light': $clr-augmented-600
 );
 
+//semantic alert colors
+$clr-semantic-a-400: hsla(0, 96%, 33%, 100%);
+$clr-semantic-a-300: hsla(0, 96%, 38%, 100%);
+$clr-semantic-a-200: hsla(0, 96%, 43%, 100%);
+$clr-semantic-a-100: hsla(0, 96%, 48%, 100%);
+
+$semantic-alert-colors: (
+     'clr-semantic-a-100': $clr-semantic-a-100,
+     'clr-semantic-a-200': $clr-semantic-a-200,
+     'clr-semantic-a-300': $clr-semantic-a-300,
+     'clr-semantic-a-400': $clr-semantic-a-400
+);
+
+
+//semantic inform colors
+$clr-semantic-i-400: hsla(215, 96%, 33%, 100%);
+$clr-semantic-i-300: hsla(215, 96%, 38%, 100%);
+$clr-semantic-i-200: hsla(215, 96%, 43%, 100%);
+$clr-semantic-i-100: hsla(215, 96%, 48%, 100%);
+
+$semantic-inform-colors: (
+     'clr-semantic-i-100': $clr-semantic-i-100,
+     'clr-semantic-i-200': $clr-semantic-i-200,
+     'clr-semantic-i-300': $clr-semantic-i-300,
+     'clr-semantic-i-400': $clr-semantic-i-400
+);
+
+//semantic success colors
+$clr-semantic-s-400: hsla(100, 96%, 33%, 100%);
+$clr-semantic-s-300: hsla(100, 96%, 38%, 100%);
+$clr-semantic-s-200: hsla(100, 96%, 43%, 100%);
+$clr-semantic-s-100: hsla(100, 96%, 48%, 100%);
+
+$semantic-success-colors: (
+     'clr-semantic-s-100': $clr-semantic-s-100,
+     'clr-semantic-s-200': $clr-semantic-s-200,
+     'clr-semantic-s-300': $clr-semantic-s-300,
+     'clr-semantic-s-400': $clr-semantic-s-400
+);
+
+//semantic warn colors
+$clr-semantic-w-400: hsla(48, 96%, 50%, 100%);
+$clr-semantic-w-300: hsla(48, 96%, 55%, 100%);
+$clr-semantic-w-200: hsla(48, 96%, 60%, 100%);
+$clr-semantic-w-100: hsla(48, 96%, 65%, 100%);
+
+
+$semantic-warn-color: (
+     'clr-semantic-w-100': $clr-semantic-w-100,
+     'clr-semantic-w-200': $clr-semantic-w-200,
+     'clr-semantic-w-300': $clr-semantic-w-300,
+     'clr-semantic-w-400': $clr-semantic-w-400
+);
+
+
 //**************** timing functions ****************//
 $tf-timing-function-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
 $tf-timing-function-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
