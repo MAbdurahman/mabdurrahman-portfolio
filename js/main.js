@@ -295,8 +295,8 @@ $(function () {
    }
 
    /**
-    * @description - checks whether
-    * @returns {boolean}
+    * @description - checks whether input for name is valid or not
+    * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
    //checkNameInput function - check the name input field
    function checkNameInput() {
@@ -325,10 +325,41 @@ $(function () {
       return true;
    }
 
+   /**
+    * @description - checks whether input for email is valid or not
+    * @returns {boolean} - if input is valid, returns true; otherwise, return false
+    */
+   //checkEmailInput Function - checks the email input field
+   function checkEmailInput() {
+      let email = $('#input-02').val();
+      let message = '';
+
+      if (email.length === 0) {
+         message = 'Your email address is required!';
+         isEmailValid = false;
+         getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+
+         return false;
+      }
+      if (!email.match(email_pattern)) {
+         message = 'Invalid email address!';
+         isEmailValid = false;
+         getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+
+         return false;
+      }
+
+      message = 'Valid email address';
+      isEmailValid = true;
+      getPrompt(message, 'contact__form--email-prompt', semantic_success);
+
+      return true;
+   } //end of the checkEmailInput Function
 
 
 
 
 
    $('#input-01').keyup(checkNameInput);
+   $('#input-02').keyup(checkEmailInput);
 });
