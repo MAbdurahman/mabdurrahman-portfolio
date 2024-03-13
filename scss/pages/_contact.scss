@@ -47,6 +47,7 @@
         font-weight: ab.$fw-font-weight-medium;
         letter-spacing: 1px;
         text-align: center;
+        color: ab.set-primary-color(clr-blue-01-700);
       }
     }
   }
@@ -78,7 +79,26 @@
           position: relative;
           width: 90%;
           margin: 20px 3%;
-          /*box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);*/
+
+          .contact__form--input-prompt {
+            position: absolute;
+            left: 4px;
+            bottom: -20px;
+            display: block;
+            font-weight: ab.$fw-font-weight-medium;
+            line-height: 1.25;
+            /*text-align: left;*/
+          }
+        }
+
+
+
+
+        .contact__form--content-textarea {
+          position: relative;
+          width: 90%;
+          height: 85px;
+          margin: 20px 3%;
         }
 
         .contact__form--button {

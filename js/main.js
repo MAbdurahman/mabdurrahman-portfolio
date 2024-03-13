@@ -261,16 +261,74 @@ $(function () {
 
    //**************** effect 07 scripts ****************//
    $('.utils-effect-07').val('');
-   console.log($('.utils-effect-07').attr('class'))
-
 
    $('.js-effect-07 .utils-effect-07').focusout(function () {
       if ($(this).val() !== '') {
          $(this).addClass('has-content');
-         console.log($(this).attr('class'))
       } else {
          $(this).removeClass('has-content');
-         console.log($(this).attr('class'))
       }
    });
+
+   //**************** form validation scripts ****************//
+   const name_pattern = /^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{1,}\s?([a-zA-Z]{1,})?)(,? (?:[JS]r\.?|I|II|III|IV))?$/g;
+   const email_pattern = /^[!A-Z0-9#$&?*^~_%+-]+(\.[A-Z0-9!_%+-^]+)*?@[A-Z0-9-]+([A-Z0-9.-])*\.[A-Z]{2,}$/i;
+   const required_message_length = 30;
+
+   const semantic_success = '#166534';
+   const semantic_alert = '#991B1B';
+   const semantic_warn = '#C68A04';
+
+   let is_name_valid = false;
+   let is_email_valid = false;
+   let is_message_valid = false;
+
+   /**
+    * @description - produces the message at the element id in the specific semantic color
+    * @param message - the message in form of a String
+    * @param prompt_location - the element id where the message is displayed
+    * @param color - the semantic color alert or success
+    */
+   function getPrompt(message, prompt_location, color) {
+      document.getElementById(prompt_location).innerHTML = message;
+      document.getElementById(prompt_location).style.color = color;
+   }
+
+   /**
+    * @description - checks whether
+    * @returns {boolean}
+    */
+   //checkNameInput function - check the name input field
+   function checkNameInput() {
+      let name = $('#input-01').val();
+      let message = '';
+
+      if (name.length === 0) {
+         message = 'Your first and last name is required!';
+         isNameValid = false;
+         getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+
+         return false;
+      }
+      if (!name.match(name_pattern)) {
+         message = 'Enter first and last name only!';
+         isNameValid = false;
+         getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+
+         return false;
+      }
+
+      message = 'Welcome ' + name;
+      isNameValid = true;
+      getPrompt(message, 'contact__form--name-prompt', semantic_success);
+
+      return true;
+   }
+
+
+
+
+
+
+   $('#input-01').keyup(checkNameInput);
 });

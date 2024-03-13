@@ -1348,6 +1348,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   height: 100%;
   z-index: -1;
   background-color: hsl(210, 0%, 88%);
+  background-color: hsl(210, 51%, 94%);
   transition: 0.4s;
 }
 
@@ -2869,6 +2870,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-weight: 500;
   letter-spacing: 1px;
   text-align: center;
+  color: hsl(210, 64%, 34%);
 }
 .contact__section--bottom {
   position: relative;
@@ -2896,7 +2898,21 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   width: 90%;
   margin: 20px 3%;
-  /*box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-700);*/
+}
+.contact__section--bottom .contact__form--group .contact__form .contact__form--content .contact__form--input-prompt {
+  position: absolute;
+  left: 4px;
+  bottom: -20px;
+  display: block;
+  font-weight: 500;
+  line-height: 1.25;
+  /*text-align: left;*/
+}
+.contact__section--bottom .contact__form--group .contact__form .contact__form--content-textarea {
+  position: relative;
+  width: 90%;
+  height: 85px;
+  margin: 20px 3%;
 }
 .contact__section--bottom .contact__form--group .contact__form .contact__form--button {
   padding: 16px 32px;
