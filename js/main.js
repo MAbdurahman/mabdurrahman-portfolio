@@ -274,6 +274,7 @@ $(function () {
    const name_pattern = /^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{1,}\s?([a-zA-Z]{1,})?)(,? (?:[JS]r\.?|I|II|III|IV))?$/g;
    const email_pattern = /^[!A-Z0-9#$&?*^~_%+-]+(\.[A-Z0-9!_%+-^]+)*?@[A-Z0-9-]+([A-Z0-9.-])*\.[A-Z]{2,}$/i;
    const required_message_length = 30;
+   const maximum_message_length = 160;
 
    const semantic_success = '#166534';
    const semantic_alert = '#991B1B';
@@ -282,6 +283,15 @@ $(function () {
    let is_name_valid = false;
    let is_email_valid = false;
    let is_message_valid = false;
+
+   function makeString(object) {
+      if (object == null) return '';
+      return '' + object;
+   };
+
+   function stripTags(str) {
+      return makeString(str).replace(/<\/?[^>]+>/g, '');
+   };
 
    /**
     * @description - produces the message at the element id in the specific semantic color
@@ -354,7 +364,37 @@ $(function () {
       getPrompt(message, 'contact__form--email-prompt', semantic_success);
 
       return true;
-   } //end of the checkEmailInput Function
+   }
+
+   /**
+    * @description - checks whether the textarea for the message is valid or not
+    * @returns {boolean} - if input is valid, returns true; otherwise, return false
+    */
+   //checkMessageInput Function - checks the message input field
+   function checkMessageInput() {
+      let form_message = $('#contact__form--message').val();
+      let characters_left = required_message_length - form_message.length;
+      let characters_number = maximum_message_length - form_message.length;
+      let message = '';
+
+      form_message = stripTags(form_message);
+
+      console.log(form_message)
+
+      if (form_message.length < required_message_length) {
+         message = characters_left + ' more characters required in message!';
+         isMessageValid = false;
+         getPrompt(message, 'contact__form--message-prompt', semantic_alert);
+
+         return false;
+      } else {
+         message = 'Valid message';
+         isMessageValid = true;
+         getPrompt(message, 'contact__form--message-prompt', semantic_success);
+
+         return true;
+      }
+   }
 
 
 
@@ -362,4 +402,5 @@ $(function () {
 
    $('#input-01').keyup(checkNameInput);
    $('#input-02').keyup(checkEmailInput);
+   $('#contact__form--message').keyup(checkMessageInput);
 });
