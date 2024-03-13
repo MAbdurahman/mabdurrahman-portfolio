@@ -2914,6 +2914,15 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   height: 85px;
   margin: 20px 3%;
 }
+.contact__section--bottom .contact__form--group .contact__form .contact__form--content-textarea .contact__form--input-prompt-textarea {
+  position: absolute;
+  left: 4px;
+  bottom: -20px;
+  display: block;
+  font-weight: 500;
+  line-height: 1.25;
+  /*text-align: left;*/
+}
 .contact__section--bottom .contact__form--group .contact__form .contact__form--button {
   padding: 16px 32px;
   font-family: "Montserrat", sans-serif;
