@@ -155,34 +155,6 @@ $(function () {
       $(this).addClass('active').siblings().removeClass('active');
    });
 
-   /*$('#portfolio__filters > .js-filter').on('click', function () {
-      var value = $(this).attr('data-filter');
-      console.log(value)
-
-      if (value === 'all') {
-         $('.filtr-item').show('1500');
-      } else {
-         $('.filter')
-            .not('.' + value)
-            .hide('1500');
-         $('.filter')
-            .filter('.' + value)
-            .show('1500');
-      }
-      if (value === 'all') {
-         console.log('show all items')
-      }
-      if (value === 'software') {
-         console.log('show all software items')
-      }
-      if (value === 'website') {
-         console.log('show all website items')
-      }
-      if (value === 'webapp') {
-         console.log('show all webapp items')
-      }
-   }); */
-
    const options = {
       animationDuration: 0.5, // in seconds
       callbacks: {
@@ -284,14 +256,34 @@ $(function () {
    let is_email_valid = false;
    let is_message_valid = false;
 
+   const notification_message = $('#notification__message');
+   console.log(notification_message)
+   const submit_button = $('#contact__form--submit');
+   console.log(submit_button);
+   const notification_title = $('#notification__message--title');
+   const notification_text = $('#notification__message--text');
+
+   let timeoutID1;
+   let timeoutID2;
+
+   /**
+    * @description - makes the parameter a String
+    * @param object - the parameter
+    * @returns {string} - returns a String
+    */
    function makeString(object) {
       if (object == null) return '';
       return '' + object;
-   };
+   }
 
-   function stripTags(str) {
+   /**
+    * @description - remove HTML tags from a String
+    * @param str - a String
+    * @returns {string} - returns a String with the tags removed
+    */
+   function removeHTMLTags(str) {
       return makeString(str).replace(/<\/?[^>]+>/g, '');
-   };
+   }
 
    /**
     * @description - produces the message at the element id in the specific semantic color
@@ -305,10 +297,10 @@ $(function () {
    }
 
    /**
-    * @description - checks whether input for name is valid or not
+    * @description - checks whether input for name is valid or not, and adds an
+    * interactive message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
-   //checkNameInput function - check the name input field
    function checkNameInput() {
       let name = $('#input-01').val();
       let message = '';
@@ -336,10 +328,10 @@ $(function () {
    }
 
    /**
-    * @description - checks whether input for email is valid or not
+    * @description - checks whether input for email is valid or not, and adds an
+    * interacive validation message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
-   //checkEmailInput Function - checks the email input field
    function checkEmailInput() {
       let email = $('#input-02').val();
       let message = '';
@@ -367,19 +359,18 @@ $(function () {
    }
 
    /**
-    * @description - checks whether the textarea for the message is valid or not
+    * @description - checks whether the textarea for the message is valid or not, and
+    * adds an interactive validation message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
-   //checkMessageInput Function - checks the message input field
    function checkMessageInput() {
       let form_message = $('#contact__form--message').val();
+      form_message = removeHTMLTags(form_message);
+      console.log(form_message)
       let characters_left = required_message_length - form_message.length;
       let characters_number = maximum_message_length - form_message.length;
       let message = '';
 
-      form_message = stripTags(form_message);
-
-      console.log(form_message)
 
       if (form_message.length < required_message_length) {
          message = characters_left + ' more characters required in message!';
@@ -396,6 +387,42 @@ $(function () {
       }
    }
 
+
+   function performInvalidForm() {
+
+   }
+
+   function performValidForm() {
+
+   }
+
+   function updateErrors() {
+
+
+   }
+
+   submit_button.on('click', function() {
+      console.log('send message clicked')
+      if (timeoutID1) {
+         clearTimeout(timeoutID1);
+         clearTimeout(timeoutID2);
+      }
+      notification_message.css('display', 'block')
+      notification_title.innerHTML = 'Error';
+      notification_message.addClass('move-in-from-right notification__error');
+
+
+      timeoutID1 = setTimeout(() => {
+         notification_message.addClass('exit-to-left');
+         notification_message.removeClass('move-in-from-right');
+         timeoutID2 = setTimeout(() => {
+
+         }, 1500)
+      }, 3500)
+
+
+
+   })
 
 
 
