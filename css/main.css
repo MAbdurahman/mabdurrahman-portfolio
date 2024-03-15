@@ -2893,6 +2893,9 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*.notification__message--text:not(:last-child) {
+    margin-bottom: 0.25em !important;
+  }*/
 }
 .contact__section--bottom .contact__form--group .contact__form .contact__form--content {
   position: relative;
@@ -2935,12 +2938,13 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   transition: all ease-in-out;
 }
 .contact__section--bottom .contact__form--group .contact__form .notification__message--title {
+  margin-bottom: 0.33em;
   font-weight: 600;
   text-align: center;
   letter-spacing: 1px;
-  margin-bottom: 0.33em;
 }
 .contact__section--bottom .contact__form--group .contact__form .notification__message--text {
+  margin-bottom: 0.25em !important;
   text-align: left;
   letter-spacing: 1px;
 }

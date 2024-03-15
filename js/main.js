@@ -258,6 +258,7 @@ $(function () {
 
    const notification_message = $('#notification__message');
    console.log(notification_message)
+   console.log(notification_message.children('h4'))
    const submit_button = $('#contact__form--submit');
    console.log(submit_button);
    const notification_title = $('#notification__message--title');
@@ -306,22 +307,22 @@ $(function () {
       let message = '';
 
       if (name.length === 0) {
-         message = 'Your first and last name is required!';
-         isNameValid = false;
+         message = 'Your first and last name are required!';
+         is_name_valid = false;
          getPrompt(message, 'contact__form--name-prompt', semantic_alert);
 
          return false;
       }
       if (!name.match(name_pattern)) {
          message = 'Enter first and last name only!';
-         isNameValid = false;
+         is_name_valid = false;
          getPrompt(message, 'contact__form--name-prompt', semantic_alert);
 
          return false;
       }
 
       message = 'Welcome ' + name;
-      isNameValid = true;
+      is_name_valid = true;
       getPrompt(message, 'contact__form--name-prompt', semantic_success);
 
       return true;
@@ -338,21 +339,21 @@ $(function () {
 
       if (email.length === 0) {
          message = 'Your email address is required!';
-         isEmailValid = false;
+         is_email_valid = false;
          getPrompt(message, 'contact__form--email-prompt', semantic_alert);
 
          return false;
       }
       if (!email.match(email_pattern)) {
          message = 'Invalid email address!';
-         isEmailValid = false;
+         is_email_valid = false;
          getPrompt(message, 'contact__form--email-prompt', semantic_alert);
 
          return false;
       }
 
       message = 'Valid email address';
-      isEmailValid = true;
+      is_email_valid = true;
       getPrompt(message, 'contact__form--email-prompt', semantic_success);
 
       return true;
@@ -366,7 +367,7 @@ $(function () {
    function checkMessageInput() {
       let form_message = $('#contact__form--message').val();
       form_message = removeHTMLTags(form_message);
-      console.log(form_message)
+
       let characters_left = required_message_length - form_message.length;
       let characters_number = maximum_message_length - form_message.length;
       let message = '';
@@ -374,13 +375,13 @@ $(function () {
 
       if (form_message.length < required_message_length) {
          message = characters_left + ' more characters required in message!';
-         isMessageValid = false;
+         is_message_valid = false;
          getPrompt(message, 'contact__form--message-prompt', semantic_alert);
 
          return false;
       } else {
          message = 'Valid message';
-         isMessageValid = true;
+         is_message_valid = true;
          getPrompt(message, 'contact__form--message-prompt', semantic_success);
 
          return true;
@@ -397,8 +398,55 @@ $(function () {
    }
 
    function updateErrors() {
+      let message = '';
+      notification_message.html(
+         `<h4 class='notitication__message--title'>Error!</h4>
+          <p class='notification__message--text'>The following are error(s) in the form:</p>`);
+            notification_message.children('h4').addClass('notification__message--title');
+            notification_message.children('p').addClass('notification__message--text');
 
+            if (!is_name_valid) {
+               if ($('#input-01').val().length === 0) {
+                  notification_message.append(
+                     `<p>Your first and last name are required!</p>`
+                  );
+                  message = 'Your first and last name are required!';
+                  getPrompt(message, 'contact__form--name-prompt', semantic_alert);
 
+               } else {
+                  notification_message.append(
+                     `<p>Enter first and last name only!</p>`
+                  );
+                  message = 'Enter first and last name only!';
+                  getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+               }
+            }
+            if (!is_email_valid) {
+               if ($('#input-02').val().length === 0) {
+                  notification_message.append(
+                     `<p>Your email address is required!</p>`
+                  );
+                  message = 'Your email address is required!';
+                  getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+
+               } else {
+                  notification_message.append(
+                     `<p>Your email address is Invalid!</p>`
+                  );
+                  message = 'Invalid email address!';
+                  getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+               }
+            }
+      if (!is_message_valid) {
+         let characters_left =
+            required_message_length - $('#contact__form--message').val().length;
+         let messageData =
+            characters_left + ' more characters required in message!';
+
+         $('#notification__message').append(`<p>${messageData}</p>`);
+         message = characters_left + ' more characters required in message!';
+         getPrompt(message, 'contact__form--message-prompt', semantic_alert);
+      }
    }
 
    submit_button.on('click', function() {
@@ -410,13 +458,14 @@ $(function () {
       notification_message.css('display', 'block')
       notification_title.innerHTML = 'Error';
       notification_message.addClass('move-in-from-right notification__error');
-
+      updateErrors();
 
       timeoutID1 = setTimeout(() => {
          notification_message.addClass('exit-to-left');
          notification_message.removeClass('move-in-from-right');
          timeoutID2 = setTimeout(() => {
-
+            notification_message.removeClass('exit-to-left');
+            notification_message.css('display', 'none')
          }, 1500)
       }, 3500)
 
