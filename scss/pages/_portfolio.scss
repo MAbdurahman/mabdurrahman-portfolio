@@ -14,8 +14,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;*/
-  gap: 5em;
-  padding-top: calc(7em + 5vw);
+  /*gap: 5em;
+  padding-top: calc(7em + 5vw);*/
+  gap: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
 
   &--upper {

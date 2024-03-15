@@ -2717,8 +2717,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   flex-direction: column;
   justify-content: center;
   align-items: center;*/
-  gap: 5em;
-  padding-top: calc(7em + 5vw);
+  /*gap: 5em;
+  padding-top: calc(7em + 5vw);*/
+  gap: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 .portfolio__section--upper {
   position: relative;
@@ -2938,13 +2941,14 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   transition: all ease-in-out;
 }
 .contact__section--bottom .contact__form--group .contact__form .notification__message--title {
-  margin-bottom: 0.33em;
+  margin-bottom: 0.5em;
   font-weight: 600;
   text-align: center;
   letter-spacing: 1px;
 }
 .contact__section--bottom .contact__form--group .contact__form .notification__message--text {
-  margin-bottom: 0.25em !important;
+  display: block;
+  margin-bottom: 0.125em !important;
   text-align: left;
   letter-spacing: 1px;
 }

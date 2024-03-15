@@ -1,4 +1,3 @@
-
 /**
  * maabdurrahman-portfolio-scripts
  * @author: Mahdi Abdurrhaman
@@ -10,7 +9,8 @@
 =====================================================*/
 $(window).on('load', function () {
    // makes sure that whole site is loaded
-   $('#preloader__gif, #preloader').fadeOut(3500, function () {});
+   $('#preloader__gif, #preloader').fadeOut(3500, function () {
+   });
 
 });
 /*===================================================
@@ -35,7 +35,7 @@ $(function () {
     * @param entries - the sections in the of an array to be observed
     * @param observer - the IntersectionObserver
     */
-   function addActiveClass (entries, observer) {
+   function addActiveClass(entries, observer) {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
             let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
@@ -48,7 +48,7 @@ $(function () {
    /**
     * @description - removes active class from navigation links
     */
-   function removeActiveClass () {
+   function removeActiveClass() {
       navigation_links.forEach(navigation_link => {
          navigation_link.classList.remove('active');
       });
@@ -58,7 +58,7 @@ $(function () {
     * @description - toogle the active class for the navigation_button, navigation_button-bars,
     * navigation_background, and navigation_list
     */
-   function toggleNavigation () {
+   function toggleNavigation() {
       $('.navigation__button').toggleClass('active');
       $('.navigation__background').toggleClass('active');
       $('.navigation__list').toggleClass('active');
@@ -70,7 +70,7 @@ $(function () {
     * navigation_list and removes the no-scroll class on the body. Thus, closing the navigation
     * when the navigation_list or navigation_item is clicked.
     */
-   function closeNavigation () {
+   function closeNavigation() {
       $('.navigation__button').removeClass('active');
       $('.navigation__background').removeClass('active');
       $('.navigation__list').removeClass('active');
@@ -98,23 +98,17 @@ $(function () {
    });*/
 
 
-   $('#progress-bars').waypoint(
-      function () {
-         $('.progress-bar').each(function () {
-            $(this).animate(
-               {
-                  width: $(this).attr('aria-valuenow') + '%',
-               },
-               1500
-            );
-         });
+   $('#progress-bars').waypoint(function () {
+      $('.progress-bar').each(function () {
+         $(this).animate({
+            width: $(this).attr('aria-valuenow') + '%',
+         }, 1500);
+      });
 
-         this.destroy();
-      },
-      {
-         offset: '100%',
-      }
-   );
+      this.destroy();
+   }, {
+      offset: '100%',
+   });
 });
 
 
@@ -151,47 +145,34 @@ $(function () {
 =====================================================*/
 $(function () {
    /**************** add and remove active class from filter buttons ****************/
-   $('#portfolio__filters > .js-filter').click(function() {
+   $('#portfolio__filters > .js-filter').click(function () {
       $(this).addClass('active').siblings().removeClass('active');
    });
 
    const options = {
       animationDuration: 0.5, // in seconds
       callbacks: {
-         onFilteringStart: function() { },
-         onFilteringEnd: function() { },
-         onShufflingStart: function() { },
-         onShufflingEnd: function() { },
-         onSortingStart: function() { },
-         onSortingEnd: function() { }
-      },
-      controlsSelector: '', // Selector for custom controls
+         onFilteringStart: function () {
+         }, onFilteringEnd: function () {
+         }, onShufflingStart: function () {
+         }, onShufflingEnd: function () {
+         }, onSortingStart: function () {
+         }, onSortingEnd: function () {
+         }
+      }, controlsSelector: '', // Selector for custom controls
       delay: 0, // Transition delay in ms
       delayMode: 'progressive', // 'progressive' or 'alternate'
-      easing: 'ease-out',
-      filter: 'all', // Initial filter
+      easing: 'ease-out', filter: 'all', // Initial filter
       filterOutCss: { // Filtering out animation
-         opacity: 0,
-         transform: 'scale(0.5)'
-      },
-      filterInCss: { // Filtering in animation
-         opacity: 0,
-         transform: 'scale(1)'
-      },
-      gridItemsSelector: '.filtr-container',
-      gutterPixels: 0, // Items spacing in pixels
+         opacity: 0, transform: 'scale(0.5)'
+      }, filterInCss: { // Filtering in animation
+         opacity: 0, transform: 'scale(1)'
+      }, gridItemsSelector: '.filtr-container', gutterPixels: 0, // Items spacing in pixels
       layout: 'sameSize', // See layouts
-      multifilterLogicalOperator: 'or',
-      searchTerm: '',
-      setupControls: true, // Should be false if controlsSelector is set
+      multifilterLogicalOperator: 'or', searchTerm: '', setupControls: true, // Should be false if controlsSelector is set
       spinner: { // Configuration for built-in spinner
-         enabled: false,
-         fillColor: '#2184D0',
-         styles: {
-            height: '75px',
-            margin: '0 auto',
-            width: '75px',
-            'z-index': 2,
+         enabled: false, fillColor: '#2184D0', styles: {
+            height: '75px', margin: '0 auto', width: '75px', 'z-index': 2,
          },
       },
    }
@@ -204,32 +185,22 @@ $(function () {
           contact section
 =====================================================*/
 $(function () {
-   $('#contact__section--title-paragraph').waypoint(
-      function () {
-         var typed5 = new Typed('#contact__section--paragraph', {
-            strings: [
-               'If you',
-               'If you have any',
-               'If you have any questions or wish',
-               'If you have any questions or wish to collaborate,',
-               'If you have any questions or wish to collaborate, send me a message! ',
-            ],
-            typeSpeed: 120,
-            backSpeed: 70,
-            backDelay: 1000,
-            // cursorChar: '_',
-            showCursor: false,
-            shuffle: false,
-            smartBackspace: true,
-            loop: false,
-         });
+   $('#contact__section--title-paragraph').waypoint(function () {
+      var typed5 = new Typed('#contact__section--paragraph', {
+         strings: ['If you', 'If you have any', 'If you have any questions or wish', 'If you have any questions or wish to collaborate,', 'If you have any questions or wish to collaborate, send me a message! ',],
+         typeSpeed: 120,
+         backSpeed: 70,
+         backDelay: 1000, // cursorChar: '_',
+         showCursor: false,
+         shuffle: false,
+         smartBackspace: true,
+         loop: false,
+      });
 
-         this.destroy();
-      },
-      {
-         offset: '50%',
-      }
-   );
+      this.destroy();
+   }, {
+      offset: '50%',
+   });
 
    //**************** effect 07 scripts ****************//
    $('.utils-effect-07').val('');
@@ -256,16 +227,22 @@ $(function () {
    let is_email_valid = false;
    let is_message_valid = false;
 
+   const name_input = $('#input-01');
+   const email_input = $('#input-02');
+   const message_input = $('#contact__form--message');
    const notification_message = $('#notification__message');
-   console.log(notification_message)
-   console.log(notification_message.children('h4'))
    const submit_button = $('#contact__form--submit');
-   console.log(submit_button);
    const notification_title = $('#notification__message--title');
    const notification_text = $('#notification__message--text');
 
    let timeoutID1;
    let timeoutID2;
+   let timeoutID3;
+   let timeoutID4;
+   let timeoutID5;
+   let timeoutID6;
+   let timeoutID7;
+   let timeoutID8;
 
    /**
     * @description - makes the parameter a String
@@ -390,67 +367,6 @@ $(function () {
 
 
    function performInvalidForm() {
-
-   }
-
-   function performValidForm() {
-
-   }
-
-   function updateErrors() {
-      let message = '';
-      notification_message.html(
-         `<h4 class='notitication__message--title'>Error!</h4>
-          <p class='notification__message--text'>The following are error(s) in the form:</p>`);
-            notification_message.children('h4').addClass('notification__message--title');
-            notification_message.children('p').addClass('notification__message--text');
-
-            if (!is_name_valid) {
-               if ($('#input-01').val().length === 0) {
-                  notification_message.append(
-                     `<p>Your first and last name are required!</p>`
-                  );
-                  message = 'Your first and last name are required!';
-                  getPrompt(message, 'contact__form--name-prompt', semantic_alert);
-
-               } else {
-                  notification_message.append(
-                     `<p>Enter first and last name only!</p>`
-                  );
-                  message = 'Enter first and last name only!';
-                  getPrompt(message, 'contact__form--name-prompt', semantic_alert);
-               }
-            }
-            if (!is_email_valid) {
-               if ($('#input-02').val().length === 0) {
-                  notification_message.append(
-                     `<p>Your email address is required!</p>`
-                  );
-                  message = 'Your email address is required!';
-                  getPrompt(message, 'contact__form--email-prompt', semantic_alert);
-
-               } else {
-                  notification_message.append(
-                     `<p>Your email address is Invalid!</p>`
-                  );
-                  message = 'Invalid email address!';
-                  getPrompt(message, 'contact__form--email-prompt', semantic_alert);
-               }
-            }
-      if (!is_message_valid) {
-         let characters_left =
-            required_message_length - $('#contact__form--message').val().length;
-         let messageData =
-            characters_left + ' more characters required in message!';
-
-         $('#notification__message').append(`<p>${messageData}</p>`);
-         message = characters_left + ' more characters required in message!';
-         getPrompt(message, 'contact__form--message-prompt', semantic_alert);
-      }
-   }
-
-   submit_button.on('click', function() {
-      console.log('send message clicked')
       if (timeoutID1) {
          clearTimeout(timeoutID1);
          clearTimeout(timeoutID2);
@@ -466,17 +382,136 @@ $(function () {
          timeoutID2 = setTimeout(() => {
             notification_message.removeClass('exit-to-left');
             notification_message.css('display', 'none')
-         }, 1500)
-      }, 3500)
+         }, 1500);
+      }, 3500);
+   }
 
+   function performValidForm() {
+      if (timeoutID3) {
+         clearTimeout(timeoutID3);
+         clearTimeout(timeoutID4);
+         clearTimeout(timeoutID5);
+         clearTimeout(timeoutID6);
+         clearTimeout(timeoutID7);
+      }
+      timeoutID3 = setTimeout(function () {
+         submit_button.val('Valid Form');
+      }, 1500);
 
+      submit_button.addClass('valid');
 
-   })
+      timeoutID4 = setTimeout(function () {
+         submit_button.val('Sending Message...');
+      }, 1500);
 
+      submit_button.prop('disable', true);
 
+      if (submit_button.hasClass('valid')) {
+         timeoutID5 = setTimeout(function () {
+            submit_button.val('Message Sent');
 
+            /* show notification message with success */
+            notification_message.css('display', 'block');
+            notification_message.addClass('move-in-from-right notification__success');
+            notification_message.html(
+               `<h4>Success!</h4>
+                 <p>Your message was successfully sent</p>
+                 `);
+            notification_message.children('h4').addClass('notification__message--title');
+            notification_message.children('span').addClass('notification__message--text');
+            timeoutID6 = setTimeout(() => {
+               notification_message.addClass('exit-to-left');
+               notification_message.removeClass('move-in-from-right');
+               timeoutID7 = setTimeout(() => {
+                  notification_message.removeClass('exit-to-left');
+                  notification_message.css('display', 'none')
+               }, 5500);
+            }, 8000);
 
-   $('#input-01').keyup(checkNameInput);
-   $('#input-02').keyup(checkEmailInput);
-   $('#contact__form--message').keyup(checkMessageInput);
+         }, 5000);
+      }
+      resetForm();
+   }
+
+   function resetForm() {
+      if (timeoutID8) {
+         clearTimeout(timeoutID1);
+         clearTimeout(timeoutID2);
+         clearTimeout(timeoutID3);
+         clearTimeout(timeoutID4);
+         clearTimeout(timeoutID5);
+         clearTimeout(timeoutID6);
+         clearTimeout(timeoutID7);
+         clearTimeout(timeoutID8);
+      }
+      timeoutID8 = setTimeout(() => {
+         name_input.val('');
+         email_input.val('');
+         message_input.val('');
+         submit_button.val('Send Message');
+         submit_button.prop('disable', false);
+         is_name_valid = false;
+         is_email_valid = false;
+         is_message_valid = false;
+      location.reload();
+      }, 13000);
+   }
+   function updateErrors() {
+      let message = '';
+      notification_message.html(`<h4 class='notitication__message--title'>Error!</h4>
+          <p class='notification__message--text'>The following are error(s) in the form:</p>`);
+      notification_message.children('h4').addClass('notification__message--title');
+      notification_message.children('p').addClass('notification__message--text');
+
+      if (!is_name_valid) {
+         if ($('#input-01').val().length === 0) {
+            notification_message.append(`<p>Your first and last name are required!</p>`);
+            notification_message.children('p').addClass('notification__message--text');
+            message = 'Your first and last name are required!';
+            getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+
+         } else {
+            notification_message.append(`<p>Enter first and last name only!</p>`);
+            notification_message.children('p').addClass('notification__message--text');
+            message = 'Enter first and last name only!';
+            getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+         }
+      }
+      if (!is_email_valid) {
+         if ($('#input-02').val().length === 0) {
+            notification_message.append(`<p>Your email address is required!</p>`);
+            notification_message.children('p').addClass('notification__message--text');
+            message = 'Your email address is required!';
+            getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+
+         } else {
+            notification_message.append(`<p>Your email address is Invalid!</p>`);
+            notification_message.children('p').addClass('notification__message--text');
+            message = 'Invalid email address!';
+            getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+         }
+      }
+      if (!is_message_valid) {
+         let characters_left = required_message_length - $('#contact__form--message').val().length;
+         let messageData = characters_left + ' more characters required in message!';
+
+         notification_message.append(`<p>${messageData}</p>`);
+         notification_message.children('p').addClass('notification__message--text');
+         message = characters_left + ' more characters required in message!';
+         getPrompt(message, 'contact__form--message-prompt', semantic_alert);
+      }
+   }
+
+   function checkFormValidation() {
+      if (is_name_valid && is_email_valid && is_message_valid) {
+         performValidForm();
+      } else {
+         performInvalidForm();
+      }
+   }
+
+   name_input.keyup(checkNameInput);
+   email_input.keyup(checkEmailInput);
+   message_input.keyup(checkMessageInput);
+   submit_button.click(checkFormValidation);
 });
