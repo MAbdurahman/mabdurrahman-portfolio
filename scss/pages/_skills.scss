@@ -39,10 +39,10 @@
       top: 10%;
       width: 100%;
       height: 100%;
-      font-weight: ab.$fw-font-weight-bold;
+      /*font-weight: ab.$fw-font-weight-bold;
       text-transform: capitalize;
       text-align: center;
-      letter-spacing: 1px;
+      letter-spacing: 1px;*/
 
       .accordions {
         width: 100%;
@@ -52,7 +52,7 @@
         flex-direction: column;
 
         /*CSS for the main interaction*/
-        .accordion > input[name="collapse"] {
+        .accordion > input[name=collapse] {
           display: none;
 
         }
@@ -74,7 +74,22 @@
           border-bottom-right-radius: ab.$br-border-radius-300;
         }
 
-        .accordion > input[name="collapse"]:checked ~ .content p {
+        .accordion > input[name=collapse] ~ .content p {
+          height: 120px;
+          padding: 8px 16px;
+          font-size: ab.$fs-font-size-010;
+          font-weight: ab.$fw-font-weight-normal;
+          text-align: left;
+          text-transform: none;
+          line-height: 1.5;
+          letter-spacing: 1px;
+          hyphens: auto;
+          color: ab.$clr-augmented-900;
+          background-color: ab.$clr-augmented-000;
+          transition: height 0.5s;
+        }
+
+        .accordion > input[name=collapse]:checked ~ .content p {
           height: 120px;
           padding: 8px 16px;
           font-size: ab.$fs-font-size-010;
@@ -96,7 +111,7 @@
 
         /* For Desktop */
         @media only screen and (min-width: 620px) {
-          .accordion > input[name="collapse"]:checked ~ .content {
+          .accordion > input[name=collapse]:checked ~ .content {
             height: 120px;
           }
         }
@@ -105,7 +120,7 @@
           margin-bottom: 1em;
         }
 
-        .accordion > input[name="collapse"]:checked ~ .content {
+        .accordion > input[name=collapse]:checked ~ .content {
           border-top: 0;
           transition: 0.3s;
         }
@@ -158,7 +173,7 @@
 
         }
 
-        .accordion > input[name="collapse"]:checked ~ .handle label {
+        .accordion > input[name=collapse]:checked ~ .handle label {
           color: ab.$clr-neutral-100;
           background-color: ab.$clr-blue-01-600;
           border-bottom-left-radius: 0;
@@ -166,7 +181,7 @@
 
         }
 
-        .accordion > input[name="collapse"]:checked ~ .handle label:before {
+        .accordion > input[name=collapse]:checked ~ .handle label:before {
           transform: rotate(180deg);
           transform-origin: center;
           transition: 0.4s;
@@ -218,7 +233,6 @@
           background-color: ab.$clr-blue-01-900;
           border-top-left-radius: ab.$br-border-radius-300;
           border-bottom-left-radius: ab.$br-border-radius-300;
-          /*box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-600);*/
           white-space: nowrap;
           transition: width 0.6s ease;
         }
