@@ -243,6 +243,7 @@ $(function () {
    let timeoutID6;
    let timeoutID7;
    let timeoutID8;
+   let timeoutID9;
 
    /**
     * @description - makes the parameter a String
@@ -415,7 +416,7 @@ $(function () {
             notification_message.addClass('move-in-from-right notification__success');
             notification_message.html(
                `<h4>Success!</h4>
-                 <p>Your message was successfully sent</p>
+                 <p>Your message was successfully sent.</p>
                  `);
             notification_message.children('h4').addClass('notification__message--title');
             notification_message.children('span').addClass('notification__message--text');
@@ -443,18 +444,24 @@ $(function () {
          clearTimeout(timeoutID6);
          clearTimeout(timeoutID7);
          clearTimeout(timeoutID8);
+         clearTimeout(timeoutID9);
       }
       timeoutID8 = setTimeout(() => {
-         name_input.val('');
-         email_input.val('');
-         message_input.val('');
-         submit_button.val('Send Message');
-         submit_button.prop('disable', false);
-         is_name_valid = false;
-         is_email_valid = false;
-         is_message_valid = false;
-      location.reload();
-      }, 13000);
+         location.reload();
+
+         timeoutID9 = setTimeout(() => {
+            name_input.val('');
+            email_input.val('');
+            message_input.val('');
+            submit_button.val('Send Message');
+            submit_button.prop('disable', false);
+            is_name_valid = false;
+            is_email_valid = false;
+            is_message_valid = false;
+         }, 2000);
+
+      }, 13500);
+
    }
    function updateErrors() {
       let message = '';
