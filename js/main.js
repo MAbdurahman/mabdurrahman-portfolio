@@ -292,7 +292,7 @@ $(function () {
          return false;
       }
       if (!name.match(name_pattern)) {
-         message = 'Enter first and last name only!';
+         message = 'Enter first and last name!';
          is_name_valid = false;
          getPrompt(message, 'contact__form--name-prompt', semantic_alert);
 
@@ -366,7 +366,9 @@ $(function () {
       }
    }
 
-
+   /**
+    * @description -
+    */
    function performInvalidForm() {
       if (timeoutID1) {
          clearTimeout(timeoutID1);
@@ -387,6 +389,9 @@ $(function () {
       }, 3500);
    }
 
+   /**
+    * @description -
+    */
    function performValidForm() {
       if (timeoutID3) {
          clearTimeout(timeoutID3);
@@ -434,6 +439,9 @@ $(function () {
       resetForm();
    }
 
+   /**
+    * @description -
+    */
    function resetForm() {
       if (timeoutID8) {
          clearTimeout(timeoutID1);
@@ -461,8 +469,11 @@ $(function () {
          }, 2000);
 
       }, 13500);
-
    }
+
+   /**
+    * @description -
+    */
    function updateErrors() {
       let message = '';
       notification_message.html(`<h4 class='notitication__message--title'>Error!</h4>
@@ -474,13 +485,13 @@ $(function () {
          if ($('#input-01').val().length === 0) {
             notification_message.append(`<p>Your first and last name are required!</p>`);
             notification_message.children('p').addClass('notification__message--text');
-            message = 'Your first and last name are required!';
+            message = 'First and last name are required!';
             getPrompt(message, 'contact__form--name-prompt', semantic_alert);
 
          } else {
-            notification_message.append(`<p>Enter first and last name only!</p>`);
+            notification_message.append(`<p>Enter your first and last name!</p>`);
             notification_message.children('p').addClass('notification__message--text');
-            message = 'Enter first and last name only!';
+            message = 'Enter first and last name!';
             getPrompt(message, 'contact__form--name-prompt', semantic_alert);
          }
       }
@@ -488,7 +499,7 @@ $(function () {
          if ($('#input-02').val().length === 0) {
             notification_message.append(`<p>Your email address is required!</p>`);
             notification_message.children('p').addClass('notification__message--text');
-            message = 'Your email address is required!';
+            message = 'Email address is required!';
             getPrompt(message, 'contact__form--email-prompt', semantic_alert);
 
          } else {
@@ -509,6 +520,9 @@ $(function () {
       }
    }
 
+   /**
+    * @description -
+    */
    function checkFormValidation() {
       if (is_name_valid && is_email_valid && is_message_valid) {
          performValidForm();
