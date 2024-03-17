@@ -16,26 +16,47 @@
     flex-direction: column;
 
 
+
     &__top {
       position: relative;
       width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-around;
       padding-top: 1em;
       padding-bottom: 1.8em;
+      border-bottom: 2px solid red;
+
+        &-left {
+          position: relative;
+          width: 35%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-right: 5rem;
+        }
+
+      &-right {
+        position: relative;
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
       .footer__sub-title {
         font-weight: ab.set-font-weight(fw-font-weight-bold);
         margin-top: 0.8em;
         margin-bottom: 0.25em;
+        &:last-child {
+          /*margin-left: 24px;*/
+        }
       }
       .footer__left {
         display: flex;
         flex-direction: column;
-        width: 33%;
+        width: fit-content;
         margin-right: 1.5em;
-
 
         .footer__logo-statement {
           font-size: 0.875rem;
@@ -43,7 +64,7 @@
         }
       }
       .footer__left-center {
-        width: 20%;
+        width: 33%;
 
         .footer__navigation-link-item {
 
@@ -55,7 +76,7 @@
       }
 
       .footer__right-center {
-        width: 20%;
+        width: 33%;
 
         .footer__contact-link-item {
 
@@ -66,7 +87,24 @@
       }
 
       .footer__right {
-        width: 20%;
+        width: 33%;
+
+
+        .footer__contact-list {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+        }
+
+        .footer__contact-link {
+          display: flex;
+          justify-content: center;
+
+
+        }
+
         .footer__social-media-list {
           display: flex;
           flex-direction: row;
@@ -112,4 +150,11 @@
       color: ab.set-neutral-color(clr-neutral-400);
     }
   }
+}
+
+.svg-inline--fa.fa-w-16 {
+  margin-right: 0.5em;
+}
+.svg-inline--fa.fa-w-16.fa-phone {
+  transform: rotate(120deg);
 }

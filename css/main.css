@@ -3089,19 +3089,38 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-top: 1em;
   padding-bottom: 1.8em;
+  border-bottom: 2px solid red;
+}
+.section__footer .footer__top-left {
+  position: relative;
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 5rem;
+}
+.section__footer .footer__top-right {
+  position: relative;
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .section__footer .footer__top .footer__sub-title {
   font-weight: 600;
   margin-top: 0.8em;
   margin-bottom: 0.25em;
 }
+.section__footer .footer__top .footer__sub-title:last-child {
+  /*margin-left: 24px;*/
+}
 .section__footer .footer__top .footer__left {
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: fit-content;
   margin-right: 1.5em;
 }
 .section__footer .footer__top .footer__left .footer__logo-statement {
@@ -3109,20 +3128,30 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   hyphens: auto;
 }
 .section__footer .footer__top .footer__left-center {
-  width: 20%;
+  width: 33%;
 }
 .section__footer .footer__top .footer__left-center .footer__navigation-link {
   text-transform: capitalize;
   color: hsl(210, 12%, 78%);
 }
 .section__footer .footer__top .footer__right-center {
-  width: 20%;
+  width: 33%;
 }
 .section__footer .footer__top .footer__right-center .footer__contact-link {
   color: hsl(210, 12%, 78%);
 }
 .section__footer .footer__top .footer__right {
-  width: 20%;
+  width: 33%;
+}
+.section__footer .footer__top .footer__right .footer__contact-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.section__footer .footer__top .footer__right .footer__contact-link {
+  display: flex;
+  justify-content: center;
 }
 .section__footer .footer__top .footer__right .footer__social-media-list {
   display: flex;
@@ -3160,6 +3189,14 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   /*margin-right: auto;
   margin-left: auto;*/
   color: hsl(210, 0%, 58%);
+}
+
+.svg-inline--fa.fa-w-16 {
+  margin-right: 0.5em;
+}
+
+.svg-inline--fa.fa-w-16.fa-phone {
+  transform: rotate(120deg);
 }
 
 /*# sourceMappingURL=main.css.map */
