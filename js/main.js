@@ -17,9 +17,8 @@ $(window).on('load', function () {
           navigation and scroll-spy
 =====================================================*/
 $(function () {
-
    const options = {
-      threshold: 0.8
+      threshold: 0.7
    }
    const observer = new IntersectionObserver(addActiveClass, options);
    const navigation_links = document.querySelectorAll('.navigation__link');
@@ -91,13 +90,6 @@ $(function () {
           skills progress bars
 =====================================================*/
 $(function () {
-   /*const accordion_labels = document.querySelectorAll('.accordion label');
-   const accordion_inputs = document.querySelectorAll('.js-accordion-input');
-   accordion_labels.forEach(accordion => {
-      accordion.addEventListener('click', addFocusedClass)
-   });*/
-
-
    $('#progress-bars').waypoint(function () {
       $('.progress-bar').each(function () {
          $(this).animate({
@@ -110,35 +102,6 @@ $(function () {
       offset: '100%',
    });
 });
-
-
-/*function addFocusedClass(e) {
-   e.preventDefault();
-   let label = e.target;
-   let accordion_inputs = document.querySelectorAll('.js-accordion-input');
-   accordion_inputs.forEach(accordion_input => {
-      if (accordion_input.checked === true) {
-         if (label.htmlFor === accordion_input.id) {
-            removeFocusedClass();
-            accordion_label.classList.add('focused');
-            accordion_input.setAttribute('checked', true);
-
-         }
-      }
-   });
-}*/
-
-/*function removeFocusedClass() {
-   let accordion_inputs = document.querySelectorAll('.js-accordion-input');
-   accordion_inputs.forEach(accordion_input => {
-      accordion_input.setAttribute('checked', false);
-      console.log(accordion_input)
-   });
-   accordion_labels.forEach(accordion_label => {
-      accordion_label.classList.remove('focused');
-   });
-}*/
-
 
 /*===================================================
           portfolio filterizr cards
