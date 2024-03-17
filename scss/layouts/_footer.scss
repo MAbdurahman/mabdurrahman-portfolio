@@ -1,0 +1,115 @@
+/*=============================================
+         layouts/_footer.scss
+================================================*/
+@use './../abstracts' as ab;
+.section__footer {
+
+  color: ab.set-neutral-color(clr-neutral-200);
+  background-color: ab.set-augmented-color(clr-augmented-900);
+
+
+  .footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &__top {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-top: 1em;
+      padding-bottom: 1.8em;
+
+      .footer__sub-title {
+        font-weight: ab.set-font-weight(fw-font-weight-bold);
+        margin-top: 0.8em;
+        margin-bottom: 0.25em;
+      }
+      .footer__left {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        margin-right: 1.5em;
+
+
+        .footer__logo-statement {
+          font-size: 0.875rem;
+          hyphens: auto;
+        }
+      }
+      .footer__left-center {
+        width: 20%;
+
+        .footer__navigation-link-item {
+
+        }
+        .footer__navigation-link {
+          text-transform: capitalize;
+          color: ab.set-augmented-color(clr-augmented-200);
+        }
+      }
+
+      .footer__right-center {
+        width: 20%;
+
+        .footer__contact-link-item {
+
+        }
+        .footer__contact-link {
+          color: ab.set-augmented-color(clr-augmented-200);
+        }
+      }
+
+      .footer__right {
+        width: 20%;
+        .footer__social-media-list {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+
+        }
+
+        .footer__social-media-link {
+          font-size: 1.25rem;
+          color: ab.set-augmented-color(clr-augmented-200);
+          margin-right: 2em;
+        }
+        .footer__social-media-link:not(:last-child) {
+          margin-right: 2em;
+        }
+      }
+
+    }
+    &__bottom {
+      position: relative;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      text-align: center;
+
+      .footer__bottom-copyright {
+        font-size: .875rem;
+        text-align: center;
+        color: ab.set-augmented-color(clr-augmented-300);
+        margin-bottom: -0.25em;
+      }
+      .footer__bottom-terms {
+        font-size: .75rem;
+        color: ab.set-augmented-color(clr-augmented-400);
+      }
+
+    }
+    .footer__top-separator {
+      display: block;
+      width: 100%;
+      height: 2px;
+      /*margin-right: auto;
+      margin-left: auto;*/
+      color: ab.set-neutral-color(clr-neutral-400);
+    }
+  }
+}
