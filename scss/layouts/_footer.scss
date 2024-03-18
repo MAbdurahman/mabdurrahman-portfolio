@@ -3,10 +3,8 @@
 ================================================*/
 @use './../abstracts' as ab;
 .section__footer {
-
-  color: ab.set-neutral-color(clr-neutral-200);
+  color: ab.set-augmented-color(clr-augmented-100);
   background-color: ab.set-augmented-color(clr-augmented-900);
-
 
   .footer {
     position: relative;
@@ -14,7 +12,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-
 
 
     &__top {
@@ -25,7 +22,7 @@
       justify-content: space-around;
       padding-top: 1em;
       padding-bottom: 1.8em;
-      border-bottom: 2px solid red;
+      /*border-bottom: 2px solid red;*/
 
         &-left {
           position: relative;
@@ -42,12 +39,24 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+
+        .footer__top-right-right {
+          position: relative;
+          width: 70%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 3.75em;
+        }
       }
 
       .footer__sub-title {
-        font-weight: ab.set-font-weight(fw-font-weight-bold);
         margin-top: 0.8em;
         margin-bottom: 0.25em;
+        font-weight: ab.set-font-weight(fw-font-weight-bold);
+        letter-spacing: 1px;
+
         &:last-child {
           /*margin-left: 24px;*/
         }
@@ -76,8 +85,9 @@
       }
 
       .footer__right-center {
-        width: 33%;
+        /*width: 33%;*/
 
+        width: 50%;
         .footer__contact-link-item {
 
         }
@@ -88,6 +98,7 @@
 
       .footer__right {
         width: 33%;
+
 
 
         .footer__contact-list {
@@ -104,6 +115,8 @@
 
 
         }
+
+
 
         .footer__social-media-list {
           display: flex;
@@ -143,7 +156,7 @@
     }
     .footer__top-separator {
       display: block;
-      width: 100%;
+      width: 98%;
       height: 2px;
       /*margin-right: auto;
       margin-left: auto;*/
