@@ -84,35 +84,14 @@ $(function () {
       closeNavigation();
    });
 
-});
 
-/*===================================================
-          skills progress bars
-=====================================================*/
-$(function () {
-   $('#progress-bars').waypoint(function () {
-      $('.progress-bar').each(function () {
-         $(this).animate({
-            width: $(this).attr('aria-valuenow') + '%',
-         }, 1500);
-      });
-
-      this.destroy();
-   }, {
-      offset: '100%',
-   });
-});
-
-/*===================================================
-          portfolio filterizr cards
-=====================================================*/
-$(function () {
-   /**************** add and remove active class from filter buttons ****************/
+   /****** add and remove active class from portfolio filter buttons ******/
    $('#portfolio__filters > .js-filter').click(function () {
       $(this).addClass('active').siblings().removeClass('active');
    });
 
-   const options = {
+   /**************** portfolio filterizr cards ****************/
+   const filterizr_options = {
       animationDuration: 0.5, // in seconds
       callbacks: {
          onFilteringStart: function () {
@@ -142,6 +121,23 @@ $(function () {
 
    const filterizd = $('.filtr-container').filterizr({});
 
+});
+
+/*===================================================
+          skills progress bars
+=====================================================*/
+$(function () {
+   $('#progress-bars').waypoint(function () {
+      $('.progress-bar').each(function () {
+         $(this).animate({
+            width: $(this).attr('aria-valuenow') + '%',
+         }, 1500);
+      });
+
+      this.destroy();
+   }, {
+      offset: '100%',
+   });
 });
 
 /*===================================================

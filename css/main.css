@@ -3074,7 +3074,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
          layouts/_footer.scss
 ================================================*/
 .section__footer {
-  color: hsl(210, 0%, 78%);
+  color: hsl(210, 12%, 88%);
   background-color: hsl(210, 30%, 10%);
 }
 .section__footer .footer {
@@ -3092,7 +3092,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   justify-content: space-around;
   padding-top: 1em;
   padding-bottom: 1.8em;
-  border-bottom: 2px solid red;
+  /*border-bottom: 2px solid red;*/
 }
 .section__footer .footer__top-left {
   position: relative;
@@ -3109,10 +3109,19 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   flex-direction: row;
   justify-content: space-between;
 }
+.section__footer .footer__top-right .footer__top-right-right {
+  position: relative;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 3.75em;
+}
 .section__footer .footer__top .footer__sub-title {
-  font-weight: 600;
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .section__footer .footer__top .footer__sub-title:last-child {
   /*margin-left: 24px;*/
@@ -3135,7 +3144,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   color: hsl(210, 12%, 78%);
 }
 .section__footer .footer__top .footer__right-center {
-  width: 33%;
+  /*width: 33%;*/
+  width: 50%;
 }
 .section__footer .footer__top .footer__right-center .footer__contact-link {
   color: hsl(210, 12%, 78%);
@@ -3184,7 +3194,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .section__footer .footer .footer__top-separator {
   display: block;
-  width: 100%;
+  width: 98%;
   height: 2px;
   /*margin-right: auto;
   margin-left: auto;*/
