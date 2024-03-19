@@ -4,7 +4,8 @@
 @use './../abstracts' as ab;
 .section__footer {
   color: ab.set-augmented-color(clr-augmented-100);
-  background-color: ab.set-augmented-color(clr-augmented-900);
+  /*background-color: ab.set-augmented-color(clr-augmented-900);*/
+  background-color: ab.set-primary-color(clr-blue-01-900);
 
   .footer {
     position: relative;
@@ -69,18 +70,49 @@
 
         .footer__logo-statement {
           font-size: 0.875rem;
+          letter-spacing: 1px;
           hyphens: auto;
         }
       }
       .footer__left-center {
         width: 33%;
 
+        .footer__navigation-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+        }
+
         .footer__navigation-link-item {
 
         }
         .footer__navigation-link {
-          text-transform: capitalize;
+
           color: ab.set-augmented-color(clr-augmented-200);
+          display: inline-block;
+          /*font-family: var.$ff-secondary-font;*/
+          /*font-size: 1.5rem;*/
+          /*font-weight: 400;*/
+          font-weight: ab.set-font-weight(fw-font-weight-medium);
+          padding: 0.25em 0.5em;
+          /*color: var.$clr-neutral-400;*/
+          text-decoration: none;
+          text-transform: uppercase;
+          background: linear-gradient(90deg, transparent 0%, transparent 50%, ab.$clr-neutral-400 50%, ab.$clr-neutral-400 100%);
+          background-size: 200%;
+          border: 0;
+          border: none;
+          border-radius: 5px;
+          -webkit-transition: all .4s;
+          transition: all .4s;
+
+          &:hover,
+          &:focus,
+          .active {
+            background-position: -100%;
+            color: ab.set-primary-color(clr-blue-01-800);
+
+          }
         }
       }
 
@@ -88,18 +120,28 @@
         /*width: 33%;*/
 
         width: 50%;
+        .footer__contact-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.33em;
+        }
         .footer__contact-link-item {
 
         }
         .footer__contact-link {
           color: ab.set-augmented-color(clr-augmented-200);
+          -webkit-transition: all .4s;
+          transition: all .4s;
+          &:hover,
+          &:focus {
+            color: ab.set-neutral-color(clr-neutral-100);
+            letter-spacing: 1px;
+          }
         }
       }
 
       .footer__right {
         width: 33%;
-
-
 
         .footer__contact-list {
           position: relative;
@@ -112,7 +154,25 @@
         .footer__contact-link {
           display: flex;
           justify-content: center;
+          -webkit-transition: all .4s;
+          transition: all .4s;
+          &:hover,
+          &:focus {
+            color: ab.set-neutral-color(clr-neutral-000);
 
+          }
+
+          .svg-inline--fa.fa-envelope-open.fa-w-16,
+          .svg-inline--fa.fa-phone.fa-w-16 {
+            font-size: 1.33rem;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+            &:hover,
+            &:focus {
+              color: ab.set-neutral-color(clr-neutral-000);
+              transform: scale(1.125);
+            }
+          }
 
         }
 
@@ -129,6 +189,19 @@
           font-size: 1.25rem;
           color: ab.set-augmented-color(clr-augmented-200);
           margin-right: 2em;
+
+          .svg-inline--fa.fa-linkedin.fa-w-14,
+          .svg-inline--fa.fa-github-square.fa-w-14,
+          .svg-inline--fa.fa-codepen.fa-w-16 {
+            font-size: 1.333rem;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+            &:hover,
+            &:focus {
+              color: ab.set-neutral-color(clr-neutral-000);
+              transform: scale(1.125);
+            }
+          }
         }
         .footer__social-media-link:not(:last-child) {
           margin-right: 2em;
@@ -151,6 +224,13 @@
       .footer__bottom-terms {
         font-size: .75rem;
         color: ab.set-augmented-color(clr-augmented-400);
+        -webkit-transition: all .4s;
+        transition: all .4s;
+        &:hover,
+        &:focus {
+          color: ab.set-neutral-color(clr-neutral-000);
+          letter-spacing: 1px;
+        }
       }
 
     }
