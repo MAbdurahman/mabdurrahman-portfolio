@@ -1942,7 +1942,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   -webkit-transition: all 0.35ms cubic-bezier(0.26, 0.1, 0.27, 1.55);
   transition: all 0.35ms cubic-bezier(0.26, 0.1, 0.27, 1.55);
   -webkit-transition: all 0.35ms cubic-bezier(0.26, 0.1, 0.27, 1.55);
-  transition: all 0.35s cubic-bezier(0.26, 0.1, 0.27, 1.55);
+  transition: all 0.35ms cubic-bezier(0.26, 0.1, 0.27, 1.55);
 }
 
 .navigation__list.active .navigation__item {
@@ -3075,7 +3075,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 ================================================*/
 .section__footer {
   color: hsl(210, 12%, 88%);
-  background-color: hsl(210, 30%, 10%);
+  /*background-color: ab.set-augmented-color(clr-augmented-900);*/
+  background-color: hsl(210, 64%, 23%);
 }
 .section__footer .footer {
   position: relative;
@@ -3134,21 +3135,58 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .section__footer .footer__top .footer__left .footer__logo-statement {
   font-size: 0.875rem;
+  letter-spacing: 1px;
   hyphens: auto;
 }
 .section__footer .footer__top .footer__left-center {
   width: 33%;
 }
+.section__footer .footer__top .footer__left-center .footer__navigation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
 .section__footer .footer__top .footer__left-center .footer__navigation-link {
-  text-transform: capitalize;
   color: hsl(210, 12%, 78%);
+  display: inline-block;
+  /*font-family: var.$ff-secondary-font;*/
+  /*font-size: 1.5rem;*/
+  /*font-weight: 400;*/
+  font-weight: 500;
+  padding: 0.25em 0.5em;
+  /*color: var.$clr-neutral-400;*/
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, transparent 0%, transparent 50%, hsl(210, 0%, 58%) 50%, hsl(210, 0%, 58%) 100%);
+  background-size: 200%;
+  border: 0;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.section__footer .footer__top .footer__left-center .footer__navigation-link:hover, .section__footer .footer__top .footer__left-center .footer__navigation-link:focus,
+.section__footer .footer__top .footer__left-center .footer__navigation-link .active {
+  background-position: -100%;
+  color: hsl(210, 64%, 28%);
 }
 .section__footer .footer__top .footer__right-center {
   /*width: 33%;*/
   width: 50%;
 }
+.section__footer .footer__top .footer__right-center .footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.33em;
+}
 .section__footer .footer__top .footer__right-center .footer__contact-link {
   color: hsl(210, 12%, 78%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.section__footer .footer__top .footer__right-center .footer__contact-link:hover, .section__footer .footer__top .footer__right-center .footer__contact-link:focus {
+  color: hsl(210, 0%, 88%);
+  letter-spacing: 1px;
 }
 .section__footer .footer__top .footer__right {
   width: 33%;
@@ -3162,6 +3200,23 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .section__footer .footer__top .footer__right .footer__contact-link {
   display: flex;
   justify-content: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.section__footer .footer__top .footer__right .footer__contact-link:hover, .section__footer .footer__top .footer__right .footer__contact-link:focus {
+  color: hsl(210, 0%, 98%);
+}
+.section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-envelope-open.fa-w-16,
+.section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-phone.fa-w-16 {
+  font-size: 1.33rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-envelope-open.fa-w-16:hover, .section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-envelope-open.fa-w-16:focus,
+.section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-phone.fa-w-16:hover,
+.section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-phone.fa-w-16:focus {
+  color: hsl(210, 0%, 98%);
+  transform: scale(1.125);
 }
 .section__footer .footer__top .footer__right .footer__social-media-list {
   display: flex;
@@ -3172,6 +3227,21 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   font-size: 1.25rem;
   color: hsl(210, 12%, 78%);
   margin-right: 2em;
+}
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-linkedin.fa-w-14,
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-github-square.fa-w-14,
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-codepen.fa-w-16 {
+  font-size: 1.333rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-linkedin.fa-w-14:hover, .section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-linkedin.fa-w-14:focus,
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-github-square.fa-w-14:hover,
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-github-square.fa-w-14:focus,
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-codepen.fa-w-16:hover,
+.section__footer .footer__top .footer__right .footer__social-media-link .svg-inline--fa.fa-codepen.fa-w-16:focus {
+  color: hsl(210, 0%, 98%);
+  transform: scale(1.125);
 }
 .section__footer .footer__top .footer__right .footer__social-media-link:not(:last-child) {
   margin-right: 2em;
@@ -3191,6 +3261,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .section__footer .footer__bottom .footer__bottom-terms {
   font-size: 0.75rem;
   color: hsl(210, 15%, 58%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.section__footer .footer__bottom .footer__bottom-terms:hover, .section__footer .footer__bottom .footer__bottom-terms:focus {
+  color: hsl(210, 0%, 98%);
+  letter-spacing: 1px;
 }
 .section__footer .footer .footer__top-separator {
   display: block;

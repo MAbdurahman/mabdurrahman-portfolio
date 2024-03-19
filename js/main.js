@@ -495,3 +495,12 @@ $(function () {
    message_input.keyup(checkMessageInput);
    submit_button.click(checkFormValidation);
 });
+
+/*===================================================
+          footer section
+=====================================================*/
+$(function () {
+
+
+
+});
