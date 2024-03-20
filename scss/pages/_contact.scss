@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   /*background-color: ab.$clr-neutral-100;*/
   &--upper {
@@ -23,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: -2.5em;
 
     .contact__section--title-text {
       .contact__section--title {

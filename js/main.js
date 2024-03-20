@@ -22,6 +22,7 @@ $(function () {
    }
    const observer = new IntersectionObserver(addActiveClass, options);
    const navigation_links = document.querySelectorAll('.navigation__link');
+   const footer_navigation_links = document.querySelectorAll('.footer__navigation-link');
 
    const sections = document.querySelectorAll('.js-scroll-spy');
    sections.forEach(section => {
@@ -38,8 +39,13 @@ $(function () {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
             let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
+            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
+
             removeActiveClass();
+            removeFooterLinksActiveClass();
+
             current_link.classList.add('active');
+            current_footer_link.classList.add('active');
          }
       });
    }
@@ -50,6 +56,15 @@ $(function () {
    function removeActiveClass() {
       navigation_links.forEach(navigation_link => {
          navigation_link.classList.remove('active');
+      });
+   }
+
+   /**
+    * @description - removes active class from footer navigation links
+    */
+   function removeFooterLinksActiveClass() {
+      footer_navigation_links.forEach(footer_navigation_link => {
+         footer_navigation_link.classList.remove('active');
       });
    }
 
@@ -333,7 +348,7 @@ $(function () {
          clearTimeout(timeoutID1);
          clearTimeout(timeoutID2);
       }
-      notification_message.css('display', 'block')
+      notification_message.css('display', 'block');
       notification_title.innerHTML = 'Error';
       notification_message.addClass('move-in-from-right notification__error');
       updateErrors();
@@ -343,7 +358,7 @@ $(function () {
          notification_message.removeClass('move-in-from-right');
          timeoutID2 = setTimeout(() => {
             notification_message.removeClass('exit-to-left');
-            notification_message.css('display', 'none')
+            notification_message.css('display', 'none');
          }, 1500);
       }, 3500);
    }
@@ -378,8 +393,7 @@ $(function () {
             /* show notification message with success */
             notification_message.css('display', 'block');
             notification_message.addClass('move-in-from-right notification__success');
-            notification_message.html(
-               `<h4>Success!</h4>
+            notification_message.html(`<h4>Success!</h4>
                  <p>Your message was successfully sent.</p>
                  `);
             notification_message.children('h4').addClass('notification__message--title');
@@ -392,7 +406,6 @@ $(function () {
                   notification_message.css('display', 'none')
                }, 5500);
             }, 8000);
-
          }, 5000);
       }
       resetForm();
@@ -417,16 +430,15 @@ $(function () {
          location.reload();
 
          timeoutID9 = setTimeout(() => {
-            name_input.val('');
-            email_input.val('');
-            message_input.val('');
+            name_input.empty();
+            email_input.empty();
+            message_input.empty();
             submit_button.val('Send Message');
             submit_button.prop('disable', false);
             is_name_valid = false;
             is_email_valid = false;
             is_message_valid = false;
          }, 2000);
-
       }, 13500);
    }
 
@@ -494,13 +506,4 @@ $(function () {
    email_input.keyup(checkEmailInput);
    message_input.keyup(checkMessageInput);
    submit_button.click(checkFormValidation);
-});
-
-/*===================================================
-          footer section
-=====================================================*/
-$(function () {
-
-
-
 });

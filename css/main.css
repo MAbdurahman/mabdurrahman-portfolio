@@ -2858,6 +2858,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   /*background-color: ab.$clr-neutral-100;*/
 }
 .contact__section--upper {
@@ -2865,6 +2866,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -2.5em;
 }
 .contact__section--upper .contact__section--title-text .contact__section--title {
   margin-top: 3em;
@@ -3075,7 +3077,6 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 ================================================*/
 .section__footer {
   color: hsl(210, 12%, 88%);
-  /*background-color: ab.set-augmented-color(clr-augmented-900);*/
   background-color: hsl(210, 64%, 23%);
 }
 .section__footer .footer {
@@ -3146,7 +3147,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   flex-direction: column;
   gap: 0.5em;
 }
-.section__footer .footer__top .footer__left-center .footer__navigation-link {
+.section__footer .footer__top .footer__left-center .footer__navigation-link-item .footer__navigation-link {
   color: hsl(210, 12%, 78%);
   display: inline-block;
   /*font-family: var.$ff-secondary-font;*/
@@ -3165,8 +3166,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-.section__footer .footer__top .footer__left-center .footer__navigation-link:hover, .section__footer .footer__top .footer__left-center .footer__navigation-link:focus,
-.section__footer .footer__top .footer__left-center .footer__navigation-link .active {
+.section__footer .footer__top .footer__left-center .footer__navigation-link-item .footer__navigation-link:hover, .section__footer .footer__top .footer__left-center .footer__navigation-link-item .footer__navigation-link:focus, .section__footer .footer__top .footer__left-center .footer__navigation-link-item .footer__navigation-link:active, .section__footer .footer__top .footer__left-center .footer__navigation-link-item .footer__navigation-link.active {
   background-position: -100%;
   color: hsl(210, 64%, 28%);
 }
@@ -3217,6 +3217,10 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .section__footer .footer__top .footer__right .footer__contact-link .svg-inline--fa.fa-phone.fa-w-16:focus {
   color: hsl(210, 0%, 98%);
   transform: scale(1.125);
+}
+.section__footer .footer__top .footer__right .active {
+  background-position: -100%;
+  color: hsl(210, 64%, 28%);
 }
 .section__footer .footer__top .footer__right .footer__social-media-list {
   display: flex;
