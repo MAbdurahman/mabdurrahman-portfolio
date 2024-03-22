@@ -2,6 +2,7 @@
           components/_header.scss
 ================================================*/
 @use './../abstracts' as ab;
+@use './../base' as ba;
 .header {
   position: relative;
   min-height: 100vh;
@@ -60,6 +61,14 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: -2.5em;
+    opacity: 1;
+    animation-name: animate-move-heading-from-left;
+    animation-duration: 3000ms;
+    animation-timing-function: ab.$tf-timing-function-ease;
+    animation-iteration-count: 1;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+
   }
   &__content-heading--one {
     margin-bottom: -0.125em;
@@ -67,14 +76,16 @@
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: hsl(210deg, 71%, 96%);
+    /*color: hsl(210deg, 71%, 96%);*/
+    color: ab.$clr-blue-01-000;
   }
   &__content-heading--two {
     font-size: 3rem;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: hsl(210deg, 71%, 96%);
+    //color: hsl(210deg, 71%, 96%);
+    color: ab.$clr-blue-01-000;
   }
   &__content-subheading {
     width: 100%;
@@ -83,6 +94,13 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2em;
+    opacity: 1;
+    animation-name: animate-move-subheading-from-right;
+    animation-duration: 3000ms;
+    animation-timing-function: ab.$tf-timing-function-ease;
+    animation-iteration-count: 1;
+    animation-delay: 1500ms;
+    animation-fill-mode: backwards;
 
   }
   &__content-subheading--one {
@@ -93,6 +111,13 @@
     letter-spacing: 1px;
     /*color: hsl(43deg, 59%, 50%);*/
     color: ab.$clr-neutral-400;
+    opacity: 1;
+    animation-name: animate-move-subheading-from-right;
+    animation-duration: 3000ms;
+    animation-timing-function: ab.$tf-timing-function-ease;
+    animation-iteration-count: 1;
+    animation-delay: 1500ms;
+    animation-fill-mode: backwards;
   }
   &__content-buttons {
     z-index: 2;
@@ -100,6 +125,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    animation-name: animate-move-buttons-from-bottom;
+    animation-duration: 2275ms;
+    animation-timing-function: ab.$tf-timing-function-ease;
+    animation-iteration-count: 1;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;
 
 }
   &__button {
@@ -114,17 +145,17 @@
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     @include ab.anchor-default();
-    @include ab.anchor-default-outline(transparent, ab.$clr-augmented-200);
-    @include ab.background-transition-basic(transparent, ab.$clr-augmented-300);
+    @include ab.anchor-default-outline(transparent, ab.$clr-blue-01-100);
+    @include ab.background-transition-basic(transparent, ab.$clr-blue-01-100);
     margin-bottom: 2.25em;
     padding: 12px 48px;
-    border: 1px solid ab.$clr-augmented-200;
+    border: 1px solid ab.$clr-blue-01-100;
     border-radius: 5px;
 
     &:hover,
     &:focus {
       color: ab.$clr-blue-01-900;
-      border-color: ab.$clr-augmented-300;
+      border-color: ab.$clr-blue-01-100;
     }
   }
 
@@ -132,7 +163,7 @@
     position: relative;
     bottom: calc((100vh - 80vh)* -1);
     font-size: 2rem;
-    color: ab.$clr-augmented-300;
+    color: ab.$clr-blue-01-100;
     cursor: pointer;
     animation-name: animate-bounce-up-down;
     animation-duration: 2s;
@@ -141,11 +172,63 @@
 
     &:hover,
     &:focus {
-      color: ab.$clr-augmented-100;
+      color: ab.$clr-blue-01-000;
       -webkit-transform: scale(1.2);
       transform: scale(1.2);
     }
     & i.fa .fa-chevron-down {
     }
+  }
+}
+
+
+@include ba.keyframes(animate-move-heading-from-left) {
+  0% {
+    opacity: 0;
+    @include ab.vendor-prefix-one(transform, translateX(-2000px), webkit);
+  }
+  60% {
+    opacity: 1;
+    @include ab.vendor-prefix-one(transform, translateX(160px), webkit);
+  }
+
+  80% {
+    @include ab.vendor-prefix-one(transform, translateX(-64px), webkit);
+  }
+
+  100% {
+    @include ab.vendor-prefix-one(transform, translateX(0), webkit);
+  }
+}
+
+@include ba.keyframes(animate-move-subheading-from-right) {
+  0% {
+    opacity: 0;
+    @include ab.vendor-prefix-one(transform, translateX(2000px), webkit);
+  }
+  60% {
+    opacity: 1;
+    @include ab.vendor-prefix-one(transform, translateX(-64px), webkit);
+  }
+
+  80% {
+    @include ab.vendor-prefix-one(transform, translateX(32px), webkit);
+  }
+
+  100% {
+    @include ab.vendor-prefix-one(transform, translateX(0), webkit);
+  }
+}
+
+@include ba.keyframes(animate-move-buttons-from-bottom) {
+  0% {
+    opacity: 0;
+    @include ab.vendor-prefix-one(transform, translateY(56px), webkit);
+
+  }
+  100% {
+    opacity: 1;
+    @include ab.vendor-prefix-one(transform, translateY(0), webkit);
+
   }
 }

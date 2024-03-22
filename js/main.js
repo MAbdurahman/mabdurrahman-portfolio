@@ -10,6 +10,9 @@
 $(window).on('load', function () {
    // makes sure that whole site is loaded
    $('#preloader__gif, #preloader').fadeOut(3500, function () {
+      /*AOS.init({
+         once: true
+      });*/
    });
 
 });
@@ -17,6 +20,7 @@ $(window).on('load', function () {
           navigation and scroll-spy
 =====================================================*/
 $(function () {
+
    const options = {
       threshold: 0.7
    }
