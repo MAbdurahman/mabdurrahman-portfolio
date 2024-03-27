@@ -10,9 +10,7 @@
 $(window).on('load', function () {
    // makes sure that whole site is loaded
    $('#preloader__gif, #preloader').fadeOut(3500, function () {
-      /*AOS.init({
-         once: true
-      });*/
+
    });
 
 });
@@ -20,9 +18,14 @@ $(window).on('load', function () {
           navigation and scroll-spy
 =====================================================*/
 $(function () {
-
+   /*AOS.init({
+      /!*offset: 350,*!/
+      mirror: false,
+      anchorPlacement: 'top-center',
+      once: true
+   });*/
    const options = {
-      threshold: 0.7
+      threshold: 0.5
    }
    const observer = new IntersectionObserver(addActiveClass, options);
    const navigation_links = document.querySelectorAll('.navigation__link');
@@ -47,6 +50,9 @@ $(function () {
 
             removeActiveClass();
             removeFooterLinksActiveClass();
+
+            console.log(current_link)
+            console.log(current_footer_link)
 
             current_link.classList.add('active');
             current_footer_link.classList.add('active');
@@ -105,9 +111,24 @@ $(function () {
 
 
    /****** add and remove active class from portfolio filter buttons ******/
-   $('#portfolio__filters > .js-filter').click(function () {
+   /*$('#portfolio__filters > .js-filter').click(function () {
       $(this).addClass('active').siblings().removeClass('active');
-   });
+   });*/
+   const filter_link_items = document.querySelectorAll('.js-filter');
+
+   function removeFilterLinkItemsActiveClass() {
+      filter_link_items.forEach(filter_link_item => {
+         filter_link_item.classList.remove('active');
+      })
+   }
+
+   function addFilterLinkItemsActiveClass(e) {
+      removeFilterLinkItemsActiveClass();
+      e.target.classList.add('active');
+   }
+   filter_link_items.forEach(filter_link_item => {
+      filter_link_item.addEventListener('click', addFilterLinkItemsActiveClass);
+   })
 
    /**************** portfolio filterizr cards ****************/
    const filterizr_options = {
@@ -140,6 +161,7 @@ $(function () {
 
    const filterizd = $('.filtr-container').filterizr({});
 
+
 });
 
 /*===================================================
@@ -157,6 +179,43 @@ $(function () {
    }, {
       offset: '100%',
    });
+});
+
+/*===================================================
+          portfolio section
+=====================================================*/
+$(function () {
+/*const sections = document.querySelectorAll('.js-scroll-spy');
+const navigation_links = document.querySelectorAll('.navigation__link');
+const footer_navigation_links = document.querySelectorAll('.footer__navigation-link');
+
+   console.log(sections)
+   console.log(navigation_links)
+   console.log(footer_navigation_links)
+
+   window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+         let top = window.scrollY;
+         let offset = section.offsetTop - 100;
+         let height = section.offsetHeight;
+         let id = section.getAttribute('id');
+
+         if ((top >= offset) && (top < (offset + height))) {
+            navigation_links.forEach(navigation_link => {
+               navigation_link.classList.remove('active');
+               let element = document.querySelector('nav div ul li a[href*='+id+']')
+               console.log(element)
+
+            })
+            footer_navigation_links.forEach(footer_navigation_link => {
+               footer_navigation_link.classList.remove('active');
+               document.querySelector('footer div div ul li a[href*='+id+']').classList.add('active');
+
+            })
+         }
+
+      });
+   });*/
 });
 
 /*===================================================

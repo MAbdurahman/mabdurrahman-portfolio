@@ -211,6 +211,7 @@
 }
 
 .navigation__link:hover,
+.navigation__link:active,
 .navigation__link.active {
   background-position: -100%;
   color: var.$clr-blue-01-800;
