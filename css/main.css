@@ -1129,7 +1129,6 @@ input[type=number] {
 }
 
 .section__two {
-  background-color: hsl(210, 0%, 88%);
   background-color: hsl(210, 12%, 98%);
 }
 
@@ -2260,6 +2259,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 
 .navigation__link:hover,
+.navigation__link:active,
 .navigation__link.active {
   background-position: -100%;
   color: hsl(210, 64%, 28%);
@@ -3057,7 +3057,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .portfolio__section--bottom {
   position: relative;
   width: 100%;
-  /*height: fit-content;*/
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
