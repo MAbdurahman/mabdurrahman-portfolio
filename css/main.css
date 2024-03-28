@@ -1604,6 +1604,27 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   animation-iteration-count: 1;
 }
 
+.animate-fade-in-and-up {
+  -webkit-animation-name: animate-fade-in-and-up;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-name: animate-fade-in-and-up;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-direction: normal;
+  -moz-animation-iteration-count: 1;
+  animation-name: animate-fade-in-and-up;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
 /*=============================================
           abstracts/_index.scss
 ================================================*/
