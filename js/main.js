@@ -24,35 +24,62 @@ $(function () {
       anchorPlacement: 'top-center',
       once: true
    });*/
-   const options = {
-      threshold: 0.5
+
+   const short_options = {
+      rootMargin: '0px', threshold: 0.7,
    }
-   const observer = new IntersectionObserver(addActiveClass, options);
+   const long_options = {
+      rootMargin: '0px', threshold: 0.5,
+   }
+
+   const short_observer = new IntersectionObserver(addNavigationLinksActiveClass, short_options);
+   const long_observer = new IntersectionObserver(addNavigationLinksLongActiveClass, long_options);
+
+   const short_sections = document.querySelectorAll('.js-scroll-spy');
+   const long_sections = document.querySelectorAll('.js-scroll-spy--long');
+
    const navigation_links = document.querySelectorAll('.navigation__link');
    const footer_navigation_links = document.querySelectorAll('.footer__navigation-link');
 
-   const sections = document.querySelectorAll('.js-scroll-spy');
-   sections.forEach(section => {
-      observer.observe(section);
+   short_sections.forEach(short_section => {
+      short_observer.observe(short_section);
+   });
+   long_sections.forEach(long_section => {
+      long_observer.observe(long_section);
    });
 
    /**
-    * @description - remove the active class from the navigation links and add active class to the
-    * current navigation link in the viewport
-    * @param entries - the sections in the of an array to be observed
-    * @param observer - the IntersectionObserver
+    * @description - removes active class from navigation links
     */
-   function addActiveClass(entries, observer) {
+   function removeNavigationLinksActiveClass() {
+      navigation_links.forEach(navigation_link => {
+         navigation_link.classList.remove('active');
+      })
+   }
+
+   /**
+    * @description - removes active class from footer navigation links
+    */
+   function removeFooterNavigationLinksActiveClass() {
+      footer_navigation_links.forEach(footer_navigation_link => {
+         footer_navigation_link.classList.remove('active');
+      })
+   }
+
+   /**
+    * @description - removes the active class from the navigation links and adds the active
+    * class to the current navigation link whose 'href=#id' is in the viewport
+    * @param entries - the sections that are in the array to observed
+    * @param short_observer - the Intersection Observer
+    */
+   function addNavigationLinksActiveClass(entries, short_observer) {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
             let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
             let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
 
-            removeActiveClass();
-            removeFooterLinksActiveClass();
-
-            console.log(current_link)
-            console.log(current_footer_link)
+            removeNavigationLinksActiveClass();
+            removeFooterNavigationLinksActiveClass();
 
             current_link.classList.add('active');
             current_footer_link.classList.add('active');
@@ -61,20 +88,23 @@ $(function () {
    }
 
    /**
-    * @description - removes active class from navigation links
+    * @description - removes the active class from the navigation links and adds the active
+    * class to the current navigation link whose 'href=#id' is in the viewport
+    * @param entries - the sections that are in the array to observed
+    * @param long_observer - the IntersectionObserver
     */
-   function removeActiveClass() {
-      navigation_links.forEach(navigation_link => {
-         navigation_link.classList.remove('active');
-      });
-   }
+   function addNavigationLinksLongActiveClass(entries, long_observer) {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
+            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
 
-   /**
-    * @description - removes active class from footer navigation links
-    */
-   function removeFooterLinksActiveClass() {
-      footer_navigation_links.forEach(footer_navigation_link => {
-         footer_navigation_link.classList.remove('active');
+            removeNavigationLinksActiveClass();
+            removeFooterNavigationLinksActiveClass();
+
+            current_link.classList.add('active');
+            current_footer_link.classList.add('active');
+         }
       });
    }
 
@@ -109,6 +139,29 @@ $(function () {
       closeNavigation();
    });
 
+});
+
+/*===================================================
+          skills progress bars
+=====================================================*/
+$(function () {
+   $('#progress-bars').waypoint(function () {
+      $('.progress-bar').each(function () {
+         $(this).animate({
+            width: $(this).attr('aria-valuenow') + '%',
+         }, 1500);
+      });
+
+      this.destroy();
+   }, {
+      offset: '100%',
+   });
+});
+
+/*===================================================
+          portfolio section
+=====================================================*/
+$(function () {
 
    /****** add and remove active class from portfolio filter buttons ******/
    /*$('#portfolio__filters > .js-filter').click(function () {
@@ -116,19 +169,27 @@ $(function () {
    });*/
    const filter_link_items = document.querySelectorAll('.js-filter');
 
+   /**
+    * @description - removes the active class from the filter link items
+    */
    function removeFilterLinkItemsActiveClass() {
       filter_link_items.forEach(filter_link_item => {
          filter_link_item.classList.remove('active');
       })
    }
 
+   /**
+    * @description - add the active class to the filter link item that was clicked
+    * @param e - the event of the click
+    */
    function addFilterLinkItemsActiveClass(e) {
       removeFilterLinkItemsActiveClass();
       e.target.classList.add('active');
    }
+
    filter_link_items.forEach(filter_link_item => {
       filter_link_item.addEventListener('click', addFilterLinkItemsActiveClass);
-   })
+   });
 
    /**************** portfolio filterizr cards ****************/
    const filterizr_options = {
@@ -161,61 +222,6 @@ $(function () {
 
    const filterizd = $('.filtr-container').filterizr({});
 
-
-});
-
-/*===================================================
-          skills progress bars
-=====================================================*/
-$(function () {
-   $('#progress-bars').waypoint(function () {
-      $('.progress-bar').each(function () {
-         $(this).animate({
-            width: $(this).attr('aria-valuenow') + '%',
-         }, 1500);
-      });
-
-      this.destroy();
-   }, {
-      offset: '100%',
-   });
-});
-
-/*===================================================
-          portfolio section
-=====================================================*/
-$(function () {
-/*const sections = document.querySelectorAll('.js-scroll-spy');
-const navigation_links = document.querySelectorAll('.navigation__link');
-const footer_navigation_links = document.querySelectorAll('.footer__navigation-link');
-
-   console.log(sections)
-   console.log(navigation_links)
-   console.log(footer_navigation_links)
-
-   window.addEventListener('scroll', () => {
-      sections.forEach(section => {
-         let top = window.scrollY;
-         let offset = section.offsetTop - 100;
-         let height = section.offsetHeight;
-         let id = section.getAttribute('id');
-
-         if ((top >= offset) && (top < (offset + height))) {
-            navigation_links.forEach(navigation_link => {
-               navigation_link.classList.remove('active');
-               let element = document.querySelector('nav div ul li a[href*='+id+']')
-               console.log(element)
-
-            })
-            footer_navigation_links.forEach(footer_navigation_link => {
-               footer_navigation_link.classList.remove('active');
-               document.querySelector('footer div div ul li a[href*='+id+']').classList.add('active');
-
-            })
-         }
-
-      });
-   });*/
 });
 
 /*===================================================
@@ -236,7 +242,8 @@ $(function () {
 
       this.destroy();
    }, {
-      offset: '50%',
+      offset: 'bottom-in-view',
+
    });
 
    //**************** effect 07 scripts ****************//

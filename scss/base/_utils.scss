@@ -321,6 +321,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 }
 
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -424,4 +425,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 .animate-shake-vertical {
   @include anim.animation(animate-shake-vertical, 2s);
+}
+.animate-fade-in-and-up {
+  @include anim.animation(animate-fade-in-and-up, 1s);
 }
