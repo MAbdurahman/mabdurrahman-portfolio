@@ -2,10 +2,15 @@
           _typography.scss
 ================================================*/
 @use "./../abstracts/variables" as var;
+@use "./../abstracts" as ab;
 
 html {
   font-size: 100%;
   scroll-behavior: smooth;
+
+  @include ab.responsive-max-width(1375px) {
+    /*font-size: 83.33%;*/
+  }
 }
 
 /*16px*/
