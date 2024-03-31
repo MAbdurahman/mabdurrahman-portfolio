@@ -92,6 +92,8 @@
     position: relative;
     width: 100%;
     height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -102,6 +104,8 @@
 
     .portfolio__card {
       width: 304px;
+      width: 322px;
+      width: 272px;
       padding: 8px;
       background-color: ab.$clr-blue-01-900;
 

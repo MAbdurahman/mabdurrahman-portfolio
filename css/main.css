@@ -1104,7 +1104,7 @@ input[type=number] {
 
 @media (min-width: 576px) {
   .utils-container {
-    max-width: 540px;
+    max-width: 544px;
   }
 }
 @media (min-width: 768px) {
@@ -1119,14 +1119,14 @@ input[type=number] {
 }
 @media (min-width: 1200px) {
   .utils-container {
-    max-width: 1140px;
+    max-width: 1144px;
   }
 }
-@media (min-width: 1400px) {
+/*@media (min-width: 1400px) {
   .utils-container {
     max-width: 1320px;
   }
-}
+}*/
 .content-box-lg {
   width: 100%;
   margin: 0 auto;
@@ -3060,6 +3060,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   width: 100%;
   height: fit-content;
+  margin-right: auto;
+  margin-left: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -3069,6 +3071,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .portfolio__section--bottom .portfolio__card {
   width: 304px;
+  width: 322px;
+  width: 272px;
   padding: 8px;
   background-color: hsl(210, 64%, 23%);
 }
@@ -3165,7 +3169,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .contact__section--bottom .contact__form--group .contact__form .contact__form--content {
   position: relative;
-  width: 90%;
+  width: 98%;
   margin: 20px 3%;
 }
 .contact__section--bottom .contact__form--group .contact__form .contact__form--content .contact__form--input-prompt {
@@ -3179,7 +3183,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .contact__section--bottom .contact__form--group .contact__form .contact__form--content-textarea {
   position: relative;
-  width: 90%;
+  width: 98%;
   height: 85px;
   margin: 20px 3%;
 }
@@ -3359,7 +3363,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 3.75em;
+  margin-left: 3em;
 }
 .section__footer .footer__top .footer__sub-title {
   margin-top: 0.8em;
@@ -3422,6 +3426,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   gap: 0.33em;
 }
 .section__footer .footer__top .footer__right-center .footer__contact-link {
+  font-size: 0.875rem;
   color: hsl(210, 12%, 78%);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -3516,7 +3521,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .section__footer .footer .footer__top-separator {
   display: block;
-  width: 98%;
+  width: 100%;
   height: 2px;
   /*margin-right: auto;
   margin-left: auto;*/
