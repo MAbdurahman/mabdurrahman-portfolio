@@ -452,6 +452,10 @@ h5 {
   font-size: 1.25rem;
 }
 
+.portfolio__para {
+  font-size: 0.75rem;
+}
+
 small, .text_small {
   font-size: 0.8rem;
   text-rendering: optimizeLegibility;
@@ -1142,10 +1146,14 @@ input[type=number] {
 }
 
 .section__four {
+  padding: 3em;
   background-color: hsl(210, 0%, 88%);
 }
 
 .section__five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: hsl(210, 12%, 98%);
 }
 
@@ -2560,7 +2568,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: row;
   justify-content: center;
-  row-gap: 0.25em;
+  column-gap: 1.25em;
   background-color: hsl(210, 12%, 98%);
 }
 @media only screen and (max-width: 1370px) {
@@ -2570,7 +2578,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .about__section--image {
   position: relative;
-  width: 32%;
+  width: 30%;
   min-height: 100%;
   display: grid;
   place-items: center;
@@ -2587,7 +2595,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.15), 5px 3px 21px -1px rgba(34, 40, 45, 0.15);
 }
 .about__section--info {
-  width: 68%;
+  width: 70%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -2732,7 +2740,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .skills__section__content--left .accordions .accordion > input[name=collapse] ~ .content p {
   height: 120px;
   padding: 8px 16px;
-  font-size: 0.75rem;
+  font-size: 0.667rem;
   font-weight: 400;
   text-align: left;
   text-transform: none;
@@ -2746,7 +2754,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .skills__section__content--left .accordions .accordion > input[name=collapse]:checked ~ .content p {
   height: 120px;
   padding: 8px 16px;
-  font-size: 0.75rem;
+  font-size: 0.667rem;
   font-weight: 400;
   text-align: left;
   text-transform: none;
@@ -3070,9 +3078,10 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   padding-bottom: 3em;
 }
 .portfolio__section--bottom .portfolio__card {
-  width: 304px;
+  /*width: 304px;
   width: 322px;
-  width: 272px;
+  width: 272px;*/
+  width: 25%;
   padding: 8px;
   background-color: hsl(210, 64%, 23%);
 }
