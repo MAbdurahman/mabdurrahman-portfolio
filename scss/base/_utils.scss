@@ -67,10 +67,14 @@
 }
 
 .section__four {
+  padding: 3em;
   background-color: ab.$clr-neutral-100;
 }
 
 .section__five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ab.$clr-augmented-000;
 
 }

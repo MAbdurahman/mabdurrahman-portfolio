@@ -77,7 +77,7 @@
         .accordion > input[name=collapse] ~ .content p {
           height: 120px;
           padding: 8px 16px;
-          font-size: ab.$fs-font-size-010;
+          font-size: ab.$fs-font-size-001;
           font-weight: ab.$fw-font-weight-normal;
           text-align: left;
           text-transform: none;
@@ -92,7 +92,7 @@
         .accordion > input[name=collapse]:checked ~ .content p {
           height: 120px;
           padding: 8px 16px;
-          font-size: ab.$fs-font-size-010;
+          font-size: ab.$fs-font-size-001;
           font-weight: ab.$fw-font-weight-normal;
           text-align: left;
           text-transform: none;
