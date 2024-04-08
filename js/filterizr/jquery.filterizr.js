@@ -253,7 +253,7 @@ var Filterizr = (function (t) {
         filterOutCss: { opacity: 0, transform: 'scale(0.5)' },
         filterInCss: { opacity: 1, transform: 'scale(1)' },
         gridItemsSelector: '.filtr-item',
-        gutterPixels: 8,
+        gutterPixels: 16,
         layout: i.SAME_SIZE,
         multifilterLogicalOperator: 'or',
         searchTerm: '',

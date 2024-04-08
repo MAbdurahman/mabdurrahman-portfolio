@@ -1,3 +1,149 @@
+/*
+!*=============================================
+          pages/_skills.scss
+================================================*!
+@use './../abstracts' as ab;
+
+.skill__section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+}
+.skills__section--title {
+  position: relative;
+  top: 5%;
+  margin-bottom:  1.5em;
+  font-family: ab.$ff-primary-font;
+  font-size: 2.441rem;
+  font-weight: ab.$fw-font-weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  color: ab.$clr-augmented-900;
+}
+
+.skills__section__content {
+  position: relative;
+  min-width: 100%;
+  min-height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  @include ab.responsive-max-width(1199px) {
+    grid-template-columns: 1fr;
+
+  }
+}
+
+.skills__section__content--left {
+  background-color: #616161;
+  @include ab.responsive-max-width(1199px) {
+    grid-row-start: 2 / -1;
+  }
+}
+
+.skills__section__content--right {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+
+  @include ab.responsive-max-width(1199px) {
+    grid-row: 1 / -1;
+  }
+}
+.skills__section--sub-title {
+  margin-bottom: 0.5em;
+  font-weight: ab.$fw-font-weight-medium;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
+
+  .focused {
+    color: ab.$clr-neutral-100;
+    background-color: ab.$clr-blue-01-600;
+  }
+
+}
+
+
+
+.progress__bars {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-row-gap: 1.5em;
+}
+.skill {
+  width: 100%;
+  padding-right: 0;
+}
+.skill h4 {
+  margin: 0;
+  font-family: ab.$ff-secondary-font;
+  font-weight: ab.$fw-font-weight-bold;
+  font-size: 1.0125rem;
+  line-height: 1.5;
+  color: ab.$clr-augmented-700;
+
+}
+.progress {
+  height: 1.5625em;
+  background-color: ab.$clr-neutral-400;
+  overflow: visible;
+  box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-600);
+  border-radius: ab.$br-border-radius-300;
+}
+.progress-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: ab.$clr-blue-01-900;
+  border-top-left-radius: ab.$br-border-radius-300;
+  border-bottom-left-radius: ab.$br-border-radius-300;
+  white-space: nowrap;
+  transition: width 0.6s ease;
+}
+.progress-bar span {
+  position: absolute;
+  left: 97%;
+  top: -2.5em;
+  width: 40px;
+  padding: 4px;
+  font-size: .9rem;
+  font-weight: ab.$fw-font-weight-bold;
+  letter-spacing: 1px;
+  font-family: ab.$ff-monospace-font;
+  color: ab.$clr-neutral-100;
+  background-color: ab.$clr-blue-01-600;
+  border-radius: ab.$br-border-radius-300;
+}
+
+.progress-bar span::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 5%;
+  border-top: 8px solid ab.$clr-blue-01-600;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+
+
+
+
+
+*/
+
+
+
 /*=============================================
           pages/_skills.scss
 ================================================*/
@@ -14,6 +160,7 @@
   gap: 1.5em;
 
 
+
   &--title {
     position: relative;
     top: 5%;
@@ -24,6 +171,9 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
+    @include ab.responsive-max-width(1199px) {
+      margin-bottom: 0.667em;
+    }
   }
 
   &__content {
@@ -33,16 +183,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2em;
+    @include ab.responsive-max-width(1199px) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      gap: 1em;
+
+    }
 
     &--left {
       position: relative;
       top: 10%;
       width: 100%;
       height: 100%;
+
       /*font-weight: ab.$fw-font-weight-bold;
       text-transform: capitalize;
       text-align: center;
       letter-spacing: 1px;*/
+
+      @include ab.responsive-max-width(1199px) {
+        top: 5%;
+        min-height: 100vh;
+        grid-row-start: 2;
+      }
 
       .accordions {
         width: 100%;
@@ -195,12 +358,18 @@
       width: 100%;
       height: 100%;
 
+      @include ab.responsive-max-width(1199px) {
+        grid-row: 1 / -1;
+      }
       .progress__bars {
         width: 100%;
         margin: 0 auto;
         display: grid;
         grid-template-rows: repeat(8, 1fr);
         grid-row-gap: 1.5em;
+        @include ab.responsive-max-width(1199px) {
+          grid-template-rows: repeat(6, 1fr);
+        }
 
         .skill {
           width: 100%;
@@ -280,6 +449,9 @@
     background-color: ab.$clr-blue-01-600;
   }
 }
+
+
+
 
 
 
