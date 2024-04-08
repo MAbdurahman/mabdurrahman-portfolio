@@ -1126,11 +1126,11 @@ input[type=number] {
     max-width: 1144px;
   }
 }
-/*@media (min-width: 1400px) {
+@media (min-width: 1400px) {
   .utils-container {
     max-width: 1320px;
   }
-}*/
+}
 .content-box-lg {
   width: 100%;
   margin: 0 auto;
@@ -1147,6 +1147,9 @@ input[type=number] {
 
 .section__four {
   padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: hsl(210, 0%, 88%);
 }
 
@@ -1155,6 +1158,13 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   background-color: hsl(210, 12%, 98%);
+}
+
+.footer {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .utils-img-responsive {
@@ -1243,13 +1253,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   scrollbar-width: none; /* Firefox */
 }
 
-.section {
+/*.section {
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-
+}*/
 .title-heading {
   position: relative;
   padding: 2rem 0;
@@ -1393,7 +1402,14 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 .section {
   width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+}
+@media only screen and (max-width: 1199px) {
+  .section {
+    height: 100vh;
+  }
 }
 
 .wrapper {
@@ -1708,7 +1724,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .header__video-item {
   width: 100%;
-  /*height: 100%;*/
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2576,6 +2592,15 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
     column-gap: 1.5em;
   }
 }
+@media only screen and (max-width: 1199px) {
+  .about__section {
+    height: fit-content;
+    flex-direction: column;
+    row-gap: 2.5em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+  }
+}
 .about__section--image {
   position: relative;
   width: 30%;
@@ -2583,6 +2608,13 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: grid;
   place-items: center;
   background-color: hsl(210, 12%, 98%);
+}
+@media only screen and (max-width: 1199px) {
+  .about__section--image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .about__section--image .about__image {
   position: relative;
@@ -2594,12 +2626,22 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   border-radius: 5px;
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.15), 5px 3px 21px -1px rgba(34, 40, 45, 0.15);
 }
+@media only screen and (max-width: 1199px) {
+  .about__section--image .about__image {
+    max-width: 400px;
+  }
+}
 .about__section--info {
   width: 70%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media only screen and (max-width: 1199px) {
+  .about__section--info {
+    width: 100%;
+  }
 }
 .about__section--info .about__info--container {
   position: relative;
@@ -2620,6 +2662,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   text-align: left;
   letter-spacing: 1px;
 }
+@media only screen and (max-width: 1199px) {
+  .about__section--info .about__info--title {
+    text-align: center;
+  }
+}
 .about__section--info .about__info--text {
   font-size: 1.125rem;
   font-weight: 400;
@@ -2633,6 +2680,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: flex;
   flex-direction: row;
   justify-content: start;
+}
+@media only screen and (max-width: 1199px) {
+  .about__section .about__info--links {
+    justify-content: center;
+    /*align-items: center;*/
+  }
 }
 .about__section .about__info--single-link {
   padding: 16px 32px;
@@ -2670,6 +2723,149 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   margin-right: 1.5em;
 }
 
+/*
+!*=============================================
+          pages/_skills.scss
+================================================*!
+@use './../abstracts' as ab;
+
+.skill__section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+}
+.skills__section--title {
+  position: relative;
+  top: 5%;
+  margin-bottom:  1.5em;
+  font-family: ab.$ff-primary-font;
+  font-size: 2.441rem;
+  font-weight: ab.$fw-font-weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  color: ab.$clr-augmented-900;
+}
+
+.skills__section__content {
+  position: relative;
+  min-width: 100%;
+  min-height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  @include ab.responsive-max-width(1199px) {
+    grid-template-columns: 1fr;
+
+  }
+}
+
+.skills__section__content--left {
+  background-color: #616161;
+  @include ab.responsive-max-width(1199px) {
+    grid-row-start: 2 / -1;
+  }
+}
+
+.skills__section__content--right {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+
+  @include ab.responsive-max-width(1199px) {
+    grid-row: 1 / -1;
+  }
+}
+.skills__section--sub-title {
+  margin-bottom: 0.5em;
+  font-weight: ab.$fw-font-weight-medium;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
+
+  .focused {
+    color: ab.$clr-neutral-100;
+    background-color: ab.$clr-blue-01-600;
+  }
+
+}
+
+
+
+.progress__bars {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-row-gap: 1.5em;
+}
+.skill {
+  width: 100%;
+  padding-right: 0;
+}
+.skill h4 {
+  margin: 0;
+  font-family: ab.$ff-secondary-font;
+  font-weight: ab.$fw-font-weight-bold;
+  font-size: 1.0125rem;
+  line-height: 1.5;
+  color: ab.$clr-augmented-700;
+
+}
+.progress {
+  height: 1.5625em;
+  background-color: ab.$clr-neutral-400;
+  overflow: visible;
+  box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-600);
+  border-radius: ab.$br-border-radius-300;
+}
+.progress-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: ab.$clr-blue-01-900;
+  border-top-left-radius: ab.$br-border-radius-300;
+  border-bottom-left-radius: ab.$br-border-radius-300;
+  white-space: nowrap;
+  transition: width 0.6s ease;
+}
+.progress-bar span {
+  position: absolute;
+  left: 97%;
+  top: -2.5em;
+  width: 40px;
+  padding: 4px;
+  font-size: .9rem;
+  font-weight: ab.$fw-font-weight-bold;
+  letter-spacing: 1px;
+  font-family: ab.$ff-monospace-font;
+  color: ab.$clr-neutral-100;
+  background-color: ab.$clr-blue-01-600;
+  border-radius: ab.$br-border-radius-300;
+}
+
+.progress-bar span::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 5%;
+  border-top: 8px solid ab.$clr-blue-01-600;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+
+
+
+
+
+*/
 /*=============================================
           pages/_skills.scss
 ================================================*/
@@ -2694,6 +2890,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   text-align: center;
   letter-spacing: 1px;
 }
+@media only screen and (max-width: 1199px) {
+  .skills__section--title {
+    margin-bottom: 0.667em;
+  }
+}
 .skills__section__content {
   position: relative;
   min-width: 100%;
@@ -2701,6 +2902,13 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2em;
+}
+@media only screen and (max-width: 1199px) {
+  .skills__section__content {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    gap: 1em;
+  }
 }
 .skills__section__content--left {
   position: relative;
@@ -2711,6 +2919,13 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 1px;*/
+}
+@media only screen and (max-width: 1199px) {
+  .skills__section__content--left {
+    top: 5%;
+    min-height: 100vh;
+    grid-row-start: 2;
+  }
 }
 .skills__section__content--left .accordions {
   width: 100%;
@@ -2835,12 +3050,22 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 1199px) {
+  .skills__section__content--right {
+    grid-row: 1/-1;
+  }
+}
 .skills__section__content--right .progress__bars {
   width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-row-gap: 1.5em;
+}
+@media only screen and (max-width: 1199px) {
+  .skills__section__content--right .progress__bars {
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
 .skills__section__content--right .progress__bars .skill {
   width: 100%;
@@ -2996,6 +3221,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 1199px) {
+  .portfolio__section--upper {
+    width: 75%;
+  }
+}
 .portfolio__section--upper .portfolio__section--title {
   position: relative;
   display: flex;
@@ -3116,6 +3346,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   justify-content: center;
   /*background-color: ab.$clr-neutral-100;*/
 }
+@media only screen and (max-width: 1199px) {
+  .contact__section {
+    height: 75vh;
+  }
+}
 .contact__section--upper {
   height: fit-content;
   display: flex;
@@ -3163,6 +3398,11 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   position: relative;
   width: 66.667%;
   height: fit-content;
+}
+@media only screen and (max-width: 1199px) {
+  .contact__section--bottom .contact__form--group {
+    width: 90%;
+  }
 }
 .contact__section--bottom .contact__form--group .contact__form {
   position: relative;

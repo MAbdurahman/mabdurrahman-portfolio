@@ -28,6 +28,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @include ab.responsive-max-width(1199px) {
+      width: 75%;
+    }
 
 
     .portfolio__section--title {
@@ -110,6 +113,7 @@
       padding: 8px;
       background-color: ab.$clr-blue-01-900;
 
+
       figure img {
         margin-bottom: 0.5em;
       }
@@ -123,7 +127,6 @@
         background-color: ab.$clr-blue-01-900;
       }
     }
-
 
   }
 }

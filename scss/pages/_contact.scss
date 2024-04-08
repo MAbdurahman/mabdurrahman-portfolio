@@ -18,6 +18,11 @@
   align-items: center;
   justify-content: center;
 
+  @include ab.responsive-max-width(1199px) {
+    height: 75vh;
+
+  }
+
   /*background-color: ab.$clr-neutral-100;*/
   &--upper {
     height: fit-content;
@@ -70,6 +75,9 @@
       position: relative;
       width: 66.667%;
       height: fit-content;
+      @include ab.responsive-max-width(1199px) {
+        width: 90%;
+      }
 
       .contact__form {
         position: relative;
