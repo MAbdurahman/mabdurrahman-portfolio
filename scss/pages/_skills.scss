@@ -224,6 +224,9 @@
         .accordion .content {
           max-width: 620px;
           margin: 0 auto;
+          @include ab.responsive-max-width(1199px) {
+            max-width: 100%;
+          }
         }
 
 
@@ -250,6 +253,10 @@
           color: ab.$clr-augmented-900;
           background-color: ab.$clr-augmented-000;
           transition: height 0.5s;
+
+          @include ab.responsive-max-width(1199px) {
+            height: 104px;
+          }
         }
 
         .accordion > input[name=collapse]:checked ~ .content p {
@@ -265,6 +272,10 @@
           color: ab.$clr-augmented-900;
           background-color: ab.$clr-augmented-000;
           transition: height 0.5s;
+
+          @include ab.responsive-max-width(1199px) {
+            height: 104px;
+          }
         }
 
         .accordion label {
@@ -276,6 +287,10 @@
         @media only screen and (min-width: 620px) {
           .accordion > input[name=collapse]:checked ~ .content {
             height: 120px;
+
+            /*@include ab.responsive-max-width(1199px) {
+              height: 104px;
+            }*/
           }
         }
 
