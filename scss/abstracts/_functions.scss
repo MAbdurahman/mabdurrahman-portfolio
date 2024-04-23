@@ -172,3 +172,19 @@ $default-max-bp: 960px;
   }
   @return map-get(var.$fluid-spaces, $fluid-space-name);
 }
+
+@function set-fluid-body-text($fluid-body-text-name) {
+  @if not map-has-key(var.$fluid-body-texts, $fluid-body-text-name) {
+    @error 'No fluid-body-text named `#{$fluid-body-text-name}` defined in $fluid-body-texts! '
+     + 'Fluid-body-text name should be one of the following:  `#{map-keys(var.$fluid-body-texts)}`.'
+  }
+  @return map-get(var.$fluid-body-texts, $fluid-body-text-name);
+}
+
+@function set-fluid-heading-text($fluid-heading-text-name) {
+  @if not map-has-key(var.$fluid-heading-texts, $fluid-heading-text-name) {
+    @error 'No fluid-heading-text named `#{$fluid-heading-text-name}` defined in $fluid-heading-texts! '
+     + 'Fluid-heading-text name should be one of the following:  `#{map-keys(var.$fluid-heading-texts)}`.'
+  }
+  @return map-get(var.$fluid-heading-texts, $fluid-heading-text-name);
+}

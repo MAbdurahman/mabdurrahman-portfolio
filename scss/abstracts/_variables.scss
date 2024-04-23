@@ -92,7 +92,39 @@ $text-sizes: (
      'ts-text-size-4xl': $ts-text-size-4xl,
      'ts-text-size-5xl': $ts-text-size-5xl
 );
+/************************* fluid body text *************************/
+$fbt-fluid-body-text-p6: clamp(0.64rem, 0.16vi + 0.61rem, 0.8rem);
+$fbt-fluid-body-text-p5: clamp(0.8rem, 0.2vi + 0.76rem, 1rem);
+$fbt-fluid-body-text-p4: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
+$fbt-fluid-body-text-p3: clamp(1.25rem, 0.31vi + 1.19rem, 1.56rem);
+$fbt-fluid-body-text-p2: clamp(1.56rem, 0.39vi + 1.48rem, 1.95rem);
+$fbt-fluid-body-text-p1: clamp(1.95rem, 0.49vi + 1.86rem, 2.44rem);
 
+$fluid-body-texts: (
+     'fbt-fluid-body-text-p6': $fbt-fluid-body-text-p6,
+     'fbt-fluid-body-text-p5': $fbt-fluid-body-text-p5,
+     'fbt-fluid-body-text-p4': $fbt-fluid-body-text-p4,
+     'fbt-fluid-body-text-p3': $fbt-fluid-body-text-p3,
+     'fbt-fluid-body-text-p2': $fbt-fluid-body-text-p2,
+     'fbt-fluid-body-text-p1': $fbt-fluid-body-text-p1,
+);
+/************************* fluid heading text *************************/
+$fht-fluid-heading-text-h6: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
+$fht-fluid-heading-text-h5: clamp(1.25rem, 0.31vi + 1.19rem, 1.56rem);
+$fht-fluid-heading-text-h4: clamp(1.56rem, 0.39vi + 1.48rem, 1.95rem);
+$fht-fluid-heading-text-h3: clamp(1.95rem, 0.49vi + 1.86rem, 2.44rem);
+$fht-fluid-heading-text-h2: clamp(2.44rem, 0.61vi + 2.32rem, 3.05rem);
+$fht-fluid-heading-text-h1: clamp(3.05rem, 0.76vi + 2.9rem, 3.81rem);
+
+$fluid-heading-texts: (
+    'fht-fluid-heading-text-h6': $fht-fluid-heading-text-h6,
+    'fht-fluid-heading-text-h5': $fht-fluid-heading-text-h5,
+    'fht-fluid-heading-text-h4': $fht-fluid-heading-text-h4,
+    'fht-fluid-heading-text-h3': $fht-fluid-heading-text-h3,
+    'fht-fluid-heading-text-h2': $fht-fluid-heading-text-h2,
+    'fht-fluid-heading-text-h1': $fht-fluid-heading-text-h1,
+
+);
 
 $fs-fluid-space-000: clamp(.5rem, 1vw, 1rem);
 $fs-fluid-space-100: clamp(1rem, 2vw, 1.5rem);
