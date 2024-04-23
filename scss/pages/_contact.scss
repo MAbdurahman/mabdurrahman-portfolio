@@ -51,11 +51,16 @@
     .contact__section--title-paragraph {
       .contact__section--paragraph {
         margin-bottom: 3.25em;
+        font-size: ab.set-fluid-body-text(fbt-fluid-body-text-p4);
         font-family: ab.$ff-secondary-font;
         font-weight: ab.$fw-font-weight-medium;
         letter-spacing: 1px;
         text-align: center;
         color: ab.set-primary-color(clr-blue-01-700);
+
+        @include ab.responsive-max-width(768px) {
+          font-size: ab.set-fluid-body-text(fbt-fluid-body-text-p5);
+        }
       }
     }
   }
