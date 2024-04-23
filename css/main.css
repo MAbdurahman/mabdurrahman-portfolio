@@ -372,6 +372,8 @@ template {
           _variables.scss
 ================================================*/
 /**************** type scale ****************/
+/************************* fluid body text *************************/
+/************************* fluid heading text *************************/
 /**************** colors ****************/
 /*=============================================
           abstracts/_index.scss
@@ -3616,10 +3618,15 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   padding-bottom: 1.8em;
 }
 
+.footer__sub-title {
+  margin-bottom: 0.25em;
+}
+
 .footer__top--left {
   position: relative;
   display: grid;
   grid-template-columns: 60% 39%;
+  column-gap: 3em;
 }
 .footer__top--left .footer__logo-statement {
   font-size: 0.875rem;
@@ -3672,15 +3679,32 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   gap: 0.33em;
 }
 
+.footer__contact-link-item {
+  transition: all 0.25s;
+}
+.footer__contact-link-item:hover, .footer__contact-link-item:focus {
+  /*transform: scaleX(1.025);*/
+  letter-spacing: 0.5px;
+}
+
 .footer__contact-link {
   font-size: 0.875rem;
   color: hsl(210, 12%, 78%);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .footer__contact-link:hover, .footer__contact-link:focus {
   color: hsl(210, 0%, 88%);
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
+  /*transform: scale(1.255);*/
+}
+
+.svg-inline--fa.fa-w-16 {
+  margin-right: 0.333em;
+}
+
+.svg-inline--fa.fa-w-16.fa-phone {
+  transform: rotate(120deg);
 }
 
 .footer__social-media-list {
@@ -3743,7 +3767,9 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 }
 .footer__bottom .footer__bottom-terms:hover, .footer__bottom .footer__bottom-terms:focus {
   color: hsl(210, 0%, 98%);
-  letter-spacing: 1px;
+  /*transform: scaleX(1.25);*/
+  /*letter-spacing: 1px;*/
+  letter-spacing: 0.5px;
 }
 
 /*# sourceMappingURL=main.css.map */
