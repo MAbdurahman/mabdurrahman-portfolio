@@ -65,6 +65,7 @@ h5 {
 
 .portfolio__para {
   font-size: ab.$fs-font-size-010;
+  font-size: ab.set-fluid-body-text(fbt-fluid-body-text-p5);
 }
 
 small, .text_small {
