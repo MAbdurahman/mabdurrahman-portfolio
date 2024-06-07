@@ -74,6 +74,7 @@
           @include ab.button-default();
           @include ab.background-transition-basic(ab.$clr-blue-01-600, ab.$clr-blue-01-900);
           font-size: 0.85rem;
+          font-size: ab.set-fluid-body-text(fbt-fluid-body-text-p5);
           font-weight: ab.$fw-font-weight-bold;
           text-transform: uppercase;
           letter-spacing: 1px;
