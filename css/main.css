@@ -2737,6 +2737,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   column-gap: 1.5rem;
 }
 
+@media only screen and (max-width: 767px) {
+  .about__section__content {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+}
 .about__section--left {
   max-height: fit-content;
 }
@@ -2752,6 +2758,13 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.15), 5px 3px 21px -1px rgba(34, 40, 45, 0.15);
 }
 
+@media only screen and (max-width: 767px) {
+  .about__image {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .about__section--right {
   max-height: fit-content;
   color: hsl(210, 30%, 10%);
@@ -3379,6 +3392,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   background-position: right bottom;
   transition: background-position 0.25s ease-out;
   font-size: 0.85rem;
+  font-size: clamp(0.8rem, 0.2vi + 0.76rem, 1rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;

@@ -161,6 +161,13 @@
   column-gap: 1.5rem;
 }
 
+@include ab.responsive-max-width(767px) {
+  .about__section__content {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+}
+
 .about__section--left {
   max-height: fit-content;
 
@@ -174,6 +181,13 @@
   border: 3px solid ab.$clr-augmented-400;
   border-radius: 5px;
   box-shadow: ab.set-box-shadow-bottom-right(bs-box-shadow-bottom-right-600);
+}
+@include ab.responsive-max-width(767px) {
+  .about__image {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .about__section--right {
