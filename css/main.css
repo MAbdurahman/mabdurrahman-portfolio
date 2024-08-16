@@ -3419,8 +3419,8 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   margin-right: auto;
   margin-left: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 1.5em;
   grid-row-gap: 2.5em;
   padding-bottom: 3em;
@@ -3429,11 +3429,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
   /*width: 304px;
   width: 322px;
   width: 272px;*/
-  width: 25%;
+  width: 33.333%;
   padding: 8px;
   background-color: hsl(210, 64%, 23%);
 }
 .portfolio__section--bottom .portfolio__card figure img {
+  width: 400px;
   margin-bottom: 0.5em;
 }
 .portfolio__section--bottom .portfolio__card--title {

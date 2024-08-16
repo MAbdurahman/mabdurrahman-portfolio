@@ -99,8 +99,8 @@
     margin-right: auto;
     margin-left: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1.5em;
     grid-row-gap: 2.5em;
     padding-bottom: 3em;
@@ -110,12 +110,13 @@
       /*width: 304px;
       width: 322px;
       width: 272px;*/
-      width: 25%;
+      width: 33.333%;
       padding: 8px;
       background-color: ab.$clr-blue-01-900;
 
 
       figure img {
+        width: 400px;
         margin-bottom: 0.5em;
       }
 
