@@ -1,25 +1,22 @@
 /**
  * maabdurrahman-portfolio-scripts
- * @author: Mahdi Abdurrhaman
+ * @author Mahdi Abdurrhaman
  * @version 1.0.0
- * @date: 9 February 2024
+ * @date 9 February 2024
  */
 /*===================================================
           navigation and scroll-spy
 =====================================================*/
 $(function () {
 
-
    /*===============================================================
           preloader
    ==================================================================*/
-   $(window).on('load', function () {
-      // makes sure that whole site is loaded
-      $('#preloader__gif, #preloader').fadeOut(2500, function () {
-
-      });
+   // makes sure that whole site is loaded
+   $('#preloader__gif, #preloader').fadeOut(2500, function () {
 
    });
+
    /*===============================================================
           navigation and footer navigation
    ==================================================================*/
